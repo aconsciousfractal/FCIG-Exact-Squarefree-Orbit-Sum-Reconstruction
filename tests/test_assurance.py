@@ -100,8 +100,21 @@ class AssuranceTests(unittest.TestCase):
     def test_build_attestation_is_closed_and_event_free(self) -> None:
         manifest = {"file_count": 100, "sha256": "a" * 64}
         paper = {"bytes": 450000, "pages": 20, "sha256": "b" * 64}
-        baseline = verify.expected_attestation(manifest, paper)
-        verify.validate_attestation_payload(baseline, manifest, paper)
+        visual_qa = {
+            "dpi": 144,
+            "inspected_pages": 20,
+            "json_sha256": "c" * 64,
+            "markdown_sha256": "d" * 64,
+            "status": "PASS_ALL_PAGES_INSPECTED",
+        }
+        toolchain = {
+            "compiler_mode": "pdflatex+bibtex",
+            "engine_banner": "canonical engine",
+            "loaded_file_count": 100,
+            "sha256": "e" * 64,
+        }
+        baseline = verify.expected_attestation(manifest, paper, visual_qa, toolchain)
+        verify.validate_attestation_payload(baseline, manifest, paper, visual_qa, toolchain)
         mutations = (
             ("version", lambda value: value.__setitem__("version", "2.0.1")),
             ("tag", lambda value: value.__setitem__("intended_release_tag", "v2.0.1")),
@@ -110,6 +123,8 @@ class AssuranceTests(unittest.TestCase):
             ("novelty", lambda value: value["claim_contract"].__setitem__("novelty_priority_firstness_claimed", True)),
             ("third-party files", lambda value: value["claim_contract"].__setitem__("third_party_full_texts_distributed", 1)),
             ("scope", lambda value: value["mathematical_scope"].__setitem__("n_values", [4, 5, 6])),
+            ("visual QA", lambda value: value["pdf_visual_qa"].__setitem__("status", "FAIL")),
+            ("toolchain", lambda value: value["pdf_build_toolchain"].__setitem__("sha256", "0" * 64)),
             ("unknown key", lambda value: value.__setitem__("unreviewed_claim", "PASS")),
         )
         for label, mutate in mutations:
@@ -117,7 +132,81 @@ class AssuranceTests(unittest.TestCase):
                 changed = copy.deepcopy(baseline)
                 mutate(changed)
                 with self.assertRaisesRegex(ValueError, "attestation schema/value drift"):
-                    verify.validate_attestation_payload(changed, manifest, paper)
+                    verify.validate_attestation_payload(changed, manifest, paper, visual_qa, toolchain)
+
+    def test_visual_qa_rejects_semantic_and_binding_mutations(self) -> None:
+        paper = verify.verify_pdf()
+        baseline = verify.expected_visual_qa(paper)
+        verify.validate_visual_qa_payload(baseline, paper)
+        mutations = (
+            ("status", lambda value: value.__setitem__("status", "FAIL_NO_PAGES_INSPECTED")),
+            ("hash", lambda value: value["document"].__setitem__("sha256", "0" * 64)),
+            ("size", lambda value: value["document"].__setitem__("bytes", 1)),
+            ("page count", lambda value: value["document"].__setitem__("page_count", 0)),
+            ("path", lambda value: value["document"].__setitem__("path", "paper/other.pdf")),
+            ("missing page", lambda value: value["inspection"].__setitem__("page_numbers", list(range(1, 21)))),
+            ("duplicate page", lambda value: value["inspection"]["page_numbers"].append(21)),
+            ("out-of-range page", lambda value: value["inspection"]["page_numbers"].append(22)),
+            ("renderer", lambda value: value["render"].__setitem__("renderer", "unknown")),
+            ("dpi", lambda value: value["render"].__setitem__("dpi", 72)),
+            ("failed check", lambda value: value["inspection"]["checks"].__setitem__("overlap_absent", False)),
+            ("unknown key", lambda value: value.__setitem__("transport_pass", True)),
+        )
+        for label, mutate in mutations:
+            with self.subTest(label=label):
+                changed = copy.deepcopy(baseline)
+                mutate(changed)
+                with self.assertRaisesRegex(ValueError, "visual-QA schema/value/PDF binding drift"):
+                    verify.validate_visual_qa_payload(changed, paper)
+
+    def test_visual_qa_failure_survives_consistent_projection_and_transport_rehash(self) -> None:
+        paper = verify.verify_pdf()
+        changed = verify.expected_visual_qa(paper)
+        changed["status"] = "FAIL_NO_PAGES_INSPECTED"
+        with tempfile.TemporaryDirectory(prefix="orbit_sum_visual_qa_mutation_") as raw:
+            root = Path(raw)
+            machine = root / "PDF_VISUAL_QA.json"
+            projection = root / "PDF_VISUAL_QA.md"
+            machine.write_bytes(verify.pretty_canonical_json_bytes(changed))
+            projection.write_text(verify.visual_qa_markdown(changed), encoding="utf-8", newline="\n")
+            with mock.patch.object(verify, "VISUAL_QA_JSON", machine), mock.patch.object(
+                verify, "VISUAL_QA_MARKDOWN", projection
+            ):
+                with self.assertRaisesRegex(ValueError, "visual-QA schema/value/PDF binding drift"):
+                    verify.verify_visual_qa(paper)
+
+    def test_distributed_visual_qa_is_canonical_bound_and_projected(self) -> None:
+        paper = verify.verify_pdf()
+        raw = verify.VISUAL_QA_JSON.read_bytes()
+        value = verify.parse_strict_json_object(raw, "docs/PDF_VISUAL_QA.json")
+        self.assertEqual(raw, verify.pretty_canonical_json_bytes(value))
+        verify.validate_visual_qa_payload(value, paper)
+        self.assertEqual(verify.VISUAL_QA_MARKDOWN.read_text(encoding="utf-8"), verify.visual_qa_markdown(value))
+
+    def test_toolchain_lock_rejects_identity_inventory_and_schema_mutations(self) -> None:
+        paper = verify.verify_pdf()
+        baseline = verify.load_json(verify.TOOLCHAIN_LOCK)
+        verify.validate_toolchain_lock_payload(baseline, paper)
+        mutations = (
+            ("PDF hash", lambda value: value["artifact"].__setitem__("sha256", "0" * 64)),
+            ("engine", lambda value: value["canonical_environment"]["engine"].__setitem__("banner", "other")),
+            ("command", lambda value: value["canonical_environment"]["commands"][0].append("-interaction=batchmode")),
+            ("inventory", lambda value: value["canonical_environment"]["loaded_file_inventory"].pop()),
+            ("portable claim", lambda value: value["assurance_boundary"].__setitem__("canonical_environment_is_portable", True)),
+            ("unknown key", lambda value: value.__setitem__("hosted_pass", True)),
+        )
+        for label, mutate in mutations:
+            with self.subTest(label=label):
+                changed = copy.deepcopy(baseline)
+                mutate(changed)
+                with self.assertRaisesRegex(ValueError, "toolchain"):
+                    verify.validate_toolchain_lock_payload(changed, paper)
+
+    def test_distributed_toolchain_lock_is_pretty_canonical(self) -> None:
+        raw = verify.TOOLCHAIN_LOCK.read_bytes()
+        value = verify.parse_strict_json_object(raw, "PDF_BUILD_TOOLCHAIN.json")
+        self.assertEqual(raw, verify.pretty_canonical_json_bytes(value))
+        verify.validate_toolchain_lock_payload(value, verify.verify_pdf())
 
     def test_strict_json_rejects_duplicate_keys(self) -> None:
         mutations = (

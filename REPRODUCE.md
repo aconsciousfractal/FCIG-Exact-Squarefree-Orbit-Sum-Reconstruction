@@ -6,7 +6,9 @@ Run every command from the repository root.
 
 - CPython 3.12, 3.13, or 3.14;
 - `pypdf==6.14.2` for PDF structure and text checks;
-- Tectonic 0.16.9, or `pdflatex` plus `bibtex`, only for rebuilding the paper.
+- a TeX engine only for rebuilding the paper. Exact byte identity additionally
+  requires the canonical MiKTeX environment recorded in
+  `PDF_BUILD_TOOLCHAIN.json`.
 
 ```bash
 python -m pip install --require-hashes -r requirements.txt
@@ -18,8 +20,10 @@ external dataset, subscription service, or cited article PDF is required.
 ## Core verification
 
 ```bash
-python scripts/verify.py --profile core
-python -O scripts/verify.py --profile core
+python -B -m unittest discover -s tests -v
+python -B -O -m unittest discover -s tests -v
+python -B scripts/verify.py --profile core
+python -B -O scripts/verify.py --profile core
 ```
 
 The core profile verifies:
@@ -36,7 +40,11 @@ The core profile verifies:
    the public claim boundary;
 8. PDF metadata, page geometry, embedded fonts, attachments, and active
    actions;
-9. the checked-out Git ancestry and current tree, together with ordinary-Git
+9. the closed visual-QA JSON record, its exact Markdown projection, PASS
+   semantics, complete page census, and binding to the current PDF bytes;
+10. the canonical PDF toolchain lock, including compiler identity, commands,
+    deterministic environment, and the 104-file loaded TeX inventory;
+11. the checked-out Git ancestry and current tree, together with ordinary-Git
    delivery without filters, Git LFS pointers, symlinks, historical governance
    paths, hidden index flags, or worktree/index byte drift.
 
@@ -57,7 +65,8 @@ both exact minimum searches, both family-degree implementations, the structural 
 the five-vertex canonical payload in disposable directories. It compares the
 resulting canonical objects byte-for-byte with `certificates/`. The large
 five-vertex lower DAGs are semantically rechecked rather than rediscovered by
-an optimizer.
+an optimizer. It also requires the isolated PDF to be byte-identical and the
+observed toolchain to equal `PDF_BUILD_TOOLCHAIN.json`.
 
 A successful run ends with:
 
@@ -77,8 +86,22 @@ python scripts/verify.py --profile core --skip-git-boundary
 The builder copies only manuscript sources to an isolated temporary directory,
 disables shell escape, fixes `SOURCE_DATE_EPOCH`, and replaces the title-named
 PDF only after a successful build. Use
-`python scripts/build_paper.py --check-byte-identical` to require exact-byte
-reproduction of the distributed PDF.
+`python -B scripts/build_paper.py --check-byte-identical --check-toolchain-lock`
+to require both exact-byte reproduction and the canonical compiler/package
+identity. `--write-toolchain-lock` is intentionally separate: it is only for
+an explicitly reviewed PDF/toolchain update and still requires byte identity
+with the tracked PDF.
+
+`docs/PDF_VISUAL_QA.json` is not generated automatically as a PASS record.
+After any PDF-byte change, render and inspect every page, update the JSON and
+its Markdown projection, then rebuild the manifest and attestation. The
+verifier checks the binding and semantics but cannot replace human inspection.
+
+The canonical lock describes a Windows MiKTeX 25.12 build. A different hosted
+runner may test portability, but hosted byte identity is not asserted until an
+observed run reports the same PDF hash. The versioned attestation records this
+boundary rather than treating a mutable runner image as equivalent to the
+canonical environment.
 
 ## Clean-checkout verification
 

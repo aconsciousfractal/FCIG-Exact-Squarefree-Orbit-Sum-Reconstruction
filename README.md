@@ -62,8 +62,10 @@ python scripts/verify.py --profile full
 
 The core profile checks the manifest, all distributed certificates, the
 independent five-vertex reconstruction, both lower DAGs, the theorem summary,
-the claim boundary, and the PDF. The full profile additionally regenerates
-the independent finite enumerations in disposable directories. See
+the claim boundary, the PDF, its machine-bound visual-QA record, and the
+canonical build-toolchain lock. The full profile additionally regenerates
+the independent finite enumerations in disposable directories and requires a
+byte-identical PDF build under the locked toolchain. See
 [`REPRODUCE.md`](REPRODUCE.md).
 
 ## Layout
@@ -77,9 +79,12 @@ schemas/        mathematical data contracts and serialization specifications
 docs/           claim, prior-art, normalization, artifact, and QA records
 ```
 
-`MANIFEST_SHA256.txt` binds the distributed package. `BUILD_ATTESTATION.json`
-records only immutable build facts: version, mathematical scope, manifest,
-and PDF identity. Review, publication, archive, and DOI events are deliberately
+`MANIFEST_SHA256.txt` binds the distributed package. `PDF_BUILD_TOOLCHAIN.json`
+records the exact canonical compiler, commands, deterministic environment, and
+104 loaded TeX files. `docs/PDF_VISUAL_QA.json` binds a closed, machine-checked
+all-page QA declaration to the exact PDF; its truth remains a human observation.
+`BUILD_ATTESTATION.json` binds those records and immutable build facts. Review,
+publication, archive, and DOI events are deliberately
 recorded outside the versioned source tree so that adding the annotated
 `v2.0.0` tag does not make the build attestation false.
 

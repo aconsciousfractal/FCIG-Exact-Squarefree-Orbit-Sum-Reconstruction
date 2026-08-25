@@ -13,6 +13,8 @@
 | Five-vertex global lower bounds | `certificates/five_vertex/branch_dag_S5.json.gz` and `branch_dag_A5.json.gz` | recomputed separator masks and every reachable branch, packing, and coverage node |
 | Exact statement crosswalk | `certificates/theorem_summary.json` | four-case theorem tuple, residual/tree/conditional rows, and scope ceiling |
 | Paper | `paper/main.tex`, included sources, and title-named PDF | theorem wording, bibliography, limits, and layout |
-| Package identity | `MANIFEST_SHA256.txt` and `BUILD_ATTESTATION.json` | file set, bytes, PDF identity, scope, and event-free build facts |
+| PDF visual QA | `docs/PDF_VISUAL_QA.json` and `docs/PDF_VISUAL_QA.md` | PASS semantics, exact PDF binding, full page census, render parameters, and exact human-readable projection |
+| PDF build environment | `PDF_BUILD_TOOLCHAIN.json` | canonical engine and bibliography processor, command sequence, deterministic environment, and 104 loaded TeX files |
+| Package identity | `MANIFEST_SHA256.txt` and `BUILD_ATTESTATION.json` | file set, bytes, PDF/QA/toolchain identity, scope, and event-free build facts |
 
 The aggregate entry point is `scripts/verify.py`.

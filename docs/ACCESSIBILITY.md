@@ -12,7 +12,8 @@ only in figures.
 
 The PDF is checked for encryption, attachments, unsafe active actions,
 consistent page geometry, an English language declaration, text extraction,
-and embedded fonts. An all-page rendered review is recorded separately in
+and embedded fonts. The all-page rendered review is recorded in the canonical
+`docs/PDF_VISUAL_QA.json` record and projected exactly into
 `docs/PDF_VISUAL_QA.md`.
 
 The distributed PDF is not claimed to be a structurally tagged PDF. Readers

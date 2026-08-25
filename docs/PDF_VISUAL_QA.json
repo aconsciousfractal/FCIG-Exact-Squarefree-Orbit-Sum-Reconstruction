@@ -1,0 +1,101 @@
+{
+  "assurance_boundary": {
+    "human_observation_is_not_machine_proved": true,
+    "new_pdf_bytes_require_new_all_page_inspection": true,
+    "verifier_enforces_binding_and_closed_schema": true
+  },
+  "document": {
+    "bytes": 462115,
+    "page_count": 21,
+    "page_size": {
+      "name": "A4",
+      "points": [
+        595.276,
+        841.89
+      ]
+    },
+    "path": "paper/Exact_Squarefree_Orbit_Sum_Reconstruction_of_Four_and_Five_Vertex_Loopless_Digraphs.pdf",
+    "sha256": "2c7961afe9c21ff65eee41cbd55716e59d38a2c51134b4a5199874f79fee22bb"
+  },
+  "inspection": {
+    "checks": {
+      "accidental_blank_pages_absent": true,
+      "bibliography_and_identifiers_readable": true,
+      "clipped_text_absent": true,
+      "malformed_urls_absent": true,
+      "missing_glyphs_absent": true,
+      "overlap_absent": true,
+      "public_only_labels": true,
+      "tables_and_rules_readable": true
+    },
+    "contact_sheet_page_groups": [
+      [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ]
+    ],
+    "date": "2026-08-25",
+    "full_resolution_page_numbers": [
+      1,
+      12,
+      18,
+      20,
+      21
+    ],
+    "page_numbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ]
+  },
+  "render": {
+    "dpi": 144,
+    "format": "PNG",
+    "one_image_per_page": true,
+    "renderer": "Poppler pdftoppm",
+    "renderer_version": "26.05.0"
+  },
+  "schema_version": "orbit_sum_pdf_visual_qa_v1",
+  "status": "PASS_ALL_PAGES_INSPECTED"
+}

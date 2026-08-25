@@ -22,7 +22,8 @@ global minimum:  7, 11, 14, 17
 
 ```bash
 python -m pip install --require-hashes -r requirements.txt
-python scripts/verify.py --profile core
+python -B -m unittest discover -s tests -v
+python -B scripts/verify.py --profile core
 ```
 
 The runtime depends on hardware because the command reconstructs all four
@@ -46,6 +47,9 @@ with `PASS_ORBIT_SUM_PACKAGE_CORE`.
   accept only an annotated `v2.0.0` tag on the verified `HEAD`?
 - Does a clean ordinary-Git checkout reproduce the manifest and PDF without
   Git LFS?
+- Does changing QA status, PDF binding, page census, renderer, or DPI fail even
+  after transport hashes are rebuilt?
+- Is canonical PDF byte identity kept distinct from an unobserved hosted run?
 
 ## Artifact path
 
@@ -56,6 +60,8 @@ with `PASS_ORBIT_SUM_PACKAGE_CORE`.
 - five-vertex payload and lower DAGs: `certificates/five_vertex/`;
 - independent five-vertex checkers: `scripts/five_vertex/checker/`;
 - exact statement crosswalk: `certificates/theorem_summary.json`;
+- visual QA: `docs/PDF_VISUAL_QA.json` and its Markdown projection;
+- canonical PDF toolchain: `PDF_BUILD_TOOLCHAIN.json`;
 - package identity: `MANIFEST_SHA256.txt` and `BUILD_ATTESTATION.json`.
 
 No third-party full text is distributed. A successful local replay is not a

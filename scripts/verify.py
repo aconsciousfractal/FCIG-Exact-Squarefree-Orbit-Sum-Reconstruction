@@ -48,10 +48,15 @@ FIVE_VERTEX_SCRIPTS = ROOT / "scripts" / "five_vertex"
 N5_DATA = ROOT / "certificates" / "five_vertex"
 PDF = ROOT / "paper" / "Exact_Squarefree_Orbit_Sum_Reconstruction_of_Four_and_Five_Vertex_Loopless_Digraphs.pdf"
 ATTESTATION = ROOT / "BUILD_ATTESTATION.json"
+TOOLCHAIN_LOCK = ROOT / "PDF_BUILD_TOOLCHAIN.json"
+VISUAL_QA_JSON = ROOT / "docs" / "PDF_VISUAL_QA.json"
+VISUAL_QA_MARKDOWN = ROOT / "docs" / "PDF_VISUAL_QA.md"
 THEOREM_SUMMARY = ROOT / "certificates" / "theorem_summary.json"
 CASE_ORDER = ("S4", "A4", "S5", "A5")
 PACKAGE_VERSION = "2.0.0"
 RELEASE_TAG = "v2.0.0"
+TOOLCHAIN_INVENTORY_COUNT = 104
+TOOLCHAIN_INVENTORY_SHA256 = "ea47cb4f281fe7c4d1d474c16c84497eb29941fed394df661d4920fecfed28b0"
 # n, degree, dictionary, minimum, patterns, residual, tree-separated,
 # tree-blind, lower-DAG nodes, conditional minimum, conditional solution count
 EXPECTED_CASE_ROWS = {
@@ -173,6 +178,222 @@ def canonical_json_bytes(value: Any) -> bytes:
 
 def pretty_canonical_json_bytes(value: Any) -> bytes:
     return (json.dumps(value, ensure_ascii=False, indent=2, sort_keys=True) + "\n").encode("utf-8")
+
+
+def expected_visual_qa(paper: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "assurance_boundary": {
+            "human_observation_is_not_machine_proved": True,
+            "new_pdf_bytes_require_new_all_page_inspection": True,
+            "verifier_enforces_binding_and_closed_schema": True,
+        },
+        "document": {
+            "bytes": paper["bytes"],
+            "page_count": paper["pages"],
+            "page_size": {"name": "A4", "points": paper["page_size_points"]},
+            "path": PDF.relative_to(ROOT).as_posix(),
+            "sha256": paper["sha256"],
+        },
+        "inspection": {
+            "checks": {
+                "accidental_blank_pages_absent": True,
+                "bibliography_and_identifiers_readable": True,
+                "clipped_text_absent": True,
+                "malformed_urls_absent": True,
+                "missing_glyphs_absent": True,
+                "overlap_absent": True,
+                "public_only_labels": True,
+                "tables_and_rules_readable": True,
+            },
+            "contact_sheet_page_groups": [list(range(1, 8)), list(range(8, 15)), list(range(15, 22))],
+            "date": "2026-08-25",
+            "full_resolution_page_numbers": [1, 12, 18, 20, 21],
+            "page_numbers": list(range(1, paper["pages"] + 1)),
+        },
+        "render": {
+            "dpi": 144,
+            "format": "PNG",
+            "one_image_per_page": True,
+            "renderer": "Poppler pdftoppm",
+            "renderer_version": "26.05.0",
+        },
+        "schema_version": "orbit_sum_pdf_visual_qa_v1",
+        "status": "PASS_ALL_PAGES_INSPECTED",
+    }
+
+
+def visual_qa_markdown(value: dict[str, Any]) -> str:
+    document = value["document"]
+    inspection = value["inspection"]
+    render = value["render"]
+    points = document["page_size"]["points"]
+    full_resolution = ", ".join(str(page) for page in inspection["full_resolution_page_numbers"])
+    return f"""# PDF visual-QA record
+
+Canonical machine record: `docs/PDF_VISUAL_QA.json`
+
+Status: `{value['status']}`
+
+- Document: `{document['path']}`
+- SHA-256: `{document['sha256']}`
+- Size: `{document['bytes']}` bytes
+- Page count and geometry: `{document['page_count']}`, {document['page_size']['name']} (`{points[0]}` x `{points[1]}` points)
+- Renderer: Poppler `pdftoppm {render['renderer_version']}`
+- Rasterization: {render['format']}, `{render['dpi']}` dpi, one image per page
+- Inspection date: `{inspection['date']}`
+- Pages inspected: `1-21`; full-resolution spot checks: `{full_resolution}`
+
+All 21 rendered pages were inspected in three contact-sheet groups: 1-7, 8-14,
+and 15-21. The title page, statement-to-certificate tables, branch-DAG digest
+table, data-and-code statement, and both bibliography pages were additionally
+inspected at full raster resolution.
+
+No clipped text, overlap, missing glyph, accidental blank page, unreadable
+table or rule, visible non-public label, or malformed URL was found. The title
+block contains the author but no displayed date or review banner. The catalog
+declares `en-US`; structural tagging is not claimed and remains a documented
+accessibility limitation.
+
+The verifier checks the closed JSON schema, PASS status, exact PDF path, hash,
+size, page count, page geometry, complete page census, renderer, DPI, declared
+checks, and this Markdown projection. It cannot prove the truth of a human
+visual observation. Any change to the PDF bytes invalidates this record and
+requires a new all-page inspection; compilation or parser-only checking is not
+a substitute for visual review.
+"""
+
+
+def validate_visual_qa_payload(value: dict[str, Any], paper: dict[str, Any]) -> None:
+    require(value == expected_visual_qa(paper), "visual-QA schema/value/PDF binding drift")
+
+
+def verify_visual_qa(paper: dict[str, Any]) -> dict[str, Any]:
+    require(VISUAL_QA_JSON.is_file(), "missing docs/PDF_VISUAL_QA.json")
+    require(VISUAL_QA_MARKDOWN.is_file(), "missing docs/PDF_VISUAL_QA.md")
+    raw = VISUAL_QA_JSON.read_bytes()
+    value = parse_strict_json_object(raw, str(VISUAL_QA_JSON))
+    require(raw == pretty_canonical_json_bytes(value), "visual-QA JSON is not pretty-canonical")
+    validate_visual_qa_payload(value, paper)
+    require(
+        VISUAL_QA_MARKDOWN.read_text(encoding="utf-8") == visual_qa_markdown(value),
+        "visual-QA Markdown projection drift",
+    )
+    return {
+        "dpi": value["render"]["dpi"],
+        "inspected_pages": len(value["inspection"]["page_numbers"]),
+        "json_sha256": sha256(VISUAL_QA_JSON),
+        "markdown_sha256": sha256(VISUAL_QA_MARKDOWN),
+        "status": value["status"],
+    }
+
+
+def validate_toolchain_lock_payload(value: dict[str, Any], paper: dict[str, Any]) -> None:
+    require(
+        set(value) == {"artifact", "assurance_boundary", "canonical_environment", "schema_version"},
+        "toolchain lock top-level schema drift",
+    )
+    require(value["schema_version"] == "orbit_sum_pdf_build_toolchain_v1", "toolchain lock schema version")
+    require(
+        value["artifact"]
+        == {
+            "bytes": paper["bytes"],
+            "path": PDF.relative_to(ROOT).as_posix(),
+            "sha256": paper["sha256"],
+        },
+        "toolchain lock PDF binding drift",
+    )
+    require(
+        value["assurance_boundary"]
+        == {
+            "canonical_environment_is_portable": False,
+            "hosted_byte_identity_requires_observed_success": True,
+            "lock_records_build_facts_not_a_publication_event": True,
+        },
+        "toolchain assurance-boundary drift",
+    )
+    environment = value["canonical_environment"]
+    require(
+        set(environment)
+        == {
+            "bibliography_processor",
+            "commands",
+            "compiler_mode",
+            "engine",
+            "environment",
+            "latex_format",
+            "loaded_file_inventory",
+            "network_package_installation",
+            "operating_system_family",
+            "shell_escape",
+        },
+        "toolchain environment schema drift",
+    )
+    require(environment["compiler_mode"] == "pdflatex+bibtex", "toolchain compiler mode")
+    require(environment["operating_system_family"] == "Windows", "toolchain operating-system family")
+    require(environment["network_package_installation"] == "disabled", "toolchain network installation policy")
+    require(environment["shell_escape"] == "disabled", "toolchain shell-escape policy")
+    require(environment["latex_format"] == "LaTeX2e <2025-11-01>", "toolchain LaTeX format")
+    require(
+        environment["environment"]
+        == {"FORCE_SOURCE_DATE": "1", "SOURCE_DATE_EPOCH": "1787529600", "TZ": "UTC"},
+        "toolchain deterministic environment",
+    )
+    require(
+        environment["engine"]
+        == {
+            "banner": "MiKTeX-pdfTeX 4.23 (MiKTeX 25.12)",
+            "executable": "pdflatex.exe",
+            "stdout_sha256": "e114ea4a56e00fb76a6a40062264ca1826f120156c2621c365260fa7c2ac1ef4",
+        },
+        "toolchain engine identity drift",
+    )
+    require(
+        environment["bibliography_processor"]
+        == {
+            "banner": "MiKTeX-BibTeX 4.2 (MiKTeX 25.12)",
+            "executable": "bibtex.exe",
+            "stdout_sha256": "bd7d478eea1b80373bd53c57f7fbb7066efbd3733a84193be1c7302887a56bef",
+        },
+        "toolchain bibliography identity drift",
+    )
+    latex = [
+        "pdflatex.exe",
+        "--disable-installer",
+        "-no-shell-escape",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "-file-line-error",
+        "main.tex",
+    ]
+    require(
+        environment["commands"] == [latex, ["bibtex.exe", "main"], latex, latex],
+        "toolchain command-sequence drift",
+    )
+    inventory = environment["loaded_file_inventory"]
+    require(isinstance(inventory, list) and len(inventory) == TOOLCHAIN_INVENTORY_COUNT, "toolchain file-inventory count")
+    for index, row in enumerate(inventory):
+        require(isinstance(row, dict) and set(row) == {"file", "version"}, f"toolchain inventory row {index}")
+        require(isinstance(row["file"], str) and row["file"], f"toolchain inventory filename {index}")
+        require(row["version"] is None or isinstance(row["version"], str), f"toolchain inventory version {index}")
+    require(
+        hashlib.sha256(canonical_json_bytes(inventory)).hexdigest() == TOOLCHAIN_INVENTORY_SHA256,
+        "toolchain loaded-file inventory drift",
+    )
+
+
+def verify_toolchain_lock(paper: dict[str, Any]) -> dict[str, Any]:
+    require(TOOLCHAIN_LOCK.is_file(), "missing PDF_BUILD_TOOLCHAIN.json")
+    raw = TOOLCHAIN_LOCK.read_bytes()
+    value = parse_strict_json_object(raw, str(TOOLCHAIN_LOCK))
+    require(raw == pretty_canonical_json_bytes(value), "toolchain lock is not pretty-canonical JSON")
+    validate_toolchain_lock_payload(value, paper)
+    environment = value["canonical_environment"]
+    return {
+        "compiler_mode": environment["compiler_mode"],
+        "engine_banner": environment["engine"]["banner"],
+        "loaded_file_count": len(environment["loaded_file_inventory"]),
+        "sha256": sha256(TOOLCHAIN_LOCK),
+    }
 
 
 def group_rows(payload: dict[str, Any]) -> dict[str, dict[str, Any]]:
@@ -736,7 +957,12 @@ def verify_pdf() -> dict[str, Any]:
     }
 
 
-def expected_attestation(manifest: dict[str, Any], paper: dict[str, Any]) -> dict[str, Any]:
+def expected_attestation(
+    manifest: dict[str, Any],
+    paper: dict[str, Any],
+    visual_qa: dict[str, Any],
+    toolchain: dict[str, Any],
+) -> dict[str, Any]:
     return {
         "schema_version": "orbit_sum_build_attestation_v1",
         "artifact_kind": "versioned_release_build",
@@ -754,6 +980,20 @@ def expected_attestation(manifest: dict[str, Any], paper: dict[str, Any]) -> dic
             "bytes": paper["bytes"],
             "pages": paper["pages"],
             "sha256": paper["sha256"],
+        },
+        "pdf_build_toolchain": {
+            "compiler_mode": toolchain["compiler_mode"],
+            "engine_banner": toolchain["engine_banner"],
+            "loaded_file_count": toolchain["loaded_file_count"],
+            "path": "PDF_BUILD_TOOLCHAIN.json",
+            "sha256": toolchain["sha256"],
+        },
+        "pdf_visual_qa": {
+            "dpi": visual_qa["dpi"],
+            "inspected_pages": visual_qa["inspected_pages"],
+            "path": "docs/PDF_VISUAL_QA.json",
+            "sha256": visual_qa["json_sha256"],
+            "status": visual_qa["status"],
         },
         "mathematical_scope": {
             "n_values": [4, 5],
@@ -777,16 +1017,27 @@ def expected_attestation(manifest: dict[str, Any], paper: dict[str, Any]) -> dic
     }
 
 
-def validate_attestation_payload(value: dict[str, Any], manifest: dict[str, Any], paper: dict[str, Any]) -> None:
-    require(value == expected_attestation(manifest, paper), "attestation schema/value drift")
+def validate_attestation_payload(
+    value: dict[str, Any],
+    manifest: dict[str, Any],
+    paper: dict[str, Any],
+    visual_qa: dict[str, Any],
+    toolchain: dict[str, Any],
+) -> None:
+    require(value == expected_attestation(manifest, paper, visual_qa, toolchain), "attestation schema/value drift")
 
 
-def verify_attestation(manifest: dict[str, Any], paper: dict[str, Any]) -> dict[str, Any]:
+def verify_attestation(
+    manifest: dict[str, Any],
+    paper: dict[str, Any],
+    visual_qa: dict[str, Any],
+    toolchain: dict[str, Any],
+) -> dict[str, Any]:
     require(ATTESTATION.is_file(), "missing BUILD_ATTESTATION.json")
     raw = ATTESTATION.read_bytes()
     value = parse_strict_json_object(raw, str(ATTESTATION))
     require(raw == pretty_canonical_json_bytes(value), "attestation is not pretty-canonical JSON")
-    validate_attestation_payload(value, manifest, paper)
+    validate_attestation_payload(value, manifest, paper, visual_qa, toolchain)
     return {"sha256": sha256(ATTESTATION), "artifact_kind": value["artifact_kind"], "version": value["version"]}
 
 
@@ -1047,7 +1298,11 @@ def full_replay() -> dict[str, Any]:
         compare_scientific(checker, N5_DATA / "independent", ("reconstructed_payload.json",))
 
     build = run(
-        python_command(ROOT / "scripts" / "build_paper.py", "--check-byte-identical"),
+        python_command(
+            ROOT / "scripts" / "build_paper.py",
+            "--check-byte-identical",
+            "--check-toolchain-lock",
+        ),
         timeout=600,
     )
     require("PASS_PAPER_BYTE_IDENTITY" in build, "isolated source/PDF byte identity")
@@ -1092,13 +1347,17 @@ def main() -> int:
     }
     paper = verify_pdf()
     result["paper"] = paper
+    visual_qa = verify_visual_qa(paper)
+    toolchain = verify_toolchain_lock(paper)
+    result["pdf_visual_qa"] = visual_qa
+    result["pdf_build_toolchain"] = toolchain
     result["theorem_summary"] = verify_theorem_summary(
         four_vertex_atlas,
         four_vertex_minima,
         structural_boundary,
         unified_five_vertex,
     )
-    result["attestation"] = verify_attestation(manifest, paper)
+    result["attestation"] = verify_attestation(manifest, paper, visual_qa, toolchain)
     result["git_boundary"] = verify_git_boundary(args.skip_git_boundary, args.git_state)
     if not args.skip_git_boundary:
         result["identity_binding"] = {

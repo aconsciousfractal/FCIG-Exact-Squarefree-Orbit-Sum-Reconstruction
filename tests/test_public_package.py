@@ -102,6 +102,9 @@ class PublicPackageTests(unittest.TestCase):
         self.assertEqual(attestation["intended_release_tag"], "v2.0.0")
         self.assertFalse(attestation["event_boundary"]["external_review_state_recorded"])
         self.assertFalse(attestation["event_boundary"]["publication_state_recorded"])
+        self.assertEqual(attestation["pdf_visual_qa"]["status"], "PASS_ALL_PAGES_INSPECTED")
+        self.assertEqual(attestation["pdf_visual_qa"]["inspected_pages"], 21)
+        self.assertEqual(attestation["pdf_build_toolchain"]["loaded_file_count"], 104)
         self.assertNotIn("review", attestation)
         self.assertNotIn("publication_actions", attestation)
         self.assertNotIn("git_candidate", attestation)
@@ -110,6 +113,20 @@ class PublicPackageTests(unittest.TestCase):
         paths = {build_manifest.relative_name(path) for path in build_manifest.package_files()}
         self.assertNotIn("MANIFEST_SHA256.txt", paths)
         self.assertNotIn("BUILD_ATTESTATION.json", paths)
+        self.assertIn("PDF_BUILD_TOOLCHAIN.json", paths)
+        self.assertIn("docs/PDF_VISUAL_QA.json", paths)
+
+    def test_unit_tests_are_direct_release_boundary_checks(self) -> None:
+        workflow = (ROOT / ".github" / "workflows" / "verify.yml").read_text(encoding="utf-8")
+        core = workflow.split("  release-boundary:", 1)[0]
+        release = workflow.split("  release-boundary:", 1)[1].split("  full-replay:", 1)[0]
+        for name, section in (("core", core), ("release", release)):
+            with self.subTest(job=name):
+                self.assertIn("python -B -m unittest discover -s tests -v", section)
+                self.assertIn("python -B -O -m unittest discover -s tests -v", section)
+                self.assertIn("scripts/verify.py --profile core", section)
+        self.assertNotIn("apt-get", workflow)
+        self.assertNotIn("--profile full", workflow)
 
     def test_plain_paper_title_block(self) -> None:
         source = (ROOT / "paper" / "main.tex").read_text(encoding="utf-8")

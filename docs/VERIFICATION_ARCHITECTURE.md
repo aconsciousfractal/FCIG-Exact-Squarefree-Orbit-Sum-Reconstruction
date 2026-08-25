@@ -22,7 +22,15 @@ The package separates mathematical proof objects from transport checks.
    permits normal history and refs; candidate mode requires the intended tag
    to be absent; release mode requires annotated `v2.0.0` on the same `HEAD`.
 8. **PDF identity.** Metadata, text boundary, embedded fonts, page geometry,
-   attachments, active actions, and rendered-page QA are separate checks.
+   attachments, and active actions are checked directly.
+9. **Visual-QA identity.** A closed JSON record must declare PASS, enumerate
+   all 21 pages, and match the exact PDF path, hash, size, geometry, renderer,
+   and DPI. Its Markdown projection is exact. The verifier checks this binding,
+   while the visual observation itself remains human evidence.
+10. **Build-environment identity.** The canonical PDF lock fixes the MiKTeX
+    engine, BibTeX, commands, deterministic environment, and 104 loaded TeX
+    files. The full replay requires both this lock and byte-identical output;
+    a hosted run is not claimed until it is actually observed.
 
 `scripts/verify.py --profile core` checks all distributed evidence. The
 `full` profile additionally regenerates the independent scientific surfaces

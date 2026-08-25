@@ -9,6 +9,13 @@ Build from the repository root:
 python scripts/build_paper.py
 ```
 
+The canonical byte-identical environment is fixed in
+`PDF_BUILD_TOOLCHAIN.json`. Check both output bytes and toolchain identity with:
+
+```text
+python -B scripts/build_paper.py --check-byte-identical --check-toolchain-lock
+```
+
 The stable output is:
 
 ```text

@@ -1,0 +1,486 @@
+{
+  "artifact": {
+    "bytes": 462115,
+    "path": "paper/Exact_Squarefree_Orbit_Sum_Reconstruction_of_Four_and_Five_Vertex_Loopless_Digraphs.pdf",
+    "sha256": "2c7961afe9c21ff65eee41cbd55716e59d38a2c51134b4a5199874f79fee22bb"
+  },
+  "assurance_boundary": {
+    "canonical_environment_is_portable": false,
+    "hosted_byte_identity_requires_observed_success": true,
+    "lock_records_build_facts_not_a_publication_event": true
+  },
+  "canonical_environment": {
+    "bibliography_processor": {
+      "banner": "MiKTeX-BibTeX 4.2 (MiKTeX 25.12)",
+      "executable": "bibtex.exe",
+      "stdout_sha256": "bd7d478eea1b80373bd53c57f7fbb7066efbd3733a84193be1c7302887a56bef"
+    },
+    "commands": [
+      [
+        "pdflatex.exe",
+        "--disable-installer",
+        "-no-shell-escape",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "-file-line-error",
+        "main.tex"
+      ],
+      [
+        "bibtex.exe",
+        "main"
+      ],
+      [
+        "pdflatex.exe",
+        "--disable-installer",
+        "-no-shell-escape",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "-file-line-error",
+        "main.tex"
+      ],
+      [
+        "pdflatex.exe",
+        "--disable-installer",
+        "-no-shell-escape",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "-file-line-error",
+        "main.tex"
+      ]
+    ],
+    "compiler_mode": "pdflatex+bibtex",
+    "engine": {
+      "banner": "MiKTeX-pdfTeX 4.23 (MiKTeX 25.12)",
+      "executable": "pdflatex.exe",
+      "stdout_sha256": "e114ea4a56e00fb76a6a40062264ca1826f120156c2621c365260fa7c2ac1ef4"
+    },
+    "environment": {
+      "FORCE_SOURCE_DATE": "1",
+      "SOURCE_DATE_EPOCH": "1787529600",
+      "TZ": "UTC"
+    },
+    "latex_format": "LaTeX2e <2025-11-01>",
+    "loaded_file_inventory": [
+      {
+        "file": "article.cls",
+        "version": "2025/01/22 v1.4n"
+      },
+      {
+        "file": "size12.clo",
+        "version": "2025/01/22 v1.4n"
+      },
+      {
+        "file": "fontenc.sty",
+        "version": "2025/07/18 v2.1d"
+      },
+      {
+        "file": "inputenc.sty",
+        "version": "2024/02/08 v1.3d"
+      },
+      {
+        "file": "babel.sty",
+        "version": "2025/12/11 v25.17"
+      },
+      {
+        "file": "bblopts.cfg",
+        "version": "2005/09/08 v0.1"
+      },
+      {
+        "file": "babel-english.tex",
+        "version": null
+      },
+      {
+        "file": "english.ldf",
+        "version": "2017/06/06 v3.3r"
+      },
+      {
+        "file": "lmodern.sty",
+        "version": "2015/05/01 v1.6.1"
+      },
+      {
+        "file": "microtype.sty",
+        "version": "2026/03/01 v3.2d"
+      },
+      {
+        "file": "keyval.sty",
+        "version": "2022/05/29 v1.15"
+      },
+      {
+        "file": "etoolbox.sty",
+        "version": "2025/10/02 v2.5m"
+      },
+      {
+        "file": "microtype-pdftex.def",
+        "version": "2026/03/01 v3.2d"
+      },
+      {
+        "file": "microtype.cfg",
+        "version": "2026/03/01 v3.2d"
+      },
+      {
+        "file": "amsmath.sty",
+        "version": "2025/07/09 v2.17z"
+      },
+      {
+        "file": "amstext.sty",
+        "version": "2024/11/17 v2.01"
+      },
+      {
+        "file": "amsgen.sty",
+        "version": "1999/11/30 v2.0"
+      },
+      {
+        "file": "amsbsy.sty",
+        "version": "1999/11/29 v1.2d"
+      },
+      {
+        "file": "amsopn.sty",
+        "version": "2022/04/08 v2.04"
+      },
+      {
+        "file": "amssymb.sty",
+        "version": "2013/01/14 v3.01"
+      },
+      {
+        "file": "amsfonts.sty",
+        "version": "2013/01/14 v3.01"
+      },
+      {
+        "file": "amsthm.sty",
+        "version": "2020/05/29 v2.20.6"
+      },
+      {
+        "file": "mathtools.sty",
+        "version": "2024/10/04 v1.31"
+      },
+      {
+        "file": "calc.sty",
+        "version": "2025/03/01 v4.3b"
+      },
+      {
+        "file": "mhsetup.sty",
+        "version": "2021/03/18 v1.4"
+      },
+      {
+        "file": "booktabs.sty",
+        "version": "2020/01/12 v1.61803398"
+      },
+      {
+        "file": "array.sty",
+        "version": "2025/09/25 v2.6n"
+      },
+      {
+        "file": "longtable.sty",
+        "version": "2025-10-13 v4.24"
+      },
+      {
+        "file": "tabularx.sty",
+        "version": "2023/12/11 v2.12a"
+      },
+      {
+        "file": "geometry.sty",
+        "version": "2026/03/07 v6.0"
+      },
+      {
+        "file": "ifvtex.sty",
+        "version": "2019/10/25 v1.7"
+      },
+      {
+        "file": "iftex.sty",
+        "version": "2024/12/12 v1.0g"
+      },
+      {
+        "file": "geometry.cfg",
+        "version": null
+      },
+      {
+        "file": "xcolor.sty",
+        "version": "2024/09/29 v3.02"
+      },
+      {
+        "file": "color.cfg",
+        "version": "2016/01/02 v1.6"
+      },
+      {
+        "file": "pdftex.def",
+        "version": "2025/09/29 v1.2d"
+      },
+      {
+        "file": "mathcolor.ltx",
+        "version": null
+      },
+      {
+        "file": "hyperref.sty",
+        "version": "2025-07-12 v7.01o"
+      },
+      {
+        "file": "kvsetkeys.sty",
+        "version": "2022-10-05 v1.19"
+      },
+      {
+        "file": "kvdefinekeys.sty",
+        "version": "2019-12-19 v1.6"
+      },
+      {
+        "file": "pdfescape.sty",
+        "version": "2019/12/09 v1.15"
+      },
+      {
+        "file": "ltxcmds.sty",
+        "version": "2023-12-04 v1.26"
+      },
+      {
+        "file": "pdftexcmds.sty",
+        "version": "2020-06-27 v0.33"
+      },
+      {
+        "file": "infwarerr.sty",
+        "version": "2019/12/03 v1.5"
+      },
+      {
+        "file": "hycolor.sty",
+        "version": "2020-01-27 v1.10"
+      },
+      {
+        "file": "nameref.sty",
+        "version": "2025-06-21 v2.57"
+      },
+      {
+        "file": "refcount.sty",
+        "version": "2019/12/15 v3.6"
+      },
+      {
+        "file": "gettitlestring.sty",
+        "version": "2019/12/15 v1.6"
+      },
+      {
+        "file": "kvoptions.sty",
+        "version": "2022-06-15 v3.15"
+      },
+      {
+        "file": "stringenc.sty",
+        "version": "2019/11/29 v1.12"
+      },
+      {
+        "file": "pd1enc.def",
+        "version": "2025-07-12 v7.01o"
+      },
+      {
+        "file": "intcalc.sty",
+        "version": "2019/12/15 v1.3"
+      },
+      {
+        "file": "puenc.def",
+        "version": "2025-07-12 v7.01o"
+      },
+      {
+        "file": "url.sty",
+        "version": "2013/09/16 ver"
+      },
+      {
+        "file": "bitset.sty",
+        "version": "2019/12/09 v1.3"
+      },
+      {
+        "file": "bigintcalc.sty",
+        "version": "2019/12/15 v1.5"
+      },
+      {
+        "file": "hpdftex.def",
+        "version": "2025-07-12 v7.01o"
+      },
+      {
+        "file": "rerunfilecheck.sty",
+        "version": "2025-06-21 v1.11"
+      },
+      {
+        "file": "uniquecounter.sty",
+        "version": "2019/12/15 v1.4"
+      },
+      {
+        "file": "macros.tex",
+        "version": null
+      },
+      {
+        "file": "t1lmr.fd",
+        "version": "2015/05/01 v1.6.1"
+      },
+      {
+        "file": "l3backend-pdftex.def",
+        "version": "2025-10-09 L3"
+      },
+      {
+        "file": "mt-cmr.cfg",
+        "version": "2013/05/19 v2.2"
+      },
+      {
+        "file": "graphicx.sty",
+        "version": "2024/12/31 v1.2e"
+      },
+      {
+        "file": "graphics.sty",
+        "version": "2024/08/06 v1.4g"
+      },
+      {
+        "file": "trig.sty",
+        "version": "2023/12/02 v1.11"
+      },
+      {
+        "file": "graphics.cfg",
+        "version": "2016/06/04 v1.11"
+      },
+      {
+        "file": "supp-pdf.mkii",
+        "version": null
+      },
+      {
+        "file": "epstopdf-base.sty",
+        "version": "2020-01-24 v2.11"
+      },
+      {
+        "file": "epstopdf-sys.cfg",
+        "version": "2021/03/18 v2.0"
+      },
+      {
+        "file": "main.out",
+        "version": null
+      },
+      {
+        "file": "main.out",
+        "version": null
+      },
+      {
+        "file": "ot1lmr.fd",
+        "version": "2015/05/01 v1.6.1"
+      },
+      {
+        "file": "omllmm.fd",
+        "version": "2015/05/01 v1.6.1"
+      },
+      {
+        "file": "omslmsy.fd",
+        "version": "2015/05/01 v1.6.1"
+      },
+      {
+        "file": "omxlmex.fd",
+        "version": "2015/05/01 v1.6.1"
+      },
+      {
+        "file": "umsa.fd",
+        "version": "2013/01/14 v3.01"
+      },
+      {
+        "file": "mt-msa.cfg",
+        "version": "2006/02/04 v1.1"
+      },
+      {
+        "file": "umsb.fd",
+        "version": "2013/01/14 v3.01"
+      },
+      {
+        "file": "mt-msb.cfg",
+        "version": "2005/06/01 v1.0"
+      },
+      {
+        "file": "abstract.tex",
+        "version": null
+      },
+      {
+        "file": "ts1lmr.fd",
+        "version": "2015/05/01 v1.6.1"
+      },
+      {
+        "file": "sections/01_introduction.tex",
+        "version": null
+      },
+      {
+        "file": "tables/T01_exact_panel.tex",
+        "version": null
+      },
+      {
+        "file": "sections/02_model.tex",
+        "version": null
+      },
+      {
+        "file": "sections/03_hitting_set.tex",
+        "version": null
+      },
+      {
+        "file": "sections/04_n4.tex",
+        "version": null
+      },
+      {
+        "file": "t1lmtt.fd",
+        "version": "2015/05/01 v1.6.1"
+      },
+      {
+        "file": "tables/T03_n4_minima.tex",
+        "version": null
+      },
+      {
+        "file": "sections/05_n5.tex",
+        "version": null
+      },
+      {
+        "file": "tables/T04_n5_dag.tex",
+        "version": null
+      },
+      {
+        "file": "sections/06_tree_index_two.tex",
+        "version": null
+      },
+      {
+        "file": "tables/T02_collision_tree.tex",
+        "version": null
+      },
+      {
+        "file": "sections/07_conditional.tex",
+        "version": null
+      },
+      {
+        "file": "tables/T05_conditional.tex",
+        "version": null
+      },
+      {
+        "file": "sections/08_certificates.tex",
+        "version": null
+      },
+      {
+        "file": "tables/T06_certificate_inventory.tex",
+        "version": null
+      },
+      {
+        "file": "sections/09_prior_art_and_limits.tex",
+        "version": null
+      },
+      {
+        "file": "sections/10_conclusion.tex",
+        "version": null
+      },
+      {
+        "file": "appendices/A_finite_action_lemmas.tex",
+        "version": null
+      },
+      {
+        "file": "appendices/B_n4_lower_certificate.tex",
+        "version": null
+      },
+      {
+        "file": "appendices/C_n5_branch_dag.tex",
+        "version": null
+      },
+      {
+        "file": "appendices/D_atlas_replay.tex",
+        "version": null
+      },
+      {
+        "file": "main.bbl",
+        "version": null
+      }
+    ],
+    "network_package_installation": "disabled",
+    "operating_system_family": "Windows",
+    "shell_escape": "disabled"
+  },
+  "schema_version": "orbit_sum_pdf_build_toolchain_v1"
+}
