@@ -1,0 +1,79 @@
+\section{Problem, exact contribution, and boundaries}
+\label{sec:problem}
+
+Fix $n\in\{4,5\}$ and let $G$ be $S_n$ or $A_n$.  The carrier is the set of
+loopless directed graphs on the labelled vertex set $[n]$, represented by
+Boolean arc masks.  The group acts by relabelling vertices.  For every
+$G$-orbit of nonempty squarefree arc supports we use the associated orbit sum
+as an integer-valued counting coordinate.  Two finite questions are then
+separated:
+\begin{enumerate}
+  \item what is the least support degree at which the complete cumulative
+  dictionary distinguishes every $G$-orbit of graphs;
+  \item inside that least-degree separating dictionary, what is the least number of
+  coordinates that still distinguishes every orbit?
+\end{enumerate}
+
+The second question is global: every coordinate through the exact degree may
+be retained or omitted.  It is not the conditional problem in which all
+lower-degree coordinates are fixed and only top-degree coordinates are
+minimized.  Section~\ref{sec:conditional} treats that distinction explicitly.
+
+Write $\rho(n,G)$ for the least separating degree and $\tau(n,G)$ for the
+minimum cardinality inside the full dictionary through degree $\rho(n,G)$.
+The central finite statement is the following.
+
+\begin{theorem}[Unified four- and five-vertex reconstruction theorem]
+\label{thm:unified}
+For
+\[
+ (n,G)=(4,S_4),(4,A_4),(5,S_5),(5,A_5),
+\]
+the exact least separating degrees are respectively
+\[
+  \rho(n,G)=3,3,4,4.
+\]
+The full dictionaries at those degrees contain respectively
+$19,29,83,124$ coordinates, and their minimum separating subfamilies have
+cardinalities
+\[
+  \tau(n,G)=7,11,14,17.
+\]
+\end{theorem}
+
+\begin{proof}
+The four-vertex degree and minimum assertions are proved in
+Section~\ref{sec:n4}: explicit degree-two collisions give necessity, complete
+degree-three signature tables give sufficiency, certified supports attain
+$7$ and $11$, and disjoint structural constraints give matching lower bounds.
+The five-vertex assertions are proved in Section~\ref{sec:n5}: the residual
+degree-three pairs give necessity, the full quartic signatures give
+sufficiency, witnesses of sizes $14$ and $17$ give upper bounds, and complete
+checked branch DAGs exclude budgets $13$ and $16$.  The four cases use the
+same definitions in Sections~\ref{sec:model} and~\ref{sec:hitting-set}.
+\end{proof}
+
+\input{tables/T01_exact_panel}
+
+The theorem is accompanied by a support-shape statement.  One degree below
+exact reconstruction, every residual pair for $S_4$, $A_4$, and $S_5$ has an
+individual tree-supported separator.  For $A_5$, exactly eight residual pairs
+are tree-blind, and each is the pair of $A_5$-orbits inside one $S_5$-orbit.
+Section~\ref{sec:tree-index-two} records the exact finite meaning of that
+index-two contrast.
+
+\begin{proofboundary}
+The objects are binary, directed, and loopless.  Coordinates
+are squarefree orbit sums of nonempty arc supports.  Equivalence is the stated
+vertex action, not complementation, transposition, or an external quotient.
+The only vertex counts are four and five.  The paper does not infer a formula
+for other vertex counts, does not replace the squarefree dictionary by a full
+polynomial invariant space, and gives the index-two terminology no physical
+interpretation.
+\end{proofboundary}
+
+The certified atlas $\CertifiedAtlas$ is part of the evidentiary package.  It contains
+canonical registries, collision masks, upper witnesses, lower certificates,
+and independent reconstructions.  The paper and atlas have
+different jobs: the paper states and explains the mathematics, while the
+atlas makes each bounded enumeration and optimization replayable.

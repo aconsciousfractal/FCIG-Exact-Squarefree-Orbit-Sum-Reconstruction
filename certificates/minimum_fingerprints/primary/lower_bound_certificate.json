@@ -1,0 +1,572 @@
+{
+  "experiment_id": "MINIMUM_FINGERPRINTS",
+  "groups": [
+    {
+      "certificate_type": "complete_branch_dag_v1",
+      "claimed_lower_bound": 7,
+      "group": "S4",
+      "nodes": [
+        {
+          "branch_constraint_index": 0,
+          "budget": 6,
+          "children": [
+            {
+              "coordinate_index": 0,
+              "node_id": "S4-N0000001"
+            }
+          ],
+          "kind": "branch",
+          "node_id": "S4-N0000000",
+          "uncovered_count": 26,
+          "uncovered_sha256": "debe58dd6e3f48bb9d579a7c53675c7062e0d77e4f75146d0431a4a66e8b970c"
+        },
+        {
+          "branch_constraint_index": 1,
+          "budget": 5,
+          "children": [
+            {
+              "coordinate_index": 1,
+              "node_id": "S4-N0000002"
+            },
+            {
+              "coordinate_index": 2,
+              "node_id": "S4-N0000008"
+            }
+          ],
+          "kind": "branch",
+          "node_id": "S4-N0000001",
+          "uncovered_count": 25,
+          "uncovered_sha256": "25fbb38760f5098b13900edc6cb50c2eec8f261f860558d8ad7775787f109e55"
+        },
+        {
+          "branch_constraint_index": 3,
+          "budget": 4,
+          "children": [
+            {
+              "coordinate_index": 2,
+              "node_id": "S4-N0000003"
+            },
+            {
+              "coordinate_index": 3,
+              "node_id": "S4-N0000006"
+            }
+          ],
+          "kind": "branch",
+          "node_id": "S4-N0000002",
+          "uncovered_count": 21,
+          "uncovered_sha256": "08675cb47a15a5419f11e2b8d9543363627dd68bb6218b73cea92d4e4c298dd9"
+        },
+        {
+          "branch_constraint_index": 6,
+          "budget": 3,
+          "children": [
+            {
+              "coordinate_index": 3,
+              "node_id": "S4-N0000004"
+            },
+            {
+              "coordinate_index": 4,
+              "node_id": "S4-N0000005"
+            }
+          ],
+          "kind": "branch",
+          "node_id": "S4-N0000003",
+          "uncovered_count": 18,
+          "uncovered_sha256": "44cb638108e937bc70db9ba7a9d1256313e8b6df5b529031e56ffa0aeef9ff95"
+        },
+        {
+          "budget": 2,
+          "kind": "packing_leaf",
+          "node_id": "S4-N0000004",
+          "packing_constraint_indices": [
+            10,
+            11,
+            16
+          ],
+          "uncovered_count": 16,
+          "uncovered_sha256": "63db506fa1407ef7f58a5065cf00fd9ce40a589843c8ba9c09f4f3345ed2d1df"
+        },
+        {
+          "budget": 2,
+          "kind": "packing_leaf",
+          "node_id": "S4-N0000005",
+          "packing_constraint_indices": [
+            9,
+            11,
+            16
+          ],
+          "uncovered_count": 16,
+          "uncovered_sha256": "3138a25a17d51e20732eaae1411cab2bdf4634dee1770d5062e9728f0aa1a34c"
+        },
+        {
+          "branch_constraint_index": 5,
+          "budget": 3,
+          "children": [
+            {
+              "coordinate_index": 2,
+              "node_id": "S4-N0000004"
+            },
+            {
+              "coordinate_index": 4,
+              "node_id": "S4-N0000007"
+            }
+          ],
+          "kind": "branch",
+          "node_id": "S4-N0000006",
+          "uncovered_count": 18,
+          "uncovered_sha256": "8ecebc13a71478440d0302a80b11c83736e6e209caa1bcc6026a746545434f29"
+        },
+        {
+          "budget": 2,
+          "kind": "packing_leaf",
+          "node_id": "S4-N0000007",
+          "packing_constraint_indices": [
+            8,
+            11,
+            16
+          ],
+          "uncovered_count": 16,
+          "uncovered_sha256": "338105d5496291b1dc04c8d04d16c4444897d7bcb9c4a1af827679ec50d0ed03"
+        },
+        {
+          "branch_constraint_index": 2,
+          "budget": 4,
+          "children": [
+            {
+              "coordinate_index": 1,
+              "node_id": "S4-N0000003"
+            },
+            {
+              "coordinate_index": 3,
+              "node_id": "S4-N0000009"
+            }
+          ],
+          "kind": "branch",
+          "node_id": "S4-N0000008",
+          "uncovered_count": 21,
+          "uncovered_sha256": "f20aabeaeeca1c3f4159f52f35c1fd12f248468ff4b735dff8159698b7f7ed07"
+        },
+        {
+          "branch_constraint_index": 4,
+          "budget": 3,
+          "children": [
+            {
+              "coordinate_index": 1,
+              "node_id": "S4-N0000004"
+            },
+            {
+              "coordinate_index": 4,
+              "node_id": "S4-N0000010"
+            }
+          ],
+          "kind": "branch",
+          "node_id": "S4-N0000009",
+          "uncovered_count": 18,
+          "uncovered_sha256": "7aaaf6d12bd829d45cfc27efebbf432b9fcd34e15d9ccd864ce1ba83871713af"
+        },
+        {
+          "budget": 2,
+          "kind": "packing_leaf",
+          "node_id": "S4-N0000010",
+          "packing_constraint_indices": [
+            7,
+            11,
+            16
+          ],
+          "uncovered_count": 16,
+          "uncovered_sha256": "711d290b36bb42abc57e0c73995841927ee2a877ed9ea36b9fc22fab401a4f83"
+        }
+      ],
+      "packing_search_calls": 52,
+      "packing_search_complete": true,
+      "proof_node_count": 11,
+      "root_budget": 6,
+      "root_node_id": "S4-N0000000",
+      "root_uncovered_count": 26,
+      "root_uncovered_sha256": "debe58dd6e3f48bb9d579a7c53675c7062e0d77e4f75146d0431a4a66e8b970c"
+    },
+    {
+      "certificate_type": "complete_branch_dag_v1",
+      "claimed_lower_bound": 11,
+      "group": "A4",
+      "nodes": [
+        {
+          "branch_constraint_index": 0,
+          "budget": 10,
+          "children": [
+            {
+              "coordinate_index": 0,
+              "node_id": "A4-N0000001"
+            }
+          ],
+          "kind": "branch",
+          "node_id": "A4-N0000000",
+          "uncovered_count": 58,
+          "uncovered_sha256": "fa06f4b02a9b46e150eddd299e611fe1e30378d72fe0ef8d96db9bfd24068b6f"
+        },
+        {
+          "branch_constraint_index": 1,
+          "budget": 9,
+          "children": [
+            {
+              "coordinate_index": 1,
+              "node_id": "A4-N0000002"
+            },
+            {
+              "coordinate_index": 2,
+              "node_id": "A4-N0000017"
+            }
+          ],
+          "kind": "branch",
+          "node_id": "A4-N0000001",
+          "uncovered_count": 57,
+          "uncovered_sha256": "d6d325fc196f7db1900458b6ccc26a918f83db7e23406affa61bcdb9d1dce801"
+        },
+        {
+          "branch_constraint_index": 3,
+          "budget": 8,
+          "children": [
+            {
+              "coordinate_index": 2,
+              "node_id": "A4-N0000003"
+            },
+            {
+              "coordinate_index": 3,
+              "node_id": "A4-N0000013"
+            }
+          ],
+          "kind": "branch",
+          "node_id": "A4-N0000002",
+          "uncovered_count": 51,
+          "uncovered_sha256": "227078bce19d62f5e613b341adca32b7f4188fd03f950ebc0a49713ae1c066c4"
+        },
+        {
+          "branch_constraint_index": 6,
+          "budget": 7,
+          "children": [
+            {
+              "coordinate_index": 3,
+              "node_id": "A4-N0000004"
+            },
+            {
+              "coordinate_index": 4,
+              "node_id": "A4-N0000010"
+            }
+          ],
+          "kind": "branch",
+          "node_id": "A4-N0000003",
+          "uncovered_count": 46,
+          "uncovered_sha256": "3804c187ccbe357e756a08010e6e8f39767acb9b4c24fe42fde3d800229b54d1"
+        },
+        {
+          "branch_constraint_index": 10,
+          "budget": 6,
+          "children": [
+            {
+              "coordinate_index": 4,
+              "node_id": "A4-N0000005"
+            },
+            {
+              "coordinate_index": 5,
+              "node_id": "A4-N0000008"
+            }
+          ],
+          "kind": "branch",
+          "node_id": "A4-N0000004",
+          "uncovered_count": 42,
+          "uncovered_sha256": "8aacd7ddf9211a57d87dab1518a637dc908d49298b967e3f216079c80d035090"
+        },
+        {
+          "branch_constraint_index": 15,
+          "budget": 5,
+          "children": [
+            {
+              "coordinate_index": 5,
+              "node_id": "A4-N0000006"
+            },
+            {
+              "coordinate_index": 6,
+              "node_id": "A4-N0000007"
+            }
+          ],
+          "kind": "branch",
+          "node_id": "A4-N0000005",
+          "uncovered_count": 39,
+          "uncovered_sha256": "9e6039bbfd61bea923e86561698e8b58392aa4bfd3946823b4ac0abd5b1e8606"
+        },
+        {
+          "budget": 4,
+          "kind": "packing_leaf",
+          "node_id": "A4-N0000006",
+          "packing_constraint_indices": [
+            21,
+            22,
+            23,
+            24,
+            29
+          ],
+          "uncovered_count": 37,
+          "uncovered_sha256": "096862dae99ad5bf1ca279c0111fadbedd632894946990395f64701f48ce4138"
+        },
+        {
+          "budget": 4,
+          "kind": "packing_leaf",
+          "node_id": "A4-N0000007",
+          "packing_constraint_indices": [
+            20,
+            22,
+            23,
+            24,
+            29
+          ],
+          "uncovered_count": 37,
+          "uncovered_sha256": "da5f0c36f224e3fdd238c2fe638ff91132ba1ba65e3f2c18743dcdfa9a87adeb"
+        },
+        {
+          "branch_constraint_index": 14,
+          "budget": 5,
+          "children": [
+            {
+              "coordinate_index": 4,
+              "node_id": "A4-N0000006"
+            },
+            {
+              "coordinate_index": 6,
+              "node_id": "A4-N0000009"
+            }
+          ],
+          "kind": "branch",
+          "node_id": "A4-N0000008",
+          "uncovered_count": 39,
+          "uncovered_sha256": "2b1959ebaa7a0e86d73ff6105ff30741039739d948934ba77817267e1935c816"
+        },
+        {
+          "budget": 4,
+          "kind": "packing_leaf",
+          "node_id": "A4-N0000009",
+          "packing_constraint_indices": [
+            19,
+            22,
+            23,
+            24,
+            29
+          ],
+          "uncovered_count": 37,
+          "uncovered_sha256": "18911edfdff2c6bd6b7f66a118e368c8d0ba5de944a68ffab35a8709fef28dff"
+        },
+        {
+          "branch_constraint_index": 9,
+          "budget": 6,
+          "children": [
+            {
+              "coordinate_index": 3,
+              "node_id": "A4-N0000005"
+            },
+            {
+              "coordinate_index": 5,
+              "node_id": "A4-N0000011"
+            }
+          ],
+          "kind": "branch",
+          "node_id": "A4-N0000010",
+          "uncovered_count": 42,
+          "uncovered_sha256": "a7ca23047c2e15de13ac529dd05035238976c376d283d668505e333790695068"
+        },
+        {
+          "branch_constraint_index": 13,
+          "budget": 5,
+          "children": [
+            {
+              "coordinate_index": 3,
+              "node_id": "A4-N0000006"
+            },
+            {
+              "coordinate_index": 6,
+              "node_id": "A4-N0000012"
+            }
+          ],
+          "kind": "branch",
+          "node_id": "A4-N0000011",
+          "uncovered_count": 39,
+          "uncovered_sha256": "e34c77107800278cf0f8db70b53e237276d47c7b029b9a01631fc8508c326195"
+        },
+        {
+          "budget": 4,
+          "kind": "packing_leaf",
+          "node_id": "A4-N0000012",
+          "packing_constraint_indices": [
+            18,
+            22,
+            23,
+            24,
+            29
+          ],
+          "uncovered_count": 37,
+          "uncovered_sha256": "bf211535187061bdd36d8ce2c9e7b384dc2f1a64298dbf9049408fccab5d7974"
+        },
+        {
+          "branch_constraint_index": 5,
+          "budget": 7,
+          "children": [
+            {
+              "coordinate_index": 2,
+              "node_id": "A4-N0000004"
+            },
+            {
+              "coordinate_index": 4,
+              "node_id": "A4-N0000014"
+            }
+          ],
+          "kind": "branch",
+          "node_id": "A4-N0000013",
+          "uncovered_count": 46,
+          "uncovered_sha256": "624ac838580e74a00d8f1f4a2c3bc7cbd780094f99679be73caab0578092e10c"
+        },
+        {
+          "branch_constraint_index": 8,
+          "budget": 6,
+          "children": [
+            {
+              "coordinate_index": 2,
+              "node_id": "A4-N0000005"
+            },
+            {
+              "coordinate_index": 5,
+              "node_id": "A4-N0000015"
+            }
+          ],
+          "kind": "branch",
+          "node_id": "A4-N0000014",
+          "uncovered_count": 42,
+          "uncovered_sha256": "c64ecb91b21a98ccfd5425f30a5a06524b60050870ac571d8f4c0e87e07c66ab"
+        },
+        {
+          "branch_constraint_index": 12,
+          "budget": 5,
+          "children": [
+            {
+              "coordinate_index": 2,
+              "node_id": "A4-N0000006"
+            },
+            {
+              "coordinate_index": 6,
+              "node_id": "A4-N0000016"
+            }
+          ],
+          "kind": "branch",
+          "node_id": "A4-N0000015",
+          "uncovered_count": 39,
+          "uncovered_sha256": "e33a621d20c09f0e7218046f7c1009e4020df3cbc5ab1d316d9802a17601869b"
+        },
+        {
+          "budget": 4,
+          "kind": "packing_leaf",
+          "node_id": "A4-N0000016",
+          "packing_constraint_indices": [
+            17,
+            22,
+            23,
+            24,
+            29
+          ],
+          "uncovered_count": 37,
+          "uncovered_sha256": "4991d883ba8f3acb6c1375f68693ffec0f5c9cd0158b7ded7c201a8f7e38f5ef"
+        },
+        {
+          "branch_constraint_index": 2,
+          "budget": 8,
+          "children": [
+            {
+              "coordinate_index": 1,
+              "node_id": "A4-N0000003"
+            },
+            {
+              "coordinate_index": 3,
+              "node_id": "A4-N0000018"
+            }
+          ],
+          "kind": "branch",
+          "node_id": "A4-N0000017",
+          "uncovered_count": 51,
+          "uncovered_sha256": "bf4528683e51e0a7caf5c47c1b0ecea9afe9ca7c253402e72d2b6dfef1677f85"
+        },
+        {
+          "branch_constraint_index": 4,
+          "budget": 7,
+          "children": [
+            {
+              "coordinate_index": 1,
+              "node_id": "A4-N0000004"
+            },
+            {
+              "coordinate_index": 4,
+              "node_id": "A4-N0000019"
+            }
+          ],
+          "kind": "branch",
+          "node_id": "A4-N0000018",
+          "uncovered_count": 46,
+          "uncovered_sha256": "4fbd822e3c266a1304ce9e7f5bb9cf2b89f1fff361479129f71467341dcc890c"
+        },
+        {
+          "branch_constraint_index": 7,
+          "budget": 6,
+          "children": [
+            {
+              "coordinate_index": 1,
+              "node_id": "A4-N0000005"
+            },
+            {
+              "coordinate_index": 5,
+              "node_id": "A4-N0000020"
+            }
+          ],
+          "kind": "branch",
+          "node_id": "A4-N0000019",
+          "uncovered_count": 42,
+          "uncovered_sha256": "7be52b591e98347dfe1334fe47d8ef30b10a6cd524698ee592a18bc7bca3fa9f"
+        },
+        {
+          "branch_constraint_index": 11,
+          "budget": 5,
+          "children": [
+            {
+              "coordinate_index": 1,
+              "node_id": "A4-N0000006"
+            },
+            {
+              "coordinate_index": 6,
+              "node_id": "A4-N0000021"
+            }
+          ],
+          "kind": "branch",
+          "node_id": "A4-N0000020",
+          "uncovered_count": 39,
+          "uncovered_sha256": "580b82ab2218ad5d1eecc1ee3817b83e29a42167db7a2c8c35809be5d441484f"
+        },
+        {
+          "budget": 4,
+          "kind": "packing_leaf",
+          "node_id": "A4-N0000021",
+          "packing_constraint_indices": [
+            16,
+            22,
+            23,
+            24,
+            29
+          ],
+          "uncovered_count": 37,
+          "uncovered_sha256": "faa8de516fc1a7376e2f61a1a1266aac9337b94381095642d42538af9abdf7dc"
+        }
+      ],
+      "packing_search_calls": 464,
+      "packing_search_complete": true,
+      "proof_node_count": 22,
+      "root_budget": 10,
+      "root_node_id": "A4-N0000000",
+      "root_uncovered_count": 58,
+      "root_uncovered_sha256": "fa06f4b02a9b46e150eddd299e611fe1e30378d72fe0ef8d96db9bfd24068b6f"
+    }
+  ],
+  "schema_version": "minimum_fingerprints_lower_bound_certificate_v1"
+}

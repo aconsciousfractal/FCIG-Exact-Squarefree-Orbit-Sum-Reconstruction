@@ -1,0 +1,106 @@
+\section{Loopless directed carrier, actions, and squarefree dictionaries}
+\label{sec:model}
+
+Let $V=[n]=\{0,\ldots,n-1\}$ and
+\[
+  \Omega_n=\{(i,j)\in V^2:i\neq j\}.
+\]
+A labelled loopless digraph is a subset $P\subseteq\Omega_n$, or equivalently
+its indicator $x^P\in\{0,1\}^{\Omega_n}$.  The selected group $G\leq S_n$
+acts by
+\[
+  g\cdot(i,j)=(g(i),g(j)),\qquad
+  g\cdot P=\{g\cdot a:a\in P\}.
+\]
+The objects to be reconstructed are the orbits $G\backslash
+\{0,1\}^{\Omega_n}$.  There are $218,368,9608,17824$ of them for the four
+actions in Table~\ref{tab:exact-panel}.
+
+For a nonempty support $T\subseteq\Omega_n$, set
+\[
+  m_T(x)=\prod_{a\in T}x_a,
+  \qquad
+  q^G_{[T]}(x)=\sum_{U\in G\cdot T}m_U(x),
+\]
+where the sum is over the distinct supports in the orbit.  On a Boolean
+pattern $P$ this specializes to
+\begin{equation}
+  q^G_{[T]}(P)=\#\{U\in G\cdot T:U\subseteq P\}.
+  \label{eq:contained-support-count}
+\end{equation}
+Thus every coordinate is an integer count.  It depends only on the orbit of
+$P$ and on the support orbit of $T$.
+
+\begin{definition}[Cumulative squarefree dictionary]
+For $d\geq1$, let
+\[
+  \Dict^G_{n,\leq d}
+   =\{q^G_{[T]}: \varnothing\neq T\subseteq\Omega_n,
+       \ |T|\leq d\},
+\]
+with one coordinate for each $G$-orbit of supports.  Its signature map is
+\[
+  \Fingerprint^G_{n,\leq d}([P]_G)
+   =\bigl(q(P)\bigr)_{q\in\Dict^G_{n,\leq d}}.
+\]
+The reconstruction degree $\rho(n,G)$ is the least $d$ for which this map is
+injective.
+\end{definition}
+
+The exact-degree coordinate profiles are
+\[
+\begin{array}{c|c}
+G & (|\Dict^G_{n,1}|,|\Dict^G_{n,2}|,\ldots)\\ \hline
+S_4&(1,5,13)\\
+A_4&(1,7,21)\\
+S_5&(1,5,16,61)\\
+A_5&(1,6,21,96).
+\end{array}
+\]
+The sums of these rows give the dictionary sizes in the central theorem.  In
+particular, a profile entry is an exact-degree count, not a cumulative count.
+
+\subsection{Canonical finite encoding}
+
+The atlas orders arcs lexicographically by $(i,j)$ with $i\neq j$.  A pattern
+or support is serialized by the corresponding unsigned bit mask.  Its
+canonical representative is the minimum unsigned mask in its $G$-orbit.
+Coordinates are ordered by degree and subsequently by canonical support mask.
+The identifier therefore contains the action, vertex count, degree, and
+canonical mask.  For four vertices, compact table identifiers are resolved
+through the coordinate registry; the five-vertex registry uses the mask
+directly.  Both forms resolve to a unique canonical support.
+
+This encoding is convenient but not mathematical content: replacing it by
+any bijective serialization leaves all orbit sums, signatures, and separator
+masks unchanged.  Canonicalization merely permits byte-level comparison of
+two independent reconstructions.
+
+\subsection{Orbit incidence and the normalization lock}
+
+For a pattern orbit $R$ and support orbit $C$, let
+\[
+ A_{R,C}=\#\{T\in C:T\subseteq P\}\quad(P\in R)
+\]
+and
+\[
+ M_{R,C}=\#\{P\in R:T\subseteq P\}\quad(T\in C).
+\]
+Both quantities are well defined by transitivity.  Double-counting incident
+pairs $(P,T)\in R\times C$ gives
+\begin{equation}
+  |R|A_{R,C}=|C|M_{R,C}.
+  \label{eq:normalization-lock}
+\end{equation}
+The signature entries in this paper are the $A_{R,C}$ values of
+Equation~\eqref{eq:contained-support-count}.  Equation
+\eqref{eq:normalization-lock} is essential: the two incidence normalizations
+are not identified unless their orbit-size factors are carried explicitly.
+The matrix vocabulary is related to classical orbit-incidence constructions
+such as the Kramer--Mesner matrix \cite{KramerMesner1976}, but none of the
+finite values below is imported from that literature.
+
+Orbit enumeration and orbit sums sit in a broad classical framework
+\cite{Polya1937,Mnukhin1992,RadcliffeScott2006}.  Here the carrier, group,
+squarefree support restriction, and integer normalization are fixed before
+any separation or optimization is performed.

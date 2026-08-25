@@ -1,0 +1,123 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Exact Squarefree Orbit-Sum Reconstruction
+%% Standalone public-repository manuscript source.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt,a4paper]{article}
+\ifdefined\pdfinfoomitdate
+  \pdfinfoomitdate=1
+\fi
+\ifdefined\pdfsuppressptexinfo
+  \pdfsuppressptexinfo=-1
+\fi
+\ifdefined\pdftrailerid
+  \pdftrailerid{}
+\fi
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{lmodern}
+\usepackage[protrusion=true,expansion=false]{microtype}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,array,longtable,tabularx}
+\usepackage{geometry}
+\geometry{margin=2.6cm}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\Urlmuskip=0mu plus 2mu\relax
+\urlstyle{tt}
+\setlength{\emergencystretch}{3em}
+\setlength{\parskip}{0pt}
+\linespread{1.015}
+\raggedbottom
+
+\input{macros}
+
+\hypersetup{
+  hypertexnames=false,
+  pdflang={en-US},
+  pdftitle={Exact Squarefree Orbit-Sum Reconstruction of Four- and Five-Vertex Loopless Digraphs: Minimum Separating Fingerprints, Tree Separators, and a Certified Atlas},
+  pdfauthor={Oleksiy Babanskyy},
+  pdfsubject={finite group actions, separating invariants, exact hitting sets, and certified reconstruction},
+  pdfkeywords={directed graph, finite group action, orbit sum, separating invariant, reconstruction, hitting set, certified atlas}
+}
+
+\title{Exact Squarefree Orbit-Sum Reconstruction of Four- and Five-Vertex
+Loopless Digraphs:\\
+Minimum Separating Fingerprints, Tree Separators, and a Certified Atlas}
+\author{Oleksiy Babanskyy}
+\date{}
+
+\pagestyle{plain}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\input{abstract}
+\end{abstract}
+
+\smallskip
+\noindent\textbf{Keywords:} finite group actions; directed graphs; orbit
+sums; separating invariants; reconstruction; exact hitting sets; certified
+atlases.
+
+\smallskip
+\noindent\textbf{MSC 2020:} 05C20; 05E18; 13A50; 90C27.
+
+\smallskip
+\noindent\footnotesize Copyright \textcopyright\ 2026 Oleksiy Babanskyy.
+The repository's MIT license applies to the assurance software and generated
+data, not to this manuscript.
+\normalsize
+
+\input{sections/01_introduction}
+\input{sections/02_model}
+\input{sections/03_hitting_set}
+\input{sections/04_n4}
+\input{sections/05_n5}
+\input{sections/06_tree_index_two}
+\input{sections/07_conditional}
+\input{sections/08_certificates}
+\input{sections/09_prior_art_and_limits}
+\input{sections/10_conclusion}
+
+\appendix
+\input{appendices/A_finite_action_lemmas}
+\input{appendices/B_n4_lower_certificate}
+\input{appendices/C_n5_branch_dag}
+\input{appendices/D_atlas_replay}
+
+\section*{Data and code availability}
+The proof is computer-assisted.  This manuscript gives the mathematical
+reduction, explicit upper witnesses, and the local soundness argument for the
+lower-certificate checker.  For the five-vertex lower bounds, the distributed
+pair cores and complete branch DAGs are essential finite proof objects:
+excluding budgets $13$ and $16$ requires checking all $63{,}589$ and
+$213{,}648$ reachable nodes, respectively.  The designated
+\href{https://github.com/aconsciousfractal/FCIG-Exact-Squarefree-Orbit-Sum-Reconstruction}{companion repository}
+for these materials is
+\begin{center}
+\small
+\texttt{https://github.com/aconsciousfractal/FCIG-Exact-}\allowbreak
+\texttt{Squarefree-Orbit-Sum-Reconstruction}.
+\end{center}
+It contains the exact finite certificates and independent replay code
+described in Appendix~\ref{app:atlas-replay}.  The optimizer was used only to
+discover witnesses and hard pair cores; the accepted lower bounds come from
+the checker that reconstructs every separator mask and validates every
+reachable DAG transition.  Third-party full texts are not redistributed.
+
+\section*{Acknowledgment of prior frameworks}
+The finite-action enumeration framework is classical and is represented here
+by P\'olya's work.  The orbit-incidence viewpoint follows the
+Kramer--Mesner tradition, while the language of separating invariants and
+reconstruction is drawn from the cited invariant-theoretic and graph-
+reconstruction literature.  The exact four- and five-vertex numerical
+statements are established by the arguments and finite certificates given
+here; no novelty, priority, or firstness claim is made.
+
+\bibliographystyle{alpha}
+\bibliography{refs}
+
+\end{document}

@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite the article below."
+title: "Exact Squarefree Orbit-Sum Reconstruction of Four- and Five-Vertex Loopless Digraphs"
+type: software
+authors:
+  - family-names: Babanskyy
+    given-names: Oleksiy
+    orcid: "https://orcid.org/0009-0001-6176-6208"
+repository-code: "https://github.com/aconsciousfractal/FCIG-Exact-Squarefree-Orbit-Sum-Reconstruction"
+version: "2.0.0"
+license: MIT
+keywords:
+  - finite-group-actions
+  - directed-graphs
+  - orbit-sums
+  - separating-invariants
+  - exact-hitting-sets
+  - certified-computation
+preferred-citation:
+  type: article
+  title: "Exact Squarefree Orbit-Sum Reconstruction of Four- and Five-Vertex Loopless Digraphs: Minimum Separating Fingerprints, Tree Separators, and a Certified Atlas"
+  authors:
+    - family-names: Babanskyy
+      given-names: Oleksiy
+      orcid: "https://orcid.org/0009-0001-6176-6208"
+  year: 2026

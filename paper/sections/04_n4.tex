@@ -1,0 +1,87 @@
+\section{The four-vertex exact degree and minimum fingerprints}
+\label{sec:n4}
+
+There are twelve loopless directed arcs on four labelled vertices, hence
+$2^{12}=4096$ labelled patterns.  Canonicalization gives $218$ orbits under
+$S_4$ and $368$ under $A_4$.  The symmetric count also agrees with the
+independent unlabelled-digraph census \cite{McKayDigraphData}; every
+load-bearing signature and minimum assertion is checked by the distributed
+certificate verifier.
+
+\begin{proposition}[Four-vertex collision boundary]
+\label{prop:n4-collision}
+For $S_4$, the signature through degree two has $34$ non-singleton fibres
+covering $70$ pattern orbits, with maximum fibre size four and $39$ unordered
+residual pairs.  For $A_4$, it has $51$ non-singleton fibres covering $102$
+pattern orbits, all of size two and hence $51$ residual pairs.  Adding all
+degree-three coordinates separates all $218$ and $368$ pattern orbits.
+\end{proposition}
+
+\begin{proof}
+Enumerate all labelled masks, replace each by the minimum mask in its group
+orbit, and evaluate Equation~\eqref{eq:contained-support-count} on the
+canonical representatives.  Grouping equal rows through degree two gives the
+stated fibre census.  The non-singleton fibres explicitly witness failure at
+degree two.  Appending all cubic columns yields respectively $218$ and $368$
+distinct rows, equal to the orbit counts, so the cumulative degree-three
+signature is injective.  Two separate implementations agree on the
+canonical pattern registry, support registry, integer signature matrix,
+fibres, and cubic separator masks; an independent verifier recomputes
+injectivity rather than trusting the recorded census.
+\end{proof}
+
+It follows immediately that $\rho(4,S_4)=\rho(4,A_4)=3$.  The full dictionaries
+contain $1+5+13=19$ and $1+7+21=29$ coordinates.
+
+\begin{theorem}[Four-vertex global minimum fingerprints]
+\label{thm:n4-minimum}
+Within the complete degree-at-most-three dictionaries, the exact minimum
+separating sizes are $7$ of $19$ for $S_4$ and $11$ of $29$ for $A_4$.
+The lower bounds are the sums of a forced degree-one coordinate, a
+complete-graph vertex-cover block on the quadratic coordinates, and
+respectively two or four coordinate-disjoint cubic constraints.
+\end{theorem}
+
+\begin{proof}
+For the upper bounds, direct evaluation verifies the canonical supports
+\begin{align*}
+F_{S_4}={}&\{\coord{S4-D1-C000},\coord{S4-D2-C000},
+\coord{S4-D2-C001},\coord{S4-D2-C002},\coord{S4-D2-C003},\\
+&\hspace{8em}\coord{S4-D3-C002},\coord{S4-D3-C011}\},\\[0.3em]
+F_{A_4}={}&\{\coord{A4-D1-C000},\coord{A4-D2-C000},
+\coord{A4-D2-C001},\coord{A4-D2-C002},\coord{A4-D2-C003},\\
+&\quad\coord{A4-D2-C004},\coord{A4-D2-C005},
+\coord{A4-D3-C000},\coord{A4-D3-C010},\\
+&\hspace{15em}\coord{A4-D3-C011},\coord{A4-D3-C014}\}.
+\end{align*}
+They separate all $23{,}653=\binom{218}{2}$ and
+$67{,}528=\binom{368}{2}$ unordered pairs.
+
+For the lower bounds, compare the empty pattern with a one-arc pattern.  Their
+separator mask is the unique linear coordinate, so that coordinate is forced.
+Next let $T_i,T_j$ represent two distinct quadratic support orbits.  The
+patterns consisting exactly of $T_i$ and $T_j$ have equal linear count, every
+cubic coordinate vanishes on both, and their quadratic separator mask is
+exactly $\{q_i,q_j\}$.  Thus every pair of quadratic coordinates is an edge
+constraint.  A separating family contains a vertex cover of $K_5$ for $S_4$
+or $K_7$ for $A_4$, requiring at least four or six quadratic coordinates.
+
+Finally, the certified inclusion-minimal mask antichains contain two
+pairwise coordinate-disjoint pure-cubic constraints for $S_4$ and four for
+$A_4$.  They require at least two or four cubics.  The three contributions
+lie in disjoint degree layers, giving
+\[
+  1+4+2=7,\qquad 1+6+4=11.
+\]
+The displayed families attain both bounds.  Appendix~\ref{app:n4-lower}
+records the finite cubic blocks and the uniform branch-DAG cross-check.
+\end{proof}
+
+\input{tables/T03_n4_minima}
+
+For auditability, the complete pair system reduces initially to $6998$ and
+$40{,}786$ distinct nonempty separator masks, then to inclusion-minimal
+antichains of sizes $26$ and $58$.  A second lower proof, independent of the
+readable decomposition, is a complete branch DAG with $11$ nodes for $S_4$
+and $22$ for $A_4$, excluding budgets six and ten.  These small DAGs and the
+structural proof arrive at the same lower bounds by different presentations.

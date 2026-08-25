@@ -1,0 +1,34 @@
+{
+  "artifact_root": "certificates/family_degree",
+  "canonical_json": {
+    "encoding": "utf-8",
+    "indent": 2,
+    "integer_only_scientific_fields": true,
+    "sort_keys": true,
+    "trailing_newline": true
+  },
+  "contract_id": "FAMILY_DEGREE_CONTRACT_V1",
+  "family_panel": {
+    "arc_order": "lexicographic_ordered_nonloop_pairs",
+    "coordinate_degrees": [1, 2, 3],
+    "group_labels": ["S3", "A3", "S4", "A4", "S5", "A5"],
+    "n_values": [3, 4, 5]
+  },
+  "required_artifacts": [
+    "primary/family_probe.json",
+    "independent/family_probe.json",
+    "structural/finite_theorem_certificate.json"
+  ],
+  "schema_dialect": "orbit_sum_machine_contract_v1",
+  "structural_certificate": {
+    "groups": ["S4", "A4"],
+    "lower_bound_formula": "forced_linear_plus_complete_graph_vertex_cover_plus_disjoint_cubic_packing",
+    "required_checks": [
+      "forced_linear_constraint",
+      "complete_quadratic_graph",
+      "actual_pairwise_disjoint_cubic_constraints",
+      "explicit_feasible_support",
+      "matching_lower_and_upper_bounds"
+    ]
+  }
+}

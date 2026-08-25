@@ -1,0 +1,51 @@
+\section{Conditional top-degree extensions versus global minima}
+\label{sec:conditional}
+
+Let $d=\rho(n,G)$ and retain the entire lower dictionary
+$\Dict^G_{n,\leq d-1}$.  A \emph{conditional top-degree extension} is a set
+$H\subseteq\Dict^G_{n,d}$ for which
+\[
+  \Dict^G_{n,\leq d-1}\cup H
+\]
+is separating.  Equivalently, $H$ hits only the residual-pair separator masks
+left by the complete lower dictionary.  This differs from the global problem,
+where lower-degree coordinates may also be omitted.
+
+\begin{proposition}[Exact conditional top-degree extensions]
+\label{prop:conditional}
+When every lower-degree coordinate is retained, the minimum number of added
+top-degree coordinates and the number of optimal subsets are
+\[
+  (2,2),\ (4,128),\ (4,2),\ (4,200)
+\]
+for $S_4,A_4,S_5,A_5$, respectively.  For the five-vertex actions, the two and
+two hundred optimal subsets form respectively one and fifty orbits under the
+recorded external diagnostic transformations.  These quotient counts are not
+part of the scientific equivalence relation.  The four conditional minima
+are distinct from the global minima $7,11,14,17$.
+\end{proposition}
+
+\begin{proof}
+For each action, restrict every residual-pair separator mask to the exact
+top-degree coordinates.  An exhaustive minimum hitting-set computation gives
+the stated minima and complete optimal-subset census.  Independent implementations
+reconstruct the residual pairs and separation masks and agree on every
+optimal subset.  Direct signature evaluation checks each recorded upper
+family; exhaustive exclusion below the minimum supplies the lower side.
+
+For $S_5$ and $A_5$, apply the separately recorded transformations only after
+the optimal subsets have been determined.  Their orbits have sizes compatible
+with the totals $2$ and $200$, yielding diagnostic counts $1$ and $50$.
+Because these transformations are not added to $S_5$ or $A_5$, quotienting
+does not change the graph-orbit equivalence or the optimization result.
+\end{proof}
+
+\input{tables/T05_conditional}
+
+The resulting total fingerprint sizes are $8,12,26,32$ because the retained
+lower dictionaries contain $6,8,22,28$ coordinates.  These totals can exceed
+the global minima substantially: in the global problem the optimizer may
+discard lower-degree coordinates whose separating work is replicated by the
+chosen top-degree family.  In particular, the former greedy bounds $8$ and
+$12$ for the four-vertex actions become exact only for this conditional
+problem, not for the global $19$- and $29$-coordinate hitting sets.

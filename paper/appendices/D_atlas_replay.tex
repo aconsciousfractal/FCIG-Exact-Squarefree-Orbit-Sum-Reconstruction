@@ -1,0 +1,50 @@
+\section{Atlas manifest, provenance, and replay commands}
+\label{app:atlas-replay}
+
+This appendix is the paper-facing entry point to the certified atlas in the
+companion repository.  The repository manifest binds every distributed source,
+certificate, script, and generated object by SHA-256.  An event-free build
+attestation binds the manifest and title-named PDF without self-reference.
+The human-readable artifact map supplies the exact relative
+path for every statement in Table~\ref{tab:statement-traceability}.
+
+\subsection{Principal objects}
+
+The principal five-vertex objects are the canonical four-action payload and
+the two deterministic-gzip lower-bound DAGs.  Their complete SHA-256 digests,
+together with those of the four-vertex registries and certificates, appear in
+the repository manifest.  Matching a digest establishes byte identity only;
+all mathematical conclusions are checked semantically.
+
+\subsection{Minimal read-only replay}
+
+From the companion-repository root, run
+\begin{verbatim}
+python scripts/verify.py --profile core
+python -O scripts/verify.py --profile core
+\end{verbatim}
+Both commands verify the manifest, rebuild the four-vertex certificate
+semantics, reconstruct the five-vertex coordinate data independently, and
+check every node of both lower-bound DAGs.  They must end with
+\begin{center}\small
+\texttt{PASS\_ORBIT\_SUM\_PACKAGE\_CORE}.
+\end{center}
+
+For a broader replay that also regenerates both four-vertex enumerations and
+the five-vertex payload in disposable directories, run
+\begin{verbatim}
+python scripts/verify.py --profile full
+\end{verbatim}
+The expected endpoint is
+\begin{center}\small
+\texttt{PASS\_ORBIT\_SUM\_PACKAGE\_FULL}.
+\end{center}
+No scientific output in the repository is overwritten by either profile.
+The mathematical scripts use only the Python standard library; PDF inspection
+uses the separately declared package dependency.
+
+\subsection{Table provenance}
+
+All tables are author-generated TeX constructions made only from the
+certified numerical summaries.  They contain no third-party image asset and
+are cross-checked against the exact theorem summary.

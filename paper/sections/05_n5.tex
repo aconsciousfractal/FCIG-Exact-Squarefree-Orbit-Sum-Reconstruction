@@ -1,0 +1,88 @@
+\section{The five-vertex exact degree and minimum fingerprints}
+\label{sec:n5}
+
+On five labelled vertices there are twenty non-loop arcs and $2^{20}$ labelled
+patterns.  Canonicalization gives $9608$ $S_5$-orbits and $17{,}824$
+$A_5$-orbits.  The symmetric count agrees with McKay's independent
+unlabelled-digraph census \cite{McKayDigraphData}; all load-bearing signatures
+and minima are checked by the distributed certificate verifier.  The
+exact-degree coordinate profiles are $(1,5,16,61)$ and
+$(1,6,21,96)$, so the cumulative quartic dictionaries have sizes $83$ and
+$124$.
+
+\begin{theorem}[Five-vertex degree and global minimum fingerprints]
+\label{thm:n5-minimum}
+The signatures through degree three leave $190$ unordered residual pairs for
+$S_5$ and $113$ for $A_5$.  The signatures through degree four separate all
+$9608$ and $17{,}824$ pattern orbits, so the least separating degree is four
+for both actions.  Within the full degree-at-most-four dictionaries, the
+exact minimum separating sizes are $14$ of $83$ and $17$ of $124$.
+Explicit fingerprints attain those sizes, while complete checked branch DAGs
+exclude budgets $13$ and $16$.
+\end{theorem}
+
+\begin{proof}
+The nonempty residual-pair lists certify noninjectivity through degree three.
+For degree four, independently reconstructed signature matrices have one row
+for every canonical pattern orbit and no repeated row.  This proves
+injectivity and hence exact degree four.
+
+For the global upper bounds, the checker evaluates all coordinates on all
+canonical pattern representatives and verifies injectivity for the following
+families.  The canonical coordinate IDs are grouped by degree for readability:
+\begin{certificateblock}
+\textbf{$S_5$, cardinality 14.}
+\begin{align*}
+&\coord{S5:5:1:00001};\\
+&\coord{S5:5:2:00003},\coord{S5:5:2:00011},
+ \coord{S5:5:2:00012},\coord{S5:5:2:00022};\\
+&\coord{S5:5:3:00016},\coord{S5:5:3:00025},
+ \coord{S5:5:3:00148},\coord{S5:5:3:00448};\\
+&\coord{S5:5:4:0006a},\coord{S5:5:4:00125},
+ \coord{S5:5:4:00145},\coord{S5:5:4:00158},
+ \coord{S5:5:4:00164}.
+\end{align*}
+\textbf{$A_5$, cardinality 17.}
+\begin{align*}
+&\coord{A5:5:1:00001};\\
+&\coord{A5:5:2:00011},\coord{A5:5:2:00012},
+ \coord{A5:5:2:00022},\\
+&\coord{A5:5:2:00024},\coord{A5:5:2:00028};\\
+&\coord{A5:5:3:00016},\coord{A5:5:3:0002a},
+ \coord{A5:5:3:0002c},\\
+&\coord{A5:5:3:00124},\coord{A5:5:3:00144},
+ \coord{A5:5:3:00184},\\
+&\coord{A5:5:3:00188};\\
+&\coord{A5:5:4:00116},\coord{A5:5:4:00198},
+ \coord{A5:5:4:001c4},\coord{A5:5:4:01182}.
+\end{align*}
+\end{certificateblock}
+
+For the lower bounds, use explicit pair cores of $249$ and $285$ separator
+masks.  Each row stores both canonical pattern IDs, not merely a precomputed
+mask.  The checker reconstructs the group, coordinate orbits, pattern
+representatives, integer evaluations, and every core separator mask.  It then
+checks a complete branch DAG rooted at budget $13$ or $16$.  At a branch node,
+every possible choice from a named uncovered separator mask appears as a
+child after forced singleton propagation.  Each leaf is closed either by a
+packing of more pairwise disjoint masks than the remaining budget or by the
+uniform maximum-coverage bound.  All children and all leaves are therefore
+locally exhaustive.  The $S_5$ DAG has $63{,}589$ nodes and depth $11$; the
+$A_5$ DAG has $213{,}648$ nodes and depth $14$.  Induction from the leaves to
+the roots proves infeasibility at the two budgets.  Together with the upper
+families, this gives minima $14$ and $17$.
+\end{proof}
+
+\input{tables/T04_n5_dag}
+
+The accepted proof objects distinguish discovery from certification.
+Mixed-integer optimization was useful for locating the witnesses and the
+pair cores.  Its infeasibility messages are retained only as diagnostics.
+The lower-bound authority is the standard-library checker that reconstructs
+the mathematics and validates every DAG transition.  A normal run and a run
+with Python assertions disabled produce the same scientific verdict.
+
+The two DAGs contain $277{,}237$ nodes in total.  Their canonical uncompressed
+JSON representations are about $40$ MB and $146$ MB; deterministic gzip
+transport reduces them to about $5$ MB and $19$ MB.  Compression and hashes
+make transport manageable, while the checker supplies the semantic proof.

@@ -1,0 +1,33 @@
+schema: minimum_fingerprints_specification_v1
+scope:
+  n: 4
+  groups: [S4, A4]
+  dictionary: complete_squarefree_support_orbit_dictionary_through_degree_3
+  objective: minimum_coordinate_subfamily_separating_every_pattern_orbit_pair
+normalization: docs/NORMALIZATION_LOCK.md
+inputs:
+  orbit_atlas: certificates/orbit_atlas/primary
+  contract: schemas/minimum_fingerprints_contract_v1.json
+required_artifacts:
+  primary:
+    - instance.json
+    - lower_bound_certificate.json
+    - minimum_fingerprints.json
+  independent:
+    - minimum_fingerprints.json
+lower_bound_semantics:
+  proof: complete_branch_DAG
+  branch: choose_an_uncovered_constraint_and_cover_every_coordinate_choice
+  accepted_leaves:
+    - nonempty_uncovered_constraint_at_budget_zero
+    - pairwise_disjoint_uncovered_packing_larger_than_budget
+  rejected_authority:
+    - optimizer_status
+    - upper_witness_without_lower_certificate
+reference_values_checked_after_reconstruction:
+  S4: {dictionary_size: 19, exact_minimum: 7}
+  A4: {dictionary_size: 29, exact_minimum: 11}
+scope_exclusions:
+  - arbitrary_invariant_families
+  - classification_of_all_optimal_subfamilies
+  - n_greater_than_5

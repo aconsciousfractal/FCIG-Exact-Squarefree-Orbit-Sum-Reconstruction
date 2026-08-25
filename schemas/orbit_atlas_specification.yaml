@@ -1,0 +1,41 @@
+schema: orbit_atlas_specification_v1
+scope:
+  n: 4
+  groups: [S4, A4]
+  carrier: ordered_nonloop_arcs
+  pattern: boolean_arc_subset
+  coordinate: integer_orbit_sum_of_squarefree_arc_support
+  cumulative_degrees: [1, 2, 3]
+normalization: docs/NORMALIZATION_LOCK.md
+canonical_order:
+  arcs: lexicographic_source_then_target
+  patterns: increasing_minimum_orbit_mask
+  coordinates: degree_then_increasing_minimum_orbit_mask
+required_artifacts:
+  - coordinate_registry.json
+  - pattern_registry.json
+  - quadratic_collision_atlas.json
+  - cubic_witness_map.json
+  - conditional_minimum_extensions.json
+  - normalized_coordinate_registry.csv
+  - normalized_pattern_registry.csv
+  - normalized_quadratic_collision_atlas.csv
+  - normalized_cubic_witness_map.csv
+  - normalized_conditional_minimum_extensions.csv
+verification:
+  independent_implementations: 2
+  comparison: byte_identity_of_all_required_artifacts
+  random_seed: null
+reference_values_checked_after_reconstruction:
+  S4:
+    pattern_orbits: 218
+    coordinate_profile: [1, 5, 13]
+    degree_two_residual_pairs: 39
+  A4:
+    pattern_orbits: 368
+    coordinate_profile: [1, 7, 21]
+    degree_two_residual_pairs: 51
+scope_exclusions:
+  - n_greater_than_5
+  - arbitrary_invariant_families
+  - physical_or_chemical_interpretation

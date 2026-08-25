@@ -1,0 +1,1915 @@
+{
+  "experiment_id": "ORBIT_ATLAS",
+  "groups": [
+    {
+      "colliding_class_count": 70,
+      "colliding_pair_count": 39,
+      "collision_fibre_count": 34,
+      "group": "S4",
+      "max_fibre_size": 4,
+      "rows": [
+        {
+          "canonical_masks": [
+            116,
+            228
+          ],
+          "fibre_id": "S4-QF000",
+          "fibre_size": 2,
+          "group": "S4",
+          "pattern_ids": [
+            "S4-P052",
+            "S4-P066"
+          ],
+          "signature_through_2": [
+            4,
+            1,
+            0,
+            2,
+            1,
+            2
+          ]
+        },
+        {
+          "canonical_masks": [
+            92,
+            101
+          ],
+          "fibre_id": "S4-QF001",
+          "fibre_size": 2,
+          "group": "S4",
+          "pattern_ids": [
+            "S4-P035",
+            "S4-P042"
+          ],
+          "signature_through_2": [
+            4,
+            1,
+            0,
+            3,
+            1,
+            1
+          ]
+        },
+        {
+          "canonical_masks": [
+            102,
+            106
+          ],
+          "fibre_id": "S4-QF002",
+          "fibre_size": 2,
+          "group": "S4",
+          "pattern_ids": [
+            "S4-P043",
+            "S4-P045"
+          ],
+          "signature_through_2": [
+            4,
+            1,
+            1,
+            1,
+            1,
+            2
+          ]
+        },
+        {
+          "canonical_masks": [
+            77,
+            83
+          ],
+          "fibre_id": "S4-QF003",
+          "fibre_size": 2,
+          "group": "S4",
+          "pattern_ids": [
+            "S4-P025",
+            "S4-P028"
+          ],
+          "signature_through_2": [
+            4,
+            1,
+            1,
+            3,
+            1,
+            0
+          ]
+        },
+        {
+          "canonical_masks": [
+            625,
+            675
+          ],
+          "fibre_id": "S4-QF004",
+          "fibre_size": 2,
+          "group": "S4",
+          "pattern_ids": [
+            "S4-P109",
+            "S4-P129"
+          ],
+          "signature_through_2": [
+            5,
+            1,
+            0,
+            6,
+            1,
+            2
+          ]
+        },
+        {
+          "canonical_masks": [
+            659,
+            666
+          ],
+          "fibre_id": "S4-QF005",
+          "fibre_size": 2,
+          "group": "S4",
+          "pattern_ids": [
+            "S4-P119",
+            "S4-P123"
+          ],
+          "signature_through_2": [
+            5,
+            1,
+            1,
+            4,
+            2,
+            2
+          ]
+        },
+        {
+          "canonical_masks": [
+            115,
+            220
+          ],
+          "fibre_id": "S4-QF006",
+          "fibre_size": 2,
+          "group": "S4",
+          "pattern_ids": [
+            "S4-P051",
+            "S4-P063"
+          ],
+          "signature_through_2": [
+            5,
+            2,
+            1,
+            4,
+            1,
+            2
+          ]
+        },
+        {
+          "canonical_masks": [
+            94,
+            109
+          ],
+          "fibre_id": "S4-QF007",
+          "fibre_size": 2,
+          "group": "S4",
+          "pattern_ids": [
+            "S4-P037",
+            "S4-P048"
+          ],
+          "signature_through_2": [
+            5,
+            2,
+            1,
+            4,
+            2,
+            1
+          ]
+        },
+        {
+          "canonical_masks": [
+            748,
+            822
+          ],
+          "fibre_id": "S4-QF008",
+          "fibre_size": 2,
+          "group": "S4",
+          "pattern_ids": [
+            "S4-P151",
+            "S4-P169"
+          ],
+          "signature_through_2": [
+            6,
+            2,
+            1,
+            5,
+            4,
+            3
+          ]
+        },
+        {
+          "canonical_masks": [
+            741,
+            746
+          ],
+          "fibre_id": "S4-QF009",
+          "fibre_size": 2,
+          "group": "S4",
+          "pattern_ids": [
+            "S4-P145",
+            "S4-P149"
+          ],
+          "signature_through_2": [
+            6,
+            2,
+            1,
+            6,
+            3,
+            3
+          ]
+        },
+        {
+          "canonical_masks": [
+            627,
+            686,
+            739,
+            753
+          ],
+          "fibre_id": "S4-QF010",
+          "fibre_size": 4,
+          "group": "S4",
+          "pattern_ids": [
+            "S4-P111",
+            "S4-P133",
+            "S4-P144",
+            "S4-P155"
+          ],
+          "signature_through_2": [
+            6,
+            2,
+            1,
+            7,
+            2,
+            3
+          ]
+        },
+        {
+          "canonical_masks": [
+            694,
+            756
+          ],
+          "fibre_id": "S4-QF011",
+          "fibre_size": 2,
+          "group": "S4",
+          "pattern_ids": [
+            "S4-P135",
+            "S4-P157"
+          ],
+          "signature_through_2": [
+            6,
+            2,
+            2,
+            4,
+            2,
+            5
+          ]
+        },
+        {
+          "canonical_masks": [
+            630,
+            732
+          ],
+          "fibre_id": "S4-QF012",
+          "fibre_size": 2,
+          "group": "S4",
+          "pattern_ids": [
+            "S4-P112",
+            "S4-P140"
+          ],
+          "signature_through_2": [
+            6,
+            2,
+            2,
+            4,
+            3,
+            4
+          ]
+        },
+        {
+          "canonical_masks": [
+            670,
+            742
+          ],
+          "fibre_id": "S4-QF013",
+          "fibre_size": 2,
+          "group": "S4",
+          "pattern_ids": [
+            "S4-P126",
+            "S4-P146"
+          ],
+          "signature_through_2": [
+            6,
+            2,
+            2,
+            5,
+            2,
+            4
+          ]
+        },
+        {
+          "canonical_masks": [
+            606,
+            729
+          ],
+          "fibre_id": "S4-QF014",
+          "fibre_size": 2,
+          "group": "S4",
+          "pattern_ids": [
+            "S4-P107",
+            "S4-P138"
+          ],
+          "signature_through_2": [
+            6,
+            2,
+            2,
+            5,
+            4,
+            2
+          ]
+        },
+        {
+          "canonical_masks": [
+            605,
+            667
+          ],
+          "fibre_id": "S4-QF015",
+          "fibre_size": 2,
+          "group": "S4",
+          "pattern_ids": [
+            "S4-P106",
+            "S4-P124"
+          ],
+          "signature_through_2": [
+            6,
+            2,
+            2,
+            6,
+            3,
+            2
+          ]
+        },
+        {
+          "canonical_masks": [
+            373,
+            826
+          ],
+          "fibre_id": "S4-QF016",
+          "fibre_size": 2,
+          "group": "S4",
+          "pattern_ids": [
+            "S4-P087",
+            "S4-P171"
+          ],
+          "signature_through_2": [
+            6,
+            3,
+            0,
+            6,
+            3,
+            3
+          ]
+        },
+        {
+          "canonical_masks": [
+            365,
+            634
+          ],
+          "fibre_id": "S4-QF017",
+          "fibre_size": 2,
+          "group": "S4",
+          "pattern_ids": [
+            "S4-P085",
+            "S4-P115"
+          ],
+          "signature_through_2": [
+            6,
+            3,
+            1,
+            4,
+            4,
+            3
+          ]
+        },
+        {
+          "canonical_masks": [
+            238,
+            679
+          ],
+          "fibre_id": "S4-QF018",
+          "fibre_size": 2,
+          "group": "S4",
+          "pattern_ids": [
+            "S4-P071",
+            "S4-P131"
+          ],
+          "signature_through_2": [
+            6,
+            3,
+            1,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "canonical_masks": [
+            237,
+            633
+          ],
+          "fibre_id": "S4-QF019",
+          "fibre_size": 2,
+          "group": "S4",
+          "pattern_ids": [
+            "S4-P070",
+            "S4-P114"
+          ],
+          "signature_through_2": [
+            6,
+            3,
+            1,
+            6,
+            3,
+            2
+          ]
+        },
+        {
+          "canonical_masks": [
+            246,
+            663
+          ],
+          "fibre_id": "S4-QF020",
+          "fibre_size": 2,
+          "group": "S4",
+          "pattern_ids": [
+            "S4-P073",
+            "S4-P122"
+          ],
+          "signature_through_2": [
+            6,
+            3,
+            2,
+            4,
+            2,
+            4
+          ]
+        },
+        {
+          "canonical_masks": [
+            221,
+            599
+          ],
+          "fibre_id": "S4-QF021",
+          "fibre_size": 2,
+          "group": "S4",
+          "pattern_ids": [
+            "S4-P064",
+            "S4-P101"
+          ],
+          "signature_through_2": [
+            6,
+            3,
+            2,
+            6,
+            2,
+            2
+          ]
+        },
+        {
+          "canonical_masks": [
+            219,
+            591
+          ],
+          "fibre_id": "S4-QF022",
+          "fibre_size": 2,
+          "group": "S4",
+          "pattern_ids": [
+            "S4-P062",
+            "S4-P094"
+          ],
+          "signature_through_2": [
+            6,
+            3,
+            3,
+            6,
+            3,
+            0
+          ]
+        },
+        {
+          "canonical_masks": [
+            126,
+            303
+          ],
+          "fibre_id": "S4-QF023",
+          "fibre_size": 2,
+          "group": "S4",
+          "pattern_ids": [
+            "S4-P060",
+            "S4-P081"
+          ],
+          "signature_through_2": [
+            6,
+            4,
+            1,
+            4,
+            3,
+            3
+          ]
+        },
+        {
+          "canonical_masks": [
+            119,
+            231
+          ],
+          "fibre_id": "S4-QF024",
+          "fibre_size": 2,
+          "group": "S4",
+          "pattern_ids": [
+            "S4-P055",
+            "S4-P069"
+          ],
+          "signature_through_2": [
+            6,
+            4,
+            1,
+            5,
+            2,
+            3
+          ]
+        },
+        {
+          "canonical_masks": [
+            111,
+            123
+          ],
+          "fibre_id": "S4-QF025",
+          "fibre_size": 2,
+          "group": "S4",
+          "pattern_ids": [
+            "S4-P050",
+            "S4-P057"
+          ],
+          "signature_through_2": [
+            6,
+            4,
+            2,
+            5,
+            2,
+            2
+          ]
+        },
+        {
+          "canonical_masks": [
+            883,
+            947
+          ],
+          "fibre_id": "S4-QF026",
+          "fibre_size": 2,
+          "group": "S4",
+          "pattern_ids": [
+            "S4-P179",
+            "S4-P188"
+          ],
+          "signature_through_2": [
+            7,
+            3,
+            1,
+            10,
+            3,
+            4
+          ]
+        },
+        {
+          "canonical_masks": [
+            750,
+            875
+          ],
+          "fibre_id": "S4-QF027",
+          "fibre_size": 2,
+          "group": "S4",
+          "pattern_ids": [
+            "S4-P153",
+            "S4-P175"
+          ],
+          "signature_through_2": [
+            7,
+            3,
+            2,
+            8,
+            4,
+            4
+          ]
+        },
+        {
+          "canonical_masks": [
+            631,
+            743
+          ],
+          "fibre_id": "S4-QF028",
+          "fibre_size": 2,
+          "group": "S4",
+          "pattern_ids": [
+            "S4-P113",
+            "S4-P147"
+          ],
+          "signature_through_2": [
+            7,
+            4,
+            2,
+            8,
+            3,
+            4
+          ]
+        },
+        {
+          "canonical_masks": [
+            635,
+            761
+          ],
+          "fibre_id": "S4-QF029",
+          "fibre_size": 2,
+          "group": "S4",
+          "pattern_ids": [
+            "S4-P116",
+            "S4-P161"
+          ],
+          "signature_through_2": [
+            7,
+            4,
+            2,
+            8,
+            4,
+            3
+          ]
+        },
+        {
+          "canonical_masks": [
+            951,
+            958
+          ],
+          "fibre_id": "S4-QF030",
+          "fibre_size": 2,
+          "group": "S4",
+          "pattern_ids": [
+            "S4-P190",
+            "S4-P193"
+          ],
+          "signature_through_2": [
+            8,
+            5,
+            2,
+            10,
+            5,
+            6
+          ]
+        },
+        {
+          "canonical_masks": [
+            887,
+            891
+          ],
+          "fibre_id": "S4-QF031",
+          "fibre_size": 2,
+          "group": "S4",
+          "pattern_ids": [
+            "S4-P182",
+            "S4-P183"
+          ],
+          "signature_through_2": [
+            8,
+            5,
+            2,
+            11,
+            5,
+            5
+          ]
+        },
+        {
+          "canonical_masks": [
+            766,
+            957
+          ],
+          "fibre_id": "S4-QF032",
+          "fibre_size": 2,
+          "group": "S4",
+          "pattern_ids": [
+            "S4-P166",
+            "S4-P192"
+          ],
+          "signature_through_2": [
+            8,
+            5,
+            3,
+            9,
+            5,
+            6
+          ]
+        },
+        {
+          "canonical_masks": [
+            751,
+            763
+          ],
+          "fibre_id": "S4-QF033",
+          "fibre_size": 2,
+          "group": "S4",
+          "pattern_ids": [
+            "S4-P154",
+            "S4-P163"
+          ],
+          "signature_through_2": [
+            8,
+            5,
+            3,
+            11,
+            5,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "colliding_class_count": 102,
+      "colliding_pair_count": 51,
+      "collision_fibre_count": 51,
+      "group": "A4",
+      "max_fibre_size": 2,
+      "rows": [
+        {
+          "canonical_masks": [
+            596,
+            610
+          ],
+          "fibre_id": "A4-QF000",
+          "fibre_size": 2,
+          "group": "A4",
+          "pattern_ids": [
+            "A4-P157",
+            "A4-P169"
+          ],
+          "signature_through_2": [
+            4,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "canonical_masks": [
+            114,
+            180
+          ],
+          "fibre_id": "A4-QF001",
+          "fibre_size": 2,
+          "group": "A4",
+          "pattern_ids": [
+            "A4-P063",
+            "A4-P097"
+          ],
+          "signature_through_2": [
+            4,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "canonical_masks": [
+            102,
+            106
+          ],
+          "fibre_id": "A4-QF002",
+          "fibre_size": 2,
+          "group": "A4",
+          "pattern_ids": [
+            "A4-P055",
+            "A4-P057"
+          ],
+          "signature_through_2": [
+            4,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "canonical_masks": [
+            99,
+            156
+          ],
+          "fibre_id": "A4-QF003",
+          "fibre_size": 2,
+          "group": "A4",
+          "pattern_ids": [
+            "A4-P052",
+            "A4-P082"
+          ],
+          "signature_through_2": [
+            4,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "canonical_masks": [
+            661,
+            662
+          ],
+          "fibre_id": "A4-QF004",
+          "fibre_size": 2,
+          "group": "A4",
+          "pattern_ids": [
+            "A4-P198",
+            "A4-P199"
+          ],
+          "signature_through_2": [
+            5,
+            1,
+            2,
+            1,
+            1,
+            1,
+            2,
+            2
+          ]
+        },
+        {
+          "canonical_masks": [
+            229,
+            236
+          ],
+          "fibre_id": "A4-QF005",
+          "fibre_size": 2,
+          "group": "A4",
+          "pattern_ids": [
+            "A4-P112",
+            "A4-P115"
+          ],
+          "signature_through_2": [
+            5,
+            2,
+            0,
+            2,
+            2,
+            2,
+            1,
+            1
+          ]
+        },
+        {
+          "canonical_masks": [
+            173,
+            179
+          ],
+          "fibre_id": "A4-QF006",
+          "fibre_size": 2,
+          "group": "A4",
+          "pattern_ids": [
+            "A4-P093",
+            "A4-P096"
+          ],
+          "signature_through_2": [
+            5,
+            2,
+            1,
+            2,
+            2,
+            2,
+            0,
+            1
+          ]
+        },
+        {
+          "canonical_masks": [
+            94,
+            109
+          ],
+          "fibre_id": "A4-QF007",
+          "fibre_size": 2,
+          "group": "A4",
+          "pattern_ids": [
+            "A4-P049",
+            "A4-P060"
+          ],
+          "signature_through_2": [
+            5,
+            2,
+            1,
+            2,
+            2,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "canonical_masks": [
+            822,
+            860
+          ],
+          "fibre_id": "A4-QF008",
+          "fibre_size": 2,
+          "group": "A4",
+          "pattern_ids": [
+            "A4-P265",
+            "A4-P276"
+          ],
+          "signature_through_2": [
+            6,
+            2,
+            1,
+            2,
+            3,
+            4,
+            1,
+            2
+          ]
+        },
+        {
+          "canonical_masks": [
+            798,
+            857
+          ],
+          "fibre_id": "A4-QF009",
+          "fibre_size": 2,
+          "group": "A4",
+          "pattern_ids": [
+            "A4-P259",
+            "A4-P274"
+          ],
+          "signature_through_2": [
+            6,
+            2,
+            1,
+            2,
+            4,
+            3,
+            1,
+            2
+          ]
+        },
+        {
+          "canonical_masks": [
+            748,
+            873
+          ],
+          "fibre_id": "A4-QF010",
+          "fibre_size": 2,
+          "group": "A4",
+          "pattern_ids": [
+            "A4-P237",
+            "A4-P280"
+          ],
+          "signature_through_2": [
+            6,
+            2,
+            1,
+            3,
+            2,
+            4,
+            2,
+            1
+          ]
+        },
+        {
+          "canonical_masks": [
+            627,
+            795
+          ],
+          "fibre_id": "A4-QF011",
+          "fibre_size": 2,
+          "group": "A4",
+          "pattern_ids": [
+            "A4-P184",
+            "A4-P258"
+          ],
+          "signature_through_2": [
+            6,
+            2,
+            1,
+            3,
+            4,
+            2,
+            1,
+            2
+          ]
+        },
+        {
+          "canonical_masks": [
+            753,
+            853
+          ],
+          "fibre_id": "A4-QF012",
+          "fibre_size": 2,
+          "group": "A4",
+          "pattern_ids": [
+            "A4-P241",
+            "A4-P272"
+          ],
+          "signature_through_2": [
+            6,
+            2,
+            1,
+            3,
+            4,
+            2,
+            2,
+            1
+          ]
+        },
+        {
+          "canonical_masks": [
+            741,
+            746
+          ],
+          "fibre_id": "A4-QF013",
+          "fibre_size": 2,
+          "group": "A4",
+          "pattern_ids": [
+            "A4-P231",
+            "A4-P235"
+          ],
+          "signature_through_2": [
+            6,
+            2,
+            1,
+            4,
+            2,
+            3,
+            2,
+            1
+          ]
+        },
+        {
+          "canonical_masks": [
+            686,
+            811
+          ],
+          "fibre_id": "A4-QF014",
+          "fibre_size": 2,
+          "group": "A4",
+          "pattern_ids": [
+            "A4-P211",
+            "A4-P261"
+          ],
+          "signature_through_2": [
+            6,
+            2,
+            1,
+            4,
+            3,
+            2,
+            1,
+            2
+          ]
+        },
+        {
+          "canonical_masks": [
+            629,
+            739
+          ],
+          "fibre_id": "A4-QF015",
+          "fibre_size": 2,
+          "group": "A4",
+          "pattern_ids": [
+            "A4-P186",
+            "A4-P230"
+          ],
+          "signature_through_2": [
+            6,
+            2,
+            1,
+            4,
+            3,
+            2,
+            2,
+            1
+          ]
+        },
+        {
+          "canonical_masks": [
+            694,
+            924
+          ],
+          "fibre_id": "A4-QF016",
+          "fibre_size": 2,
+          "group": "A4",
+          "pattern_ids": [
+            "A4-P213",
+            "A4-P300"
+          ],
+          "signature_through_2": [
+            6,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            3
+          ]
+        },
+        {
+          "canonical_masks": [
+            756,
+            917
+          ],
+          "fibre_id": "A4-QF017",
+          "fibre_size": 2,
+          "group": "A4",
+          "pattern_ids": [
+            "A4-P244",
+            "A4-P297"
+          ],
+          "signature_through_2": [
+            6,
+            2,
+            2,
+            2,
+            2,
+            2,
+            3,
+            2
+          ]
+        },
+        {
+          "canonical_masks": [
+            630,
+            732
+          ],
+          "fibre_id": "A4-QF018",
+          "fibre_size": 2,
+          "group": "A4",
+          "pattern_ids": [
+            "A4-P187",
+            "A4-P224"
+          ],
+          "signature_through_2": [
+            6,
+            2,
+            2,
+            2,
+            2,
+            3,
+            2,
+            2
+          ]
+        },
+        {
+          "canonical_masks": [
+            725,
+            754
+          ],
+          "fibre_id": "A4-QF019",
+          "fibre_size": 2,
+          "group": "A4",
+          "pattern_ids": [
+            "A4-P218",
+            "A4-P242"
+          ],
+          "signature_through_2": [
+            6,
+            2,
+            2,
+            2,
+            3,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "canonical_masks": [
+            606,
+            729
+          ],
+          "fibre_id": "A4-QF020",
+          "fibre_size": 2,
+          "group": "A4",
+          "pattern_ids": [
+            "A4-P166",
+            "A4-P221"
+          ],
+          "signature_through_2": [
+            6,
+            2,
+            2,
+            2,
+            3,
+            4,
+            1,
+            1
+          ]
+        },
+        {
+          "canonical_masks": [
+            605,
+            723
+          ],
+          "fibre_id": "A4-QF021",
+          "fibre_size": 2,
+          "group": "A4",
+          "pattern_ids": [
+            "A4-P165",
+            "A4-P217"
+          ],
+          "signature_through_2": [
+            6,
+            2,
+            2,
+            2,
+            4,
+            3,
+            1,
+            1
+          ]
+        },
+        {
+          "canonical_masks": [
+            670,
+            742
+          ],
+          "fibre_id": "A4-QF022",
+          "fibre_size": 2,
+          "group": "A4",
+          "pattern_ids": [
+            "A4-P204",
+            "A4-P232"
+          ],
+          "signature_through_2": [
+            6,
+            2,
+            2,
+            3,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "canonical_masks": [
+            622,
+            730
+          ],
+          "fibre_id": "A4-QF023",
+          "fibre_size": 2,
+          "group": "A4",
+          "pattern_ids": [
+            "A4-P180",
+            "A4-P222"
+          ],
+          "signature_through_2": [
+            6,
+            2,
+            2,
+            3,
+            2,
+            4,
+            1,
+            1
+          ]
+        },
+        {
+          "canonical_masks": [
+            619,
+            667
+          ],
+          "fibre_id": "A4-QF024",
+          "fibre_size": 2,
+          "group": "A4",
+          "pattern_ids": [
+            "A4-P177",
+            "A4-P202"
+          ],
+          "signature_through_2": [
+            6,
+            2,
+            2,
+            4,
+            2,
+            3,
+            1,
+            1
+          ]
+        },
+        {
+          "canonical_masks": [
+            669,
+            726
+          ],
+          "fibre_id": "A4-QF025",
+          "fibre_size": 2,
+          "group": "A4",
+          "pattern_ids": [
+            "A4-P203",
+            "A4-P219"
+          ],
+          "signature_through_2": [
+            6,
+            2,
+            3,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "canonical_masks": [
+            430,
+            826
+          ],
+          "fibre_id": "A4-QF026",
+          "fibre_size": 2,
+          "group": "A4",
+          "pattern_ids": [
+            "A4-P147",
+            "A4-P267"
+          ],
+          "signature_through_2": [
+            6,
+            3,
+            0,
+            3,
+            3,
+            3,
+            0,
+            3
+          ]
+        },
+        {
+          "canonical_masks": [
+            373,
+            993
+          ],
+          "fibre_id": "A4-QF027",
+          "fibre_size": 2,
+          "group": "A4",
+          "pattern_ids": [
+            "A4-P143",
+            "A4-P323"
+          ],
+          "signature_through_2": [
+            6,
+            3,
+            0,
+            3,
+            3,
+            3,
+            3,
+            0
+          ]
+        },
+        {
+          "canonical_masks": [
+            366,
+            634
+          ],
+          "fibre_id": "A4-QF028",
+          "fibre_size": 2,
+          "group": "A4",
+          "pattern_ids": [
+            "A4-P141",
+            "A4-P190"
+          ],
+          "signature_through_2": [
+            6,
+            3,
+            1,
+            2,
+            2,
+            4,
+            1,
+            2
+          ]
+        },
+        {
+          "canonical_masks": [
+            365,
+            636
+          ],
+          "fibre_id": "A4-QF029",
+          "fibre_size": 2,
+          "group": "A4",
+          "pattern_ids": [
+            "A4-P140",
+            "A4-P192"
+          ],
+          "signature_through_2": [
+            6,
+            3,
+            1,
+            2,
+            2,
+            4,
+            2,
+            1
+          ]
+        },
+        {
+          "canonical_masks": [
+            245,
+            791
+          ],
+          "fibre_id": "A4-QF030",
+          "fibre_size": 2,
+          "group": "A4",
+          "pattern_ids": [
+            "A4-P120",
+            "A4-P256"
+          ],
+          "signature_through_2": [
+            6,
+            3,
+            1,
+            2,
+            4,
+            2,
+            2,
+            1
+          ]
+        },
+        {
+          "canonical_masks": [
+            237,
+            633
+          ],
+          "fibre_id": "A4-QF031",
+          "fibre_size": 2,
+          "group": "A4",
+          "pattern_ids": [
+            "A4-P116",
+            "A4-P189"
+          ],
+          "signature_through_2": [
+            6,
+            3,
+            1,
+            3,
+            3,
+            3,
+            1,
+            1
+          ]
+        },
+        {
+          "canonical_masks": [
+            238,
+            679
+          ],
+          "fibre_id": "A4-QF032",
+          "fibre_size": 2,
+          "group": "A4",
+          "pattern_ids": [
+            "A4-P117",
+            "A4-P209"
+          ],
+          "signature_through_2": [
+            6,
+            3,
+            1,
+            4,
+            2,
+            2,
+            1,
+            2
+          ]
+        },
+        {
+          "canonical_masks": [
+            246,
+            663
+          ],
+          "fibre_id": "A4-QF033",
+          "fibre_size": 2,
+          "group": "A4",
+          "pattern_ids": [
+            "A4-P121",
+            "A4-P200"
+          ],
+          "signature_through_2": [
+            6,
+            3,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "canonical_masks": [
+            221,
+            599
+          ],
+          "fibre_id": "A4-QF034",
+          "fibre_size": 2,
+          "group": "A4",
+          "pattern_ids": [
+            "A4-P108",
+            "A4-P160"
+          ],
+          "signature_through_2": [
+            6,
+            3,
+            2,
+            2,
+            4,
+            2,
+            1,
+            1
+          ]
+        },
+        {
+          "canonical_masks": [
+            222,
+            615
+          ],
+          "fibre_id": "A4-QF035",
+          "fibre_size": 2,
+          "group": "A4",
+          "pattern_ids": [
+            "A4-P109",
+            "A4-P174"
+          ],
+          "signature_through_2": [
+            6,
+            3,
+            2,
+            4,
+            2,
+            2,
+            1,
+            1
+          ]
+        },
+        {
+          "canonical_masks": [
+            219,
+            591
+          ],
+          "fibre_id": "A4-QF036",
+          "fibre_size": 2,
+          "group": "A4",
+          "pattern_ids": [
+            "A4-P106",
+            "A4-P153"
+          ],
+          "signature_through_2": [
+            6,
+            3,
+            3,
+            3,
+            3,
+            3,
+            0,
+            0
+          ]
+        },
+        {
+          "canonical_masks": [
+            183,
+            303
+          ],
+          "fibre_id": "A4-QF037",
+          "fibre_size": 2,
+          "group": "A4",
+          "pattern_ids": [
+            "A4-P100",
+            "A4-P133"
+          ],
+          "signature_through_2": [
+            6,
+            4,
+            1,
+            2,
+            2,
+            3,
+            1,
+            2
+          ]
+        },
+        {
+          "canonical_masks": [
+            126,
+            317
+          ],
+          "fibre_id": "A4-QF038",
+          "fibre_size": 2,
+          "group": "A4",
+          "pattern_ids": [
+            "A4-P073",
+            "A4-P137"
+          ],
+          "signature_through_2": [
+            6,
+            4,
+            1,
+            2,
+            2,
+            3,
+            2,
+            1
+          ]
+        },
+        {
+          "canonical_masks": [
+            119,
+            252
+          ],
+          "fibre_id": "A4-QF039",
+          "fibre_size": 2,
+          "group": "A4",
+          "pattern_ids": [
+            "A4-P068",
+            "A4-P123"
+          ],
+          "signature_through_2": [
+            6,
+            4,
+            1,
+            2,
+            3,
+            2,
+            2,
+            1
+          ]
+        },
+        {
+          "canonical_masks": [
+            190,
+            231
+          ],
+          "fibre_id": "A4-QF040",
+          "fibre_size": 2,
+          "group": "A4",
+          "pattern_ids": [
+            "A4-P104",
+            "A4-P114"
+          ],
+          "signature_through_2": [
+            6,
+            4,
+            1,
+            3,
+            2,
+            2,
+            1,
+            2
+          ]
+        },
+        {
+          "canonical_masks": [
+            123,
+            189
+          ],
+          "fibre_id": "A4-QF041",
+          "fibre_size": 2,
+          "group": "A4",
+          "pattern_ids": [
+            "A4-P070",
+            "A4-P103"
+          ],
+          "signature_through_2": [
+            6,
+            4,
+            2,
+            2,
+            3,
+            2,
+            1,
+            1
+          ]
+        },
+        {
+          "canonical_masks": [
+            111,
+            159
+          ],
+          "fibre_id": "A4-QF042",
+          "fibre_size": 2,
+          "group": "A4",
+          "pattern_ids": [
+            "A4-P062",
+            "A4-P085"
+          ],
+          "signature_through_2": [
+            6,
+            4,
+            2,
+            3,
+            2,
+            2,
+            1,
+            1
+          ]
+        },
+        {
+          "canonical_masks": [
+            758,
+            925
+          ],
+          "fibre_id": "A4-QF043",
+          "fibre_size": 2,
+          "group": "A4",
+          "pattern_ids": [
+            "A4-P246",
+            "A4-P301"
+          ],
+          "signature_through_2": [
+            7,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ]
+        },
+        {
+          "canonical_masks": [
+            823,
+            889
+          ],
+          "fibre_id": "A4-QF044",
+          "fibre_size": 2,
+          "group": "A4",
+          "pattern_ids": [
+            "A4-P266",
+            "A4-P291"
+          ],
+          "signature_through_2": [
+            7,
+            4,
+            1,
+            4,
+            4,
+            4,
+            2,
+            2
+          ]
+        },
+        {
+          "canonical_masks": [
+            635,
+            815
+          ],
+          "fibre_id": "A4-QF045",
+          "fibre_size": 2,
+          "group": "A4",
+          "pattern_ids": [
+            "A4-P191",
+            "A4-P263"
+          ],
+          "signature_through_2": [
+            7,
+            4,
+            2,
+            4,
+            4,
+            4,
+            1,
+            2
+          ]
+        },
+        {
+          "canonical_masks": [
+            637,
+            761
+          ],
+          "fibre_id": "A4-QF046",
+          "fibre_size": 2,
+          "group": "A4",
+          "pattern_ids": [
+            "A4-P193",
+            "A4-P248"
+          ],
+          "signature_through_2": [
+            7,
+            4,
+            2,
+            4,
+            4,
+            4,
+            2,
+            1
+          ]
+        },
+        {
+          "canonical_masks": [
+            1758,
+            1774
+          ],
+          "fibre_id": "A4-QF047",
+          "fibre_size": 2,
+          "group": "A4",
+          "pattern_ids": [
+            "A4-P342",
+            "A4-P345"
+          ],
+          "signature_through_2": [
+            8,
+            4,
+            3,
+            5,
+            5,
+            5,
+            3,
+            3
+          ]
+        },
+        {
+          "canonical_masks": [
+            989,
+            1014
+          ],
+          "fibre_id": "A4-QF048",
+          "fibre_size": 2,
+          "group": "A4",
+          "pattern_ids": [
+            "A4-P320",
+            "A4-P333"
+          ],
+          "signature_through_2": [
+            8,
+            5,
+            3,
+            4,
+            5,
+            5,
+            3,
+            3
+          ]
+        },
+        {
+          "canonical_masks": [
+            766,
+            957
+          ],
+          "fibre_id": "A4-QF049",
+          "fibre_size": 2,
+          "group": "A4",
+          "pattern_ids": [
+            "A4-P253",
+            "A4-P314"
+          ],
+          "signature_through_2": [
+            8,
+            5,
+            3,
+            5,
+            4,
+            5,
+            3,
+            3
+          ]
+        },
+        {
+          "canonical_masks": [
+            759,
+            927
+          ],
+          "fibre_id": "A4-QF050",
+          "fibre_size": 2,
+          "group": "A4",
+          "pattern_ids": [
+            "A4-P247",
+            "A4-P303"
+          ],
+          "signature_through_2": [
+            8,
+            5,
+            3,
+            5,
+            5,
+            4,
+            3,
+            3
+          ]
+        }
+      ]
+    }
+  ],
+  "schema_version": "orbit_atlas_quadratic_collision_atlas_v1"
+}

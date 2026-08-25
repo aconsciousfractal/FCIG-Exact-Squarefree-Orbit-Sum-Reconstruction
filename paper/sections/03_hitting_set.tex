@@ -1,0 +1,79 @@
+\section{Exact separation as a hitting-set problem}
+\label{sec:hitting-set}
+
+Fix one of the four actions and a finite coordinate dictionary $\Dict$.
+For distinct pattern orbits $R,R'$, define the separator mask
+\[
+  \Sep_{\Dict}(R,R')
+  =\{q\in\Dict:q(R)\neq q(R')\}.
+\]
+The full dictionary separates if and only if every such mask is nonempty.  A
+subfamily $F\subseteq\Dict$ separates if and only if
+\begin{equation}
+  F\cap\Sep_{\Dict}(R,R')\neq\varnothing
+  \quad\text{for every unordered pair }\{R,R'\}.
+  \label{eq:hitting-set}
+\end{equation}
+Consequently the minimum fingerprint problem is the transversal-number
+problem for the hypergraph of nonempty pair-separator masks.
+
+Each coordinate can take several integer values.  For this reason our primary
+language is ``hitting set on unordered orbit-pair separation masks.''  The
+classical Test Cover problem provides useful optimization context
+\cite{DeBontridderEtAl2003}, but applying that name here requires the explicit
+multi-outcome generalization encoded by Equation~\eqref{eq:hitting-set}.
+
+The reported minima count selected coordinates from the declared dictionary.
+They are not minima among arbitrary integer-valued combinations of those
+coordinates.  Indeed, on a finite pattern set, a sufficiently large
+mixed-radix linear combination can encode the entire separating signature in
+one integer whenever the full dictionary separates.  The nontrivial
+optimization problem here is therefore the sparsest separating
+\emph{subfamily} of the fixed coordinate dictionary.
+
+\subsection{Lossless reductions}
+
+Two elementary reductions shrink the constraint family without changing its
+transversals.  Duplicate separator masks may initially be represented once.
+Second, if $S\subsetneq T$ are separator masks, the constraint ``hit $T$'' is
+implied by ``hit $S$'' and $T$ may be deleted.  The resulting inclusion-minimal
+antichain is the finite hitting-set instance used for the four-vertex readable
+proof.  The five-vertex lower certificate instead uses a selected explicit
+pair core; infeasibility of that core at a given budget implies infeasibility
+of the complete pair system at the same budget.
+
+\subsection{Upper and lower certificates}
+
+An upper certificate is an explicit list of coordinates.  Its checker
+recomputes every value in Equation~\eqref{eq:contained-support-count} and
+verifies that all pattern-orbit signature rows are distinct.  Cardinality then
+gives the upper bound.
+
+A lower certificate fixes a budget $b$ and proves that no subfamily of size at
+most $b$ hits all required masks.  Three locally checkable rules suffice:
+\begin{enumerate}
+  \item a singleton separator mask forces its sole coordinate;
+  \item $k$ pairwise disjoint remaining masks require at least $k$
+  coordinates;
+  \item if every coordinate hits at most $M$ among $C$ remaining masks, at
+  least $\lceil C/M\rceil$ coordinates are required.
+\end{enumerate}
+If none of these closes a state, branch on one uncovered mask.  Every hitting
+set must select at least one of its coordinates, so the children are jointly
+exhaustive.  Memoizing identical reduced states turns the tree into a DAG.
+Appendix~\ref{app:n5-dag} gives the precise checker contract.
+
+The proof semantics therefore do not depend on an optimizer's status code.
+Optimization software was used to discover candidate supports and hard pair
+cores for the five-vertex instances.  The accepted lower bounds are the
+complete DAGs checked from explicit pattern pairs and recomputed separator
+masks.
+
+\subsection{Global versus residual pair systems}
+
+Two pair systems occur in later sections.  The \emph{global} minimum uses all
+unordered pairs and every coordinate through the exact degree.  The
+\emph{top-degree extension} problem retains every lower-degree coordinate;
+only pairs still equal on those coordinates need to be hit by top-degree
+coordinates.  Confusing these universes changes the objective; the exact
+conditional values are stated separately in Section~\ref{sec:conditional}.

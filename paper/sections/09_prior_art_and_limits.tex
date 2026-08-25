@@ -1,0 +1,61 @@
+\section{Prior-art subtraction, terminology, and limitations}
+\label{sec:sources-limits}
+
+The source map assigns each reference a typed role and a transfer limit.  The
+external literature supplies general frameworks, vocabulary, and adjacent
+problems; the exact finite values in this paper are supported by the
+distributed certificates.  The distinction is summarized below.
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.27\textwidth}>{\raggedright\arraybackslash}p{0.28\textwidth}>{\raggedright\arraybackslash}p{0.36\textwidth}}
+\toprule
+Role and sources & What transfers & What does not transfer\\
+\midrule
+\endfirsthead
+\toprule
+Role and sources & What transfers & What does not transfer\\
+\midrule
+\endhead
+Orbit enumeration \cite{Polya1937} & finite group-action enumeration framework & injectivity and minimum separator cardinality\\
+Separating invariants \cite{Kemper2009,DufresneJeffries2015,KemperLopatinReimers2022} & general separation language and constraints & minima in the fixed integer squarefree dictionaries\\
+Reconstruction and decks \cite{Mnukhin1992,Simon2018,DufresneEtAl2026} & orbit-sum and reconstruction context & equality with the directed Boolean carrier or its signatures\\
+Graph-counting coordinates \cite{Thiery2000,Mikkonen2008,CurticapeanDellMarx2017,ArvindEtAl2019,BokerEtAl2023} & adjacent graph-invariant and motif-transform context & the exact directed fibres, residual pairs, or minima\\
+Orbit-incidence matrices \cite{KramerMesner1976} & matrix vocabulary & an unnormalized identification of the two incidence conventions\\
+Test Cover \cite{DeBontridderEtAl2003} & classical optimization context & a binary-test formulation without the multi-outcome caveat\\
+Representation and graph isomorphism \cite{GrochowUrisman2026} & adjacent support-degree context & any theorem used to derive the four finite numerical rows\\
+\bottomrule
+\end{longtable}
+
+The graph-reconstruction work of Dufresne, Jeronimo, Kenkel, Lindo, and
+Villamizar \cite{DufresneEtAl2026} concerns an undirected vertex-deletion
+setting and supplies boundary context, not an identification of carriers.
+Similarly, general reconstruction under group actions
+\cite{RadcliffeScott2006} does not determine the selected squarefree
+coordinates or their finite hitting-set minima.
+
+The source audit is bounded and typed.  Failure to identify an exact match in
+that corpus is not used as a mathematical premise.  All theorems in this paper
+remain true or false solely by their stated finite definitions and
+certificates; bibliographic scope affects contextual positioning, not the
+validity of the enumerations.
+
+\subsection{Model limitations}
+
+The conclusions depend on every item in the following list:
+\begin{itemize}
+  \item the vertex set has size four or five;
+  \item arcs are directed, loops are excluded, and multiplicities are Boolean;
+  \item the acting group is exactly $S_n$ or $A_n$ by vertex relabelling;
+  \item coordinates are orbit sums of nonempty squarefree arc supports;
+  \item the dictionaries are cumulative through the declared support degree;
+  \item minimum cardinality is taken among coordinate subfamilies, not among
+  arbitrary formulas generated from them;
+  \item transposition, complementation, and odd external relabellings are
+  controls or diagnostic transformations, not extra equivalences.
+\end{itemize}
+
+No computation in the governed experiment uses a vertex count above five.
+The data therefore do not support a recurrence or asymptotic law in $n$.
+Likewise, the eight $A_5$ tree-blind pairs establish a bounded contrast, not a
+general obstruction theorem for alternating groups.  The source-shape census
+does not change the global minimum proof, and the conditional extension
+counts do not replace the global minima.

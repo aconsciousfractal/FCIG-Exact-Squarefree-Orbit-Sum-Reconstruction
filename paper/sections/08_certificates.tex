@@ -1,0 +1,69 @@
+\section{Certificates and independent replay}
+\label{sec:atlas}
+
+The certified atlas $\CertifiedAtlas$ is a collection of finite mathematical objects with an
+explicit dependency graph.  It is not a substitute for the statements and
+proof explanations in Sections~\ref{sec:n4}--\ref{sec:conditional}.  Its role
+is to expose every enumerated carrier, coordinate, collision, witness, and
+lower-bound transition to a checker.
+
+\input{tables/T06_certificate_inventory}
+
+\subsection{Traceability from statement to certificate}
+
+The six main statements have the following evidence chain:
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{0.28\textwidth}>{\raggedright\arraybackslash}p{0.27\textwidth}>{\raggedright\arraybackslash}X}
+\toprule
+Statement & finite content & principal certificate surface\\
+\midrule
+Unified reconstruction theorem & degrees $3,3,4,4$ and minima $7,11,14,17$ & union of the four exact-degree and global-minimum packages\\
+Four-vertex collision proposition & $39/51$ residual pairs and cubic sufficiency & collision atlas and degree-three signature tables\\
+Four-vertex minimum theorem & global minima $7/19$ and $11/29$ & explicit supports, structural blocks, and 11/22-node lower DAGs\\
+Five-vertex degree and minimum theorem & exact degree four and minima $14/83$, $17/124$ & complete signatures, upper witnesses, and 63,589/213,648-node lower DAGs\\
+Tree/index-two proposition & $39,51,190,105$ tree-separable residual pairs & tree flags, separator masks, and $S_n/A_n$ orbit crosswalk\\
+Conditional-extension proposition & added-coordinate data
+$\begin{matrix}(2,2),(4,128),\\(4,2),(4,200)\end{matrix}$ & residual-pair payloads and complete optimal-subset census\\
+\bottomrule
+\end{tabularx}
+\caption{Statement-to-certificate traceability.}
+\label{tab:statement-traceability}
+\end{table}
+
+Each principal surface is addressed by repository-relative path and SHA-256
+in Appendix~\ref{app:atlas-replay}.  The separate exact crosswalk
+also records statement text, support files, verifier, and
+transfer limit.  This prevents a typeset number from becoming detached from
+the finite object that establishes it.
+
+\subsection{Independent implementation paths}
+
+The five-vertex computation uses separate producer and checker code trees.  The
+producer generated groups by direct permutation enumeration and evaluated
+support orbits by its own incidence path.  The checker generated groups by
+closure from generators, reconstructed support orbits independently, and
+evaluated coordinates by contained-support accumulation.  Neither imported
+the other's module or trusted a producer-generated separator mask.  The two
+complete canonical payloads are byte-identical.
+
+For the lower proofs, the checker reconstructs all $534$ core pattern pairs,
+all coordinate IDs, and every separator mask before reading DAG transitions.
+It then checks reachability, acyclicity, every branch child, and every packing
+or coverage leaf.  Thus neither a stored separator mask nor an optimizer
+status is accepted as proof authority.
+
+The assurance label is deliberately limited: the implementations are independent in
+implementation and data path.  This is not a claim of blind human replication
+or independent model-family authorship.
+
+\subsection{Hashes and semantic checks}
+
+A hash authenticates that the checked byte string is the same byte string
+later inspected.  It does not show that the string encodes the intended group,
+coordinate evaluation, or proof rule.  Those assertions are verified by
+reconstruction.  The atlas therefore stores transport evidence (the manifest
+and hashes) together with semantic evidence (explicit patterns, supports,
+integer values, and local branch rules).  No hash-only oracle is accepted for
+a mathematical result.

@@ -1,0 +1,91 @@
+\section{Five-vertex branch-DAG encoding and checker contract}
+\label{app:n5-dag}
+
+The five-vertex lower certificates prove infeasibility of a hitting-set budget
+on an explicit core of pair-separator masks.  This appendix specifies why a
+locally accepted DAG certifies the global lower bound.
+
+\subsection{Root data}
+
+For each action the proof object contains the ordered coordinate IDs, the
+budget, and a list of explicit unordered pattern pairs.  The checker rebuilds
+each canonical pattern from its ID and recomputes the integer coordinate rows
+before deriving the separator mask.  The root statistics are:
+\[
+\begin{array}{c|r|r|l}
+G & \text{budget} & \text{core rows} & \text{root-state SHA-256 prefix}\\ \hline
+S_5 & 13 & 249 & \texttt{80a7d31c66c96555}\\
+A_5 & 16 & 285 & \texttt{0fb0e501622ad7bc}.
+\end{array}
+\]
+The pair core is a subset of the complete separator system.  Therefore, if no
+budget-$b$ family hits the core, no budget-$b$ family separates all pattern
+orbits.
+
+\subsection{Reduced states and local rules}
+
+A state consists of a nonnegative remaining budget and a set of uncovered
+separator masks.  Selecting coordinate $i$ removes every mask containing
+$i$ and decreases the budget by one.  Singleton masks are propagated until
+none remains.  The state is rejected if the budget is negative or a remaining
+mask is empty.
+
+A \emph{branch node} names one uncovered mask $S$ and contains one child for
+every $i\in S$, after selecting $i$ and applying deterministic singleton
+propagation.  Since a hitting set must meet $S$, these children exhaust all
+solutions below that node.
+
+A \emph{packing leaf} supplies $k$ pairwise disjoint uncovered masks when
+$k$ exceeds the remaining budget.  Each selected coordinate hits at most one
+packing member, so closure is valid.  A \emph{coverage leaf} supplies the
+number $C$ of uncovered masks and an exact maximum $M$ of masks hit by any
+remaining coordinate.  If $\lceil C/M\rceil$ exceeds the remaining budget,
+closure is again valid.
+
+Every state stores a canonical state hash, but the checker recomputes the
+reduced masks, budgets, packing disjointness, coverage maximum, and child
+states.  The hash binds the representation after those semantic checks.
+
+\begin{lemma}[Soundness of a complete branch DAG]
+If every reachable node satisfies its local transition rule and every leaf
+satisfies one of the two lower-bound rules above, then the root state has no
+hitting set within its budget.
+\end{lemma}
+
+\begin{proof}
+Proceed by reverse topological order.  A checked leaf has no feasible hitting
+set by its packing or coverage inequality.  At a branch node, any hitting set
+must select some coordinate in the named mask and would therefore induce a
+feasible hitting set in at least one child.  If all children are infeasible,
+so is the parent.  The conclusion reaches the root.  Shared child states do
+not affect the induction because the graph is acyclic and every reachable
+node is checked once.
+\end{proof}
+
+\subsection{Complete proof census}
+
+For $S_5$ there are $11{,}893$ branch nodes and $51{,}696$ leaves.  Of the
+leaves, $49{,}123$ close by disjoint packing and $2573$ by uniform coverage.
+The maximum depth is eleven.  For $A_5$ there are $44{,}316$ branch nodes and
+$169{,}332$ leaves: $164{,}003$ packing leaves and $5329$ coverage leaves,
+with maximum depth fourteen.  All $63{,}589$ and $213{,}648$ nodes are
+reachable from their roots.
+
+The deterministic compressed transports and canonical uncompressed content
+are separately hashed:
+\begin{center}
+\small
+\begin{tabular}{ccl}
+\toprule
+Action & representation & SHA-256\\
+\midrule
+$S_5$ & gzip & \texttt{6babe9631d4dc613\ldots f8c60d}\\
+$S_5$ & canonical JSON & \texttt{233be7b8bb5aa9ef\ldots200a2d}\\
+$A_5$ & gzip & \texttt{11d3efdc8b683965\ldots d2cde}\\
+$A_5$ & canonical JSON & \texttt{866974b4163f90e3\ldots eab82}\\
+\bottomrule
+\end{tabular}
+\end{center}
+The full hashes are recorded in the atlas manifest.  The verifier checks both
+transport forms, but the lower-bound conclusion follows from the local rules,
+not from matching the displayed prefixes.

@@ -1,0 +1,69 @@
+\section{Tree separators and the bounded index-two contrast}
+\label{sec:tree-index-two}
+
+A top-degree support has size $n-1$: cubic for $n=4$ and quartic for $n=5$.
+Call such a directed support a \emph{tree support} if the simple undirected
+graph obtained by forgetting arc orientations is a tree on all $n$ vertices.
+This is a property of the support orbit and hence defines a subset of the
+top-degree coordinate dictionary.
+
+For $A_n\triangleleft S_n$ of index two, an $S_n$-orbit is either one
+$A_n$-orbit or the disjoint union of two $A_n$-orbits.  In the second case we
+call the resulting pair an \emph{index-two split pair}.  This is purely a
+finite group-action definition.
+
+\begin{proposition}[Tree and index-two contrast in the finite panel]
+\label{prop:tree-index-two}
+Every one of the $39$ $S_4$ and $51$ $A_4$ residual pairs at degree two, and
+every one of the $190$ $S_5$ residual pairs at degree three, has an individual
+tree-supported separator at the exact top degree.  For $A_5$, $105$ of the
+$113$ degree-three residual pairs have such a separator.  The remaining eight
+pairs are tree-blind, and each of those eight is an index-two split pair of
+$A_5$-orbits contained in one $S_5$-orbit.
+\end{proposition}
+
+\begin{proof}
+For every residual pair, compute its separator mask inside the exact
+top-degree dictionary and intersect that mask with the coordinates whose
+canonical supports satisfy the tree test.  The intersections have the stated
+nonempty/empty census.  This uses all $8,12,27,41$ tree-supported top-degree
+coordinates for $S_4,A_4,S_5,A_5$, respectively.
+
+Independently, construct the map from each $A_n$ pattern orbit to the
+containing $S_n$ orbit.  A fibre of size two is an index-two split.  There are
+nine split residual pairs for $A_4$ and fifty-four for $A_5$.  Every $A_4$
+split pair is tree-separated.  In the $A_5$ residual list, all eight empty
+tree intersections occur among the fifty-four split pairs; exact pattern IDs
+and separator masks are stored in the atlas.  Rebuilding the full payload by
+a second implementation gives byte-identical canonical data, including this
+crosswalk.
+\end{proof}
+
+\input{tables/T02_collision_tree}
+
+The converse implication is false in the finite data: forty-six of the
+fifty-four $A_5$ split residual pairs do have a tree separator.  Thus
+index-two splitting is necessary for the observed tree blindness but does not
+by itself force it.  This distinction prevents the eight exceptions from
+being inflated into a general statement about alternating actions.
+
+\subsection{A common tree cover for the symmetric five-vertex action}
+
+The proposition concerns one separator per residual pair.  A stronger finite
+optimization asks for a single family of tree coordinates that hits all
+$190$ $S_5$ residual pairs.  Its exact minimum is five, and there are $88$
+minimum tree-only families in the canonical coordinate order.  For $A_5$ no
+tree-only family can hit every residual pair because the eight tree-blind
+pairs have empty tree separator masks.
+
+When the tree restriction is removed, each of the two minimum conditional
+$S_5$ quartic extensions has four coordinates: exactly three have tree
+supports and the fourth has an underlying support that is unicyclic on its
+touched vertices.  This shape statement belongs to the bounded atlas and is
+not used in the proof of the global $14$-coordinate minimum.
+
+\begin{proofboundary}
+The words ``split pair'' and ``tree-blind'' refer only to orbit fibres and
+directed support shapes in the declared finite model.  They carry no
+geometric, stereochemical, or physical assertion.
+\end{proofboundary}

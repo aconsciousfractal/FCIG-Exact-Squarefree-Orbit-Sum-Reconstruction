@@ -1,0 +1,352 @@
+{
+  "claim_ceiling": "finite_panel_only_no_universal_inference",
+  "experiment_id": "FAMILY_DEGREE",
+  "groups": [
+    {
+      "carrier_size": 6,
+      "coordinate_counts": {
+        "1": 1,
+        "2": 4,
+        "3": 4
+      },
+      "coordinate_registry_sha256": "a2a91f940320ff282aa5735f7d3a1b1c3f95b02db1221a8783697b75763a4d2c",
+      "degree_summaries": [
+        {
+          "colliding_class_count": 12,
+          "colliding_pair_count": 18,
+          "collision_fibre_count": 3,
+          "collision_fibre_sha256": "ee0b0f519b66569b091af04f8058806d6f6a0a163c9e238758b72f1f080ec0af",
+          "degree": 1,
+          "distinct_signature_count": 7,
+          "first_collision_masks": [
+            3,
+            5
+          ],
+          "max_fibre_size": 4
+        },
+        {
+          "colliding_class_count": 0,
+          "colliding_pair_count": 0,
+          "collision_fibre_count": 0,
+          "collision_fibre_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "degree": 2,
+          "distinct_signature_count": 16,
+          "first_collision_masks": null,
+          "max_fibre_size": 1
+        },
+        {
+          "colliding_class_count": 0,
+          "colliding_pair_count": 0,
+          "collision_fibre_count": 0,
+          "collision_fibre_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "degree": 3,
+          "distinct_signature_count": 16,
+          "first_collision_masks": null,
+          "max_fibre_size": 1
+        }
+      ],
+      "group": "S3",
+      "group_order": 6,
+      "n": 3,
+      "pattern_orbit_count": 16,
+      "pattern_registry_sha256": "c31b8013760849302a4a5692f44cd8dc3e6d139a1fbcfabaa8ec403ebd12120a",
+      "pattern_space_size": 64,
+      "reconstruction_degree_within_panel": 2,
+      "total_coordinate_count": 9
+    },
+    {
+      "carrier_size": 6,
+      "coordinate_counts": {
+        "1": 2,
+        "2": 5,
+        "3": 8
+      },
+      "coordinate_registry_sha256": "3510d41a96effbf91b5e7114bb6c978eb3b1a1630f7d43415fbe2c4c9c0e2526",
+      "degree_summaries": [
+        {
+          "colliding_class_count": 12,
+          "colliding_pair_count": 12,
+          "collision_fibre_count": 4,
+          "collision_fibre_sha256": "b70155eb84311af98d4459df9261e78dc6b6bceaec0abf7db951942bbdf44704",
+          "degree": 1,
+          "distinct_signature_count": 16,
+          "first_collision_masks": [
+            3,
+            5
+          ],
+          "max_fibre_size": 3
+        },
+        {
+          "colliding_class_count": 0,
+          "colliding_pair_count": 0,
+          "collision_fibre_count": 0,
+          "collision_fibre_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "degree": 2,
+          "distinct_signature_count": 24,
+          "first_collision_masks": null,
+          "max_fibre_size": 1
+        },
+        {
+          "colliding_class_count": 0,
+          "colliding_pair_count": 0,
+          "collision_fibre_count": 0,
+          "collision_fibre_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "degree": 3,
+          "distinct_signature_count": 24,
+          "first_collision_masks": null,
+          "max_fibre_size": 1
+        }
+      ],
+      "group": "A3",
+      "group_order": 3,
+      "n": 3,
+      "pattern_orbit_count": 24,
+      "pattern_registry_sha256": "f3d209ad3138584e0443345abc65605080d02f41d61f62bb675ea5884b2118cd",
+      "pattern_space_size": 64,
+      "reconstruction_degree_within_panel": 2,
+      "total_coordinate_count": 15
+    },
+    {
+      "carrier_size": 12,
+      "coordinate_counts": {
+        "1": 1,
+        "2": 5,
+        "3": 13
+      },
+      "coordinate_registry_sha256": "1a6043bf6eef3bda7065661e89986cd47a47ad6ca2aa50504888dbc4973cbf2a",
+      "degree_summaries": [
+        {
+          "colliding_class_count": 214,
+          "colliding_pair_count": 3412,
+          "collision_fibre_count": 9,
+          "collision_fibre_sha256": "6227ab751af3a2fee5d479631a72411b333f4de43c01bcf29244a8f415572dcf",
+          "degree": 1,
+          "distinct_signature_count": 13,
+          "first_collision_masks": [
+            3,
+            9
+          ],
+          "max_fibre_size": 48
+        },
+        {
+          "colliding_class_count": 70,
+          "colliding_pair_count": 39,
+          "collision_fibre_count": 34,
+          "collision_fibre_sha256": "900b5fa9d597a41d024107a66355e961f02e5b5037bcc34f7f5482e65a6f78fb",
+          "degree": 2,
+          "distinct_signature_count": 182,
+          "first_collision_masks": [
+            77,
+            83
+          ],
+          "max_fibre_size": 4
+        },
+        {
+          "colliding_class_count": 0,
+          "colliding_pair_count": 0,
+          "collision_fibre_count": 0,
+          "collision_fibre_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "degree": 3,
+          "distinct_signature_count": 218,
+          "first_collision_masks": null,
+          "max_fibre_size": 1
+        }
+      ],
+      "group": "S4",
+      "group_order": 24,
+      "n": 4,
+      "pattern_orbit_count": 218,
+      "pattern_registry_sha256": "0e51d360ab906150601e2b235daed5e36bf0d4c7fc55fd81985445e6760df83d",
+      "pattern_space_size": 4096,
+      "reconstruction_degree_within_panel": 3,
+      "total_coordinate_count": 19
+    },
+    {
+      "carrier_size": 12,
+      "coordinate_counts": {
+        "1": 1,
+        "2": 7,
+        "3": 21
+      },
+      "coordinate_registry_sha256": "432a528a0fd987bb4ad9499b3400cef185a6a8175043ffd71e9aba33437893e1",
+      "degree_summaries": [
+        {
+          "colliding_class_count": 364,
+          "colliding_pair_count": 10387,
+          "collision_fibre_count": 9,
+          "collision_fibre_sha256": "445d18baa0a64d1c4756d2abfb9fcba1dcae1c122a4df25c04ac22b018d799f8",
+          "degree": 1,
+          "distinct_signature_count": 13,
+          "first_collision_masks": [
+            3,
+            9
+          ],
+          "max_fibre_size": 86
+        },
+        {
+          "colliding_class_count": 102,
+          "colliding_pair_count": 51,
+          "collision_fibre_count": 51,
+          "collision_fibre_sha256": "a405b3782df67963f86e5e98f25f474e900d9b41b199c7420a83ba05bea04096",
+          "degree": 2,
+          "distinct_signature_count": 317,
+          "first_collision_masks": [
+            94,
+            109
+          ],
+          "max_fibre_size": 2
+        },
+        {
+          "colliding_class_count": 0,
+          "colliding_pair_count": 0,
+          "collision_fibre_count": 0,
+          "collision_fibre_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "degree": 3,
+          "distinct_signature_count": 368,
+          "first_collision_masks": null,
+          "max_fibre_size": 1
+        }
+      ],
+      "group": "A4",
+      "group_order": 12,
+      "n": 4,
+      "pattern_orbit_count": 368,
+      "pattern_registry_sha256": "07549ba9decd5ac91ab6d103c0d3fdd687b6b0b3d332e55fcae4c9a2d4e50bbb",
+      "pattern_space_size": 4096,
+      "reconstruction_degree_within_panel": 3,
+      "total_coordinate_count": 29
+    },
+    {
+      "carrier_size": 20,
+      "coordinate_counts": {
+        "1": 1,
+        "2": 5,
+        "3": 16
+      },
+      "coordinate_registry_sha256": "04d5baf61c967c3e7ee77b3737506cb22c3fa3d43b4220c7867e892ff4390ac5",
+      "degree_summaries": [
+        {
+          "colliding_class_count": 9604,
+          "colliding_pair_count": 5614981,
+          "collision_fibre_count": 17,
+          "collision_fibre_sha256": "290dd018e990b1bf76f22de364e7d65039899a701d4ae483f540fb4297a5c133",
+          "degree": 1,
+          "distinct_signature_count": 21,
+          "first_collision_masks": [
+            3,
+            17
+          ],
+          "max_fibre_size": 1670
+        },
+        {
+          "colliding_class_count": 8526,
+          "colliding_pair_count": 27989,
+          "collision_fibre_count": 1862,
+          "collision_fibre_sha256": "8c67f679a105f33abf59d64563c0fcdfd2c5445ef9ebdfdcc5870fc745ff8d3c",
+          "degree": 2,
+          "distinct_signature_count": 2944,
+          "first_collision_masks": [
+            123,
+            335
+          ],
+          "max_fibre_size": 32
+        },
+        {
+          "colliding_class_count": 333,
+          "colliding_pair_count": 190,
+          "collision_fibre_count": 159,
+          "collision_fibre_sha256": "4ce275458b47307bf3d147520f6f7d55a1dbb6c868d26fea3161378e691023e3",
+          "degree": 3,
+          "distinct_signature_count": 9434,
+          "first_collision_masks": [
+            365,
+            485
+          ],
+          "max_fibre_size": 4
+        }
+      ],
+      "group": "S5",
+      "group_order": 120,
+      "n": 5,
+      "pattern_orbit_count": 9608,
+      "pattern_registry_sha256": "78b6ec153804bcaab283582a5aa9bc011727aaf0664b20778b9d5418bc2b3495",
+      "pattern_space_size": 1048576,
+      "reconstruction_degree_within_panel": "GT3",
+      "total_coordinate_count": 22
+    },
+    {
+      "carrier_size": 20,
+      "coordinate_counts": {
+        "1": 1,
+        "2": 6,
+        "3": 21
+      },
+      "coordinate_registry_sha256": "c8dd28e89730f6144c5a21c5a9bef3b3af6fa8115d0765a12ab8ec4101c3b87b",
+      "degree_summaries": [
+        {
+          "colliding_class_count": 17820,
+          "colliding_pair_count": 19741159,
+          "collision_fibre_count": 17,
+          "collision_fibre_sha256": "3aaee5781f030a02ea7137684fc4681187530b2e33a0cb9cf010168a1746aad0",
+          "degree": 1,
+          "distinct_signature_count": 21,
+          "first_collision_masks": [
+            3,
+            17
+          ],
+          "max_fibre_size": 3158
+        },
+        {
+          "colliding_class_count": 15278,
+          "colliding_pair_count": 32830,
+          "collision_fibre_count": 4095,
+          "collision_fibre_sha256": "3918d2732bc60d8fbaf0422fabbf0922a662c82112cadb1a6cf866be6ae04e40",
+          "degree": 2,
+          "distinct_signature_count": 6641,
+          "first_collision_masks": [
+            123,
+            399
+          ],
+          "max_fibre_size": 22
+        },
+        {
+          "colliding_class_count": 210,
+          "colliding_pair_count": 113,
+          "collision_fibre_count": 103,
+          "collision_fibre_sha256": "16445cddb092020174eb8e3f3ff40e0f2c343be456297325da9ad61c7af2ebf4",
+          "degree": 3,
+          "distinct_signature_count": 17717,
+          "first_collision_masks": [
+            277,
+            278
+          ],
+          "max_fibre_size": 4
+        }
+      ],
+      "group": "A5",
+      "group_order": 60,
+      "n": 5,
+      "pattern_orbit_count": 17824,
+      "pattern_registry_sha256": "faf0a9d924819b95c6eaa618292ec283fc7916044c8c3b7110b27ec6df8f023e",
+      "pattern_space_size": 1048576,
+      "reconstruction_degree_within_panel": "GT3",
+      "total_coordinate_count": 28
+    }
+  ],
+  "normalization": {
+    "arc_order": "lexicographic_i_then_j_excluding_loops",
+    "carrier": "all_directed_nonloop_arcs",
+    "coordinate_family": "cumulative_squarefree_orbit_sums_degrees_1_2_3",
+    "equivalence": "declared_vertex_group_only",
+    "group_labels": [
+      "S3",
+      "A3",
+      "S4",
+      "A4",
+      "S5",
+      "A5"
+    ],
+    "vertex_parity": "inversion_parity"
+  },
+  "schema_version": "family_degree_family_probe_v1"
+}

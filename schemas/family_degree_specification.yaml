@@ -1,0 +1,34 @@
+schema: family_degree_specification_v1
+scope:
+  panel:
+    - [3, S3]
+    - [3, A3]
+    - [4, S4]
+    - [4, A4]
+    - [5, S5]
+    - [5, A5]
+  carrier: ordered_nonloop_arcs
+  coordinate: integer_orbit_sum_of_squarefree_arc_support
+  tested_degrees: [1, 2, 3]
+normalization: docs/NORMALIZATION_LOCK.md
+required_artifacts:
+  primary: family_probe.json
+  independent: family_probe.json
+  structural: finite_theorem_certificate.json
+structural_certificate:
+  groups: [S4, A4]
+  lower_bound_formula: forced_linear_plus_complete_graph_vertex_cover_plus_disjoint_cubic_packing
+  checks:
+    - forced_linear_constraint_is_present
+    - quadratic_constraints_form_K5_or_K7
+    - cubic_constraints_are_actual_and_pairwise_disjoint
+    - explicit_upper_witness_hits_every_constraint
+reference_values_checked_after_reconstruction:
+  S4: {pattern_orbits: 218, reconstruction_degree: 3, exact_minimum: 7}
+  A4: {pattern_orbits: 368, reconstruction_degree: 3, exact_minimum: 11}
+  S5: {pattern_orbits: 9608, degree_three_is_not_injective: true}
+  A5: {pattern_orbits: 17824, degree_three_is_not_injective: true}
+scope_exclusions:
+  - all_n_degree_formula
+  - all_n_minimum_formula
+  - physical_or_chemical_interpretation

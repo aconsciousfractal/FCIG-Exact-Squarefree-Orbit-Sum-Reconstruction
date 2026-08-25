@@ -1,0 +1,77 @@
+{
+  "experiment_id": "MINIMUM_FINGERPRINTS",
+  "groups": [
+    {
+      "all_full_pairs_separated": true,
+      "canonical_coordinate_ids": [
+        "S4-D1-C000",
+        "S4-D2-C000",
+        "S4-D2-C001",
+        "S4-D2-C002",
+        "S4-D2-C003",
+        "S4-D3-C002",
+        "S4-D3-C011"
+      ],
+      "canonical_coordinate_mask_int": 131359,
+      "coordinate_count": 19,
+      "full_pair_count": 23653,
+      "full_pair_sha256": "4818b5e68dbde59293ff8574298670715d2bd023501bb15321c8ead989c44e0e",
+      "greedy_coordinate_ids": [
+        "S4-D1-C000",
+        "S4-D2-C000",
+        "S4-D2-C001",
+        "S4-D2-C002",
+        "S4-D2-C003",
+        "S4-D3-C004",
+        "S4-D3-C007"
+      ],
+      "greedy_upper_bound": 7,
+      "group": "S4",
+      "initial_disjoint_packing_lower_bound": 5,
+      "minimum_size": 7,
+      "reduced_constraint_count": 26,
+      "search_nodes": 65
+    },
+    {
+      "all_full_pairs_separated": true,
+      "canonical_coordinate_ids": [
+        "A4-D1-C000",
+        "A4-D2-C000",
+        "A4-D2-C001",
+        "A4-D2-C002",
+        "A4-D2-C003",
+        "A4-D2-C004",
+        "A4-D2-C005",
+        "A4-D3-C000",
+        "A4-D3-C010",
+        "A4-D3-C011",
+        "A4-D3-C014"
+      ],
+      "canonical_coordinate_mask_int": 4981119,
+      "coordinate_count": 29,
+      "full_pair_count": 67528,
+      "full_pair_sha256": "3397252c2f5d644914e3288fda8123a8fdd67cc883139d3f9481bfd438ee1a0e",
+      "greedy_coordinate_ids": [
+        "A4-D1-C000",
+        "A4-D2-C000",
+        "A4-D2-C001",
+        "A4-D2-C002",
+        "A4-D2-C003",
+        "A4-D2-C004",
+        "A4-D2-C005",
+        "A4-D3-C001",
+        "A4-D3-C003",
+        "A4-D3-C006",
+        "A4-D3-C011"
+      ],
+      "greedy_upper_bound": 11,
+      "group": "A4",
+      "initial_disjoint_packing_lower_bound": 8,
+      "minimum_size": 11,
+      "reduced_constraint_count": 58,
+      "search_nodes": 228
+    }
+  ],
+  "objective": "global_minimum_separating_fingerprint",
+  "schema_version": "minimum_fingerprints_minimum_fingerprints_v1"
+}

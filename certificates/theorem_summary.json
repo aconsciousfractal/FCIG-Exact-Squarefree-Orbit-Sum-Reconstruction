@@ -1,0 +1,79 @@
+{
+  "carrier": "Boolean loopless directed graphs on the ordered-pair carrier",
+  "case_order": [
+    "S4",
+    "A4",
+    "S5",
+    "A5"
+  ],
+  "cases": {
+    "A4": {
+      "action": "A4",
+      "conditional_extension_minimum": 4,
+      "conditional_extension_solution_count": 128,
+      "dictionary_size": 29,
+      "global_minimum": 11,
+      "lower_dag_nodes": 22,
+      "n": 4,
+      "pattern_orbits": 368,
+      "reconstruction_degree": 3,
+      "residual_pairs_before_top_degree": 51,
+      "tree_blind_pairs": 0,
+      "tree_separated_pairs": 51
+    },
+    "A5": {
+      "action": "A5",
+      "conditional_extension_minimum": 4,
+      "conditional_extension_solution_count": 200,
+      "dictionary_size": 124,
+      "global_minimum": 17,
+      "lower_dag_nodes": 213648,
+      "n": 5,
+      "pattern_orbits": 17824,
+      "reconstruction_degree": 4,
+      "residual_pairs_before_top_degree": 113,
+      "tree_blind_pairs": 8,
+      "tree_separated_pairs": 105
+    },
+    "S4": {
+      "action": "S4",
+      "conditional_extension_minimum": 2,
+      "conditional_extension_solution_count": 2,
+      "dictionary_size": 19,
+      "global_minimum": 7,
+      "lower_dag_nodes": 11,
+      "n": 4,
+      "pattern_orbits": 218,
+      "reconstruction_degree": 3,
+      "residual_pairs_before_top_degree": 39,
+      "tree_blind_pairs": 0,
+      "tree_separated_pairs": 39
+    },
+    "S5": {
+      "action": "S5",
+      "conditional_extension_minimum": 4,
+      "conditional_extension_solution_count": 2,
+      "dictionary_size": 83,
+      "global_minimum": 14,
+      "lower_dag_nodes": 63589,
+      "n": 5,
+      "pattern_orbits": 9608,
+      "reconstruction_degree": 4,
+      "residual_pairs_before_top_degree": 190,
+      "tree_blind_pairs": 0,
+      "tree_separated_pairs": 190
+    }
+  },
+  "minimum_domain": "subfamilies of the four declared cumulative squarefree support-orbit dictionaries",
+  "schema_version": "orbit_sum_theorem_summary_v1",
+  "scope_ceiling": {
+    "arbitrary_invariants": false,
+    "chemical_interpretation": false,
+    "n_values": [
+      4,
+      5
+    ],
+    "novelty_priority_firstness": false,
+    "physical_chirality": false
+  }
+}

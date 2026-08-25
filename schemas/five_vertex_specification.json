@@ -1,0 +1,64 @@
+{
+  "canonical_serialization": {
+    "arc_bitmask": "bit_k_is_one_iff_the_kth_arc_in_lexicographic_nonloop_arc_order_is_present",
+    "arc_bitmask_hex_width": "three_for_n4_and_five_for_n5",
+    "coordinate_evaluation": "number_of_support_orbit_masks_contained_in_the_pattern_mask",
+    "coordinate_id": "group_colon_n_colon_degree_colon_fixed_width_lowercase_hex_support_mask",
+    "coordinate_order": "degree_then_unsigned_canonical_support_mask",
+    "pattern_id": "group_colon_n_colon_fixed_width_lowercase_hex_pattern_mask",
+    "payload_encoding": "utf8_json_sorted_keys_compact_separators_trailing_LF",
+    "permutation_encoding": "tuple_of_vertex_images",
+    "representative": "least_unsigned_bitmask_in_the_named_group_orbit",
+    "vertex_order": "integers_zero_through_n_minus_one"
+  },
+  "reference_values_checked_after_reconstruction": {
+    "A4": {
+      "coordinate_profile": [1, 7, 21],
+      "degree_two_residual_pairs": 51,
+      "pattern_orbits": 368
+    },
+    "A5": {
+      "coordinate_profile": [1, 6, 21, 96],
+      "degree_three_residual_pairs": 113,
+      "dictionary_size": 124,
+      "exact_minimum": 17,
+      "pattern_orbits": 17824,
+      "tree_blind_pairs": 8
+    },
+    "S4": {
+      "coordinate_profile": [1, 5, 13],
+      "degree_two_residual_pairs": 39,
+      "pattern_orbits": 218
+    },
+    "S5": {
+      "coordinate_profile": [1, 5, 16, 61],
+      "degree_three_residual_pairs": 190,
+      "dictionary_size": 83,
+      "exact_minimum": 14,
+      "pattern_orbits": 9608,
+      "tree_only_minimum": 5
+    }
+  },
+  "schema": "five_vertex_reconstruction_specification_v1",
+  "scope": {
+    "actions": ["S4", "A4", "S5", "A5"],
+    "carrier": "ordered_nonloop_arcs",
+    "coordinate": "integer_orbit_sum_of_a_squarefree_arc_support",
+    "maximum_n": 5,
+    "n_values": [4, 5],
+    "pattern": "boolean_arc_subset",
+    "scientific_equivalence": "orbit_under_the_named_vertex_action_only"
+  },
+  "scope_exclusions": [
+    "n_greater_than_5",
+    "arbitrary_invariant_families",
+    "physical_chirality",
+    "chemical_interpretation",
+    "novelty_or_priority"
+  ],
+  "terminology": {
+    "index_two_split_pair": "two_A_n_pattern_orbits_with_the_same_S_n_parent_orbit",
+    "tree_blind_pair": "residual_pair_with_no_tree_supported_top_degree_separator"
+  },
+  "specification_id": "FOUR_FIVE_VERTEX_ORBIT_SUM_RECONSTRUCTION"
+}

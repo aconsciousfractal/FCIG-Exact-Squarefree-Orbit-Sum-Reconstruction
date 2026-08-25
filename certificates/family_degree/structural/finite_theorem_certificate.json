@@ -1,0 +1,729 @@
+{
+  "claim_ceiling": "finite_four_vertex_dictionary_only",
+  "experiment_id": "FAMILY_DEGREE",
+  "finite_scope": {
+    "coordinate_universe": "all_squarefree_coordinates_through_degree_three",
+    "groups": [
+      "S4",
+      "A4"
+    ],
+    "pattern_pairs": {
+      "A4": 67528,
+      "S4": 23653
+    }
+  },
+  "groups": [
+    {
+      "canonical_feasible_support": {
+        "all_distinct_separator_masks_hit": true,
+        "coordinate_ids": [
+          "S4-D1-C000",
+          "S4-D2-C000",
+          "S4-D2-C001",
+          "S4-D2-C002",
+          "S4-D2-C003",
+          "S4-D3-C002",
+          "S4-D3-C011"
+        ],
+        "distinct_separator_mask_count": 6998,
+        "full_pair_count": 23653,
+        "support_size": 7
+      },
+      "complete_quadratic_graph": {
+        "edge_count": 10,
+        "edges": [
+          {
+            "constraint_id": "S4-CON-00001",
+            "constraint_index": 1,
+            "coordinate_ids": [
+              "S4-D2-C000",
+              "S4-D2-C001"
+            ],
+            "edge": [
+              "S4-D2-C000",
+              "S4-D2-C001"
+            ],
+            "left_pattern_id": "S4-P002",
+            "mask_int": 6,
+            "right_pattern_id": "S4-P004",
+            "witness_pair_id": "S4-PAIR-00434"
+          },
+          {
+            "constraint_id": "S4-CON-00002",
+            "constraint_index": 2,
+            "coordinate_ids": [
+              "S4-D2-C000",
+              "S4-D2-C002"
+            ],
+            "edge": [
+              "S4-D2-C000",
+              "S4-D2-C002"
+            ],
+            "left_pattern_id": "S4-P002",
+            "mask_int": 10,
+            "right_pattern_id": "S4-P005",
+            "witness_pair_id": "S4-PAIR-00435"
+          },
+          {
+            "constraint_id": "S4-CON-00004",
+            "constraint_index": 4,
+            "coordinate_ids": [
+              "S4-D2-C000",
+              "S4-D2-C003"
+            ],
+            "edge": [
+              "S4-D2-C000",
+              "S4-D2-C003"
+            ],
+            "left_pattern_id": "S4-P002",
+            "mask_int": 18,
+            "right_pattern_id": "S4-P009",
+            "witness_pair_id": "S4-PAIR-00439"
+          },
+          {
+            "constraint_id": "S4-CON-00007",
+            "constraint_index": 7,
+            "coordinate_ids": [
+              "S4-D2-C000",
+              "S4-D2-C004"
+            ],
+            "edge": [
+              "S4-D2-C000",
+              "S4-D2-C004"
+            ],
+            "left_pattern_id": "S4-P002",
+            "mask_int": 34,
+            "right_pattern_id": "S4-P011",
+            "witness_pair_id": "S4-PAIR-00441"
+          },
+          {
+            "constraint_id": "S4-CON-00003",
+            "constraint_index": 3,
+            "coordinate_ids": [
+              "S4-D2-C001",
+              "S4-D2-C002"
+            ],
+            "edge": [
+              "S4-D2-C001",
+              "S4-D2-C002"
+            ],
+            "left_pattern_id": "S4-P004",
+            "mask_int": 12,
+            "right_pattern_id": "S4-P005",
+            "witness_pair_id": "S4-PAIR-00862"
+          },
+          {
+            "constraint_id": "S4-CON-00005",
+            "constraint_index": 5,
+            "coordinate_ids": [
+              "S4-D2-C001",
+              "S4-D2-C003"
+            ],
+            "edge": [
+              "S4-D2-C001",
+              "S4-D2-C003"
+            ],
+            "left_pattern_id": "S4-P004",
+            "mask_int": 20,
+            "right_pattern_id": "S4-P009",
+            "witness_pair_id": "S4-PAIR-00866"
+          },
+          {
+            "constraint_id": "S4-CON-00008",
+            "constraint_index": 8,
+            "coordinate_ids": [
+              "S4-D2-C001",
+              "S4-D2-C004"
+            ],
+            "edge": [
+              "S4-D2-C001",
+              "S4-D2-C004"
+            ],
+            "left_pattern_id": "S4-P004",
+            "mask_int": 36,
+            "right_pattern_id": "S4-P011",
+            "witness_pair_id": "S4-PAIR-00868"
+          },
+          {
+            "constraint_id": "S4-CON-00006",
+            "constraint_index": 6,
+            "coordinate_ids": [
+              "S4-D2-C002",
+              "S4-D2-C003"
+            ],
+            "edge": [
+              "S4-D2-C002",
+              "S4-D2-C003"
+            ],
+            "left_pattern_id": "S4-P005",
+            "mask_int": 24,
+            "right_pattern_id": "S4-P009",
+            "witness_pair_id": "S4-PAIR-01078"
+          },
+          {
+            "constraint_id": "S4-CON-00009",
+            "constraint_index": 9,
+            "coordinate_ids": [
+              "S4-D2-C002",
+              "S4-D2-C004"
+            ],
+            "edge": [
+              "S4-D2-C002",
+              "S4-D2-C004"
+            ],
+            "left_pattern_id": "S4-P005",
+            "mask_int": 40,
+            "right_pattern_id": "S4-P011",
+            "witness_pair_id": "S4-PAIR-01080"
+          },
+          {
+            "constraint_id": "S4-CON-00010",
+            "constraint_index": 10,
+            "coordinate_ids": [
+              "S4-D2-C003",
+              "S4-D2-C004"
+            ],
+            "edge": [
+              "S4-D2-C003",
+              "S4-D2-C004"
+            ],
+            "left_pattern_id": "S4-P009",
+            "mask_int": 48,
+            "right_pattern_id": "S4-P011",
+            "witness_pair_id": "S4-PAIR-01918"
+          }
+        ],
+        "graph": "K5",
+        "quadratic_coordinate_ids": [
+          "S4-D2-C000",
+          "S4-D2-C001",
+          "S4-D2-C002",
+          "S4-D2-C003",
+          "S4-D2-C004"
+        ],
+        "vertex_cover_lower_bound": 4,
+        "vertex_cover_proof": "The complement of a vertex cover is independent; a complete graph has independence number one."
+      },
+      "disjoint_cubic_constraints": {
+        "blocks": [
+          {
+            "constraint_id": "S4-CON-00011",
+            "constraint_index": 11,
+            "coordinate_ids": [
+              "S4-D3-C001",
+              "S4-D3-C002",
+              "S4-D3-C006",
+              "S4-D3-C007"
+            ],
+            "left_pattern_id": "S4-P111",
+            "mask_int": 12672,
+            "right_pattern_id": "S4-P155",
+            "witness_pair_id": "S4-PAIR-18025"
+          },
+          {
+            "constraint_id": "S4-CON-00016",
+            "constraint_index": 16,
+            "coordinate_ids": [
+              "S4-D3-C004",
+              "S4-D3-C005",
+              "S4-D3-C009",
+              "S4-D3-C011"
+            ],
+            "left_pattern_id": "S4-P052",
+            "mask_int": 166912,
+            "right_pattern_id": "S4-P066",
+            "witness_pair_id": "S4-PAIR-09971"
+          }
+        ],
+        "cubic_coordinate_count": 13,
+        "packing_lower_bound": 2,
+        "pairwise_disjoint": true
+      },
+      "forced_degree_one": {
+        "constraint_id": "S4-CON-00000",
+        "constraint_index": 0,
+        "coordinate_ids": [
+          "S4-D1-C000"
+        ],
+        "left_pattern_id": "S4-P000",
+        "mask_int": 1,
+        "right_pattern_id": "S4-P001",
+        "witness_pair_id": "S4-PAIR-00000"
+      },
+      "group": "S4",
+      "lower_bound_arithmetic": {
+        "block_coordinate_sets_disjoint": true,
+        "claimed_minimum": 7,
+        "cubic_packing": 2,
+        "forced_degree_one": 1,
+        "lower_bound": 7,
+        "quadratic_vertex_cover": 4,
+        "sum_expression": "1+4+2=7"
+      }
+    },
+    {
+      "canonical_feasible_support": {
+        "all_distinct_separator_masks_hit": true,
+        "coordinate_ids": [
+          "A4-D1-C000",
+          "A4-D2-C000",
+          "A4-D2-C001",
+          "A4-D2-C002",
+          "A4-D2-C003",
+          "A4-D2-C004",
+          "A4-D2-C005",
+          "A4-D3-C000",
+          "A4-D3-C010",
+          "A4-D3-C011",
+          "A4-D3-C014"
+        ],
+        "distinct_separator_mask_count": 40786,
+        "full_pair_count": 67528,
+        "support_size": 11
+      },
+      "complete_quadratic_graph": {
+        "edge_count": 21,
+        "edges": [
+          {
+            "constraint_id": "A4-CON-00001",
+            "constraint_index": 1,
+            "coordinate_ids": [
+              "A4-D2-C000",
+              "A4-D2-C001"
+            ],
+            "edge": [
+              "A4-D2-C000",
+              "A4-D2-C001"
+            ],
+            "left_pattern_id": "A4-P002",
+            "mask_int": 6,
+            "right_pattern_id": "A4-P004",
+            "witness_pair_id": "A4-PAIR-00734"
+          },
+          {
+            "constraint_id": "A4-CON-00002",
+            "constraint_index": 2,
+            "coordinate_ids": [
+              "A4-D2-C000",
+              "A4-D2-C002"
+            ],
+            "edge": [
+              "A4-D2-C000",
+              "A4-D2-C002"
+            ],
+            "left_pattern_id": "A4-P002",
+            "mask_int": 10,
+            "right_pattern_id": "A4-P005",
+            "witness_pair_id": "A4-PAIR-00735"
+          },
+          {
+            "constraint_id": "A4-CON-00004",
+            "constraint_index": 4,
+            "coordinate_ids": [
+              "A4-D2-C000",
+              "A4-D2-C003"
+            ],
+            "edge": [
+              "A4-D2-C000",
+              "A4-D2-C003"
+            ],
+            "left_pattern_id": "A4-P002",
+            "mask_int": 18,
+            "right_pattern_id": "A4-P007",
+            "witness_pair_id": "A4-PAIR-00737"
+          },
+          {
+            "constraint_id": "A4-CON-00007",
+            "constraint_index": 7,
+            "coordinate_ids": [
+              "A4-D2-C000",
+              "A4-D2-C004"
+            ],
+            "edge": [
+              "A4-D2-C000",
+              "A4-D2-C004"
+            ],
+            "left_pattern_id": "A4-P002",
+            "mask_int": 34,
+            "right_pattern_id": "A4-P011",
+            "witness_pair_id": "A4-PAIR-00741"
+          },
+          {
+            "constraint_id": "A4-CON-00011",
+            "constraint_index": 11,
+            "coordinate_ids": [
+              "A4-D2-C000",
+              "A4-D2-C005"
+            ],
+            "edge": [
+              "A4-D2-C000",
+              "A4-D2-C005"
+            ],
+            "left_pattern_id": "A4-P002",
+            "mask_int": 66,
+            "right_pattern_id": "A4-P013",
+            "witness_pair_id": "A4-PAIR-00743"
+          },
+          {
+            "constraint_id": "A4-CON-00016",
+            "constraint_index": 16,
+            "coordinate_ids": [
+              "A4-D2-C000",
+              "A4-D2-C006"
+            ],
+            "edge": [
+              "A4-D2-C000",
+              "A4-D2-C006"
+            ],
+            "left_pattern_id": "A4-P002",
+            "mask_int": 130,
+            "right_pattern_id": "A4-P022",
+            "witness_pair_id": "A4-PAIR-00752"
+          },
+          {
+            "constraint_id": "A4-CON-00003",
+            "constraint_index": 3,
+            "coordinate_ids": [
+              "A4-D2-C001",
+              "A4-D2-C002"
+            ],
+            "edge": [
+              "A4-D2-C001",
+              "A4-D2-C002"
+            ],
+            "left_pattern_id": "A4-P004",
+            "mask_int": 12,
+            "right_pattern_id": "A4-P005",
+            "witness_pair_id": "A4-PAIR-01462"
+          },
+          {
+            "constraint_id": "A4-CON-00005",
+            "constraint_index": 5,
+            "coordinate_ids": [
+              "A4-D2-C001",
+              "A4-D2-C003"
+            ],
+            "edge": [
+              "A4-D2-C001",
+              "A4-D2-C003"
+            ],
+            "left_pattern_id": "A4-P004",
+            "mask_int": 20,
+            "right_pattern_id": "A4-P007",
+            "witness_pair_id": "A4-PAIR-01464"
+          },
+          {
+            "constraint_id": "A4-CON-00008",
+            "constraint_index": 8,
+            "coordinate_ids": [
+              "A4-D2-C001",
+              "A4-D2-C004"
+            ],
+            "edge": [
+              "A4-D2-C001",
+              "A4-D2-C004"
+            ],
+            "left_pattern_id": "A4-P004",
+            "mask_int": 36,
+            "right_pattern_id": "A4-P011",
+            "witness_pair_id": "A4-PAIR-01468"
+          },
+          {
+            "constraint_id": "A4-CON-00012",
+            "constraint_index": 12,
+            "coordinate_ids": [
+              "A4-D2-C001",
+              "A4-D2-C005"
+            ],
+            "edge": [
+              "A4-D2-C001",
+              "A4-D2-C005"
+            ],
+            "left_pattern_id": "A4-P004",
+            "mask_int": 68,
+            "right_pattern_id": "A4-P013",
+            "witness_pair_id": "A4-PAIR-01470"
+          },
+          {
+            "constraint_id": "A4-CON-00017",
+            "constraint_index": 17,
+            "coordinate_ids": [
+              "A4-D2-C001",
+              "A4-D2-C006"
+            ],
+            "edge": [
+              "A4-D2-C001",
+              "A4-D2-C006"
+            ],
+            "left_pattern_id": "A4-P004",
+            "mask_int": 132,
+            "right_pattern_id": "A4-P022",
+            "witness_pair_id": "A4-PAIR-01479"
+          },
+          {
+            "constraint_id": "A4-CON-00006",
+            "constraint_index": 6,
+            "coordinate_ids": [
+              "A4-D2-C002",
+              "A4-D2-C003"
+            ],
+            "edge": [
+              "A4-D2-C002",
+              "A4-D2-C003"
+            ],
+            "left_pattern_id": "A4-P005",
+            "mask_int": 24,
+            "right_pattern_id": "A4-P007",
+            "witness_pair_id": "A4-PAIR-01826"
+          },
+          {
+            "constraint_id": "A4-CON-00009",
+            "constraint_index": 9,
+            "coordinate_ids": [
+              "A4-D2-C002",
+              "A4-D2-C004"
+            ],
+            "edge": [
+              "A4-D2-C002",
+              "A4-D2-C004"
+            ],
+            "left_pattern_id": "A4-P005",
+            "mask_int": 40,
+            "right_pattern_id": "A4-P011",
+            "witness_pair_id": "A4-PAIR-01830"
+          },
+          {
+            "constraint_id": "A4-CON-00013",
+            "constraint_index": 13,
+            "coordinate_ids": [
+              "A4-D2-C002",
+              "A4-D2-C005"
+            ],
+            "edge": [
+              "A4-D2-C002",
+              "A4-D2-C005"
+            ],
+            "left_pattern_id": "A4-P005",
+            "mask_int": 72,
+            "right_pattern_id": "A4-P013",
+            "witness_pair_id": "A4-PAIR-01832"
+          },
+          {
+            "constraint_id": "A4-CON-00018",
+            "constraint_index": 18,
+            "coordinate_ids": [
+              "A4-D2-C002",
+              "A4-D2-C006"
+            ],
+            "edge": [
+              "A4-D2-C002",
+              "A4-D2-C006"
+            ],
+            "left_pattern_id": "A4-P005",
+            "mask_int": 136,
+            "right_pattern_id": "A4-P022",
+            "witness_pair_id": "A4-PAIR-01841"
+          },
+          {
+            "constraint_id": "A4-CON-00010",
+            "constraint_index": 10,
+            "coordinate_ids": [
+              "A4-D2-C003",
+              "A4-D2-C004"
+            ],
+            "edge": [
+              "A4-D2-C003",
+              "A4-D2-C004"
+            ],
+            "left_pattern_id": "A4-P007",
+            "mask_int": 48,
+            "right_pattern_id": "A4-P011",
+            "witness_pair_id": "A4-PAIR-02551"
+          },
+          {
+            "constraint_id": "A4-CON-00014",
+            "constraint_index": 14,
+            "coordinate_ids": [
+              "A4-D2-C003",
+              "A4-D2-C005"
+            ],
+            "edge": [
+              "A4-D2-C003",
+              "A4-D2-C005"
+            ],
+            "left_pattern_id": "A4-P007",
+            "mask_int": 80,
+            "right_pattern_id": "A4-P013",
+            "witness_pair_id": "A4-PAIR-02553"
+          },
+          {
+            "constraint_id": "A4-CON-00019",
+            "constraint_index": 19,
+            "coordinate_ids": [
+              "A4-D2-C003",
+              "A4-D2-C006"
+            ],
+            "edge": [
+              "A4-D2-C003",
+              "A4-D2-C006"
+            ],
+            "left_pattern_id": "A4-P007",
+            "mask_int": 144,
+            "right_pattern_id": "A4-P022",
+            "witness_pair_id": "A4-PAIR-02562"
+          },
+          {
+            "constraint_id": "A4-CON-00015",
+            "constraint_index": 15,
+            "coordinate_ids": [
+              "A4-D2-C004",
+              "A4-D2-C005"
+            ],
+            "edge": [
+              "A4-D2-C004",
+              "A4-D2-C005"
+            ],
+            "left_pattern_id": "A4-P011",
+            "mask_int": 96,
+            "right_pattern_id": "A4-P013",
+            "witness_pair_id": "A4-PAIR-03983"
+          },
+          {
+            "constraint_id": "A4-CON-00020",
+            "constraint_index": 20,
+            "coordinate_ids": [
+              "A4-D2-C004",
+              "A4-D2-C006"
+            ],
+            "edge": [
+              "A4-D2-C004",
+              "A4-D2-C006"
+            ],
+            "left_pattern_id": "A4-P011",
+            "mask_int": 160,
+            "right_pattern_id": "A4-P022",
+            "witness_pair_id": "A4-PAIR-03992"
+          },
+          {
+            "constraint_id": "A4-CON-00021",
+            "constraint_index": 21,
+            "coordinate_ids": [
+              "A4-D2-C005",
+              "A4-D2-C006"
+            ],
+            "edge": [
+              "A4-D2-C005",
+              "A4-D2-C006"
+            ],
+            "left_pattern_id": "A4-P013",
+            "mask_int": 192,
+            "right_pattern_id": "A4-P022",
+            "witness_pair_id": "A4-PAIR-04701"
+          }
+        ],
+        "graph": "K7",
+        "quadratic_coordinate_ids": [
+          "A4-D2-C000",
+          "A4-D2-C001",
+          "A4-D2-C002",
+          "A4-D2-C003",
+          "A4-D2-C004",
+          "A4-D2-C005",
+          "A4-D2-C006"
+        ],
+        "vertex_cover_lower_bound": 6,
+        "vertex_cover_proof": "The complement of a vertex cover is independent; a complete graph has independence number one."
+      },
+      "disjoint_cubic_constraints": {
+        "blocks": [
+          {
+            "constraint_id": "A4-CON-00022",
+            "constraint_index": 22,
+            "coordinate_ids": [
+              "A4-D3-C002",
+              "A4-D3-C005",
+              "A4-D3-C011",
+              "A4-D3-C016"
+            ],
+            "left_pattern_id": "A4-P049",
+            "mask_int": 17310720,
+            "right_pattern_id": "A4-P060",
+            "witness_pair_id": "A4-PAIR-16817"
+          },
+          {
+            "constraint_id": "A4-CON-00023",
+            "constraint_index": 23,
+            "coordinate_ids": [
+              "A4-D3-C006",
+              "A4-D3-C009",
+              "A4-D3-C014",
+              "A4-D3-C018"
+            ],
+            "left_pattern_id": "A4-P112",
+            "mask_int": 71450624,
+            "right_pattern_id": "A4-P115",
+            "witness_pair_id": "A4-PAIR-34890"
+          },
+          {
+            "constraint_id": "A4-CON-00024",
+            "constraint_index": 24,
+            "coordinate_ids": [
+              "A4-D3-C001",
+              "A4-D3-C008",
+              "A4-D3-C010",
+              "A4-D3-C019"
+            ],
+            "left_pattern_id": "A4-P093",
+            "mask_int": 134545920,
+            "right_pattern_id": "A4-P096",
+            "witness_pair_id": "A4-PAIR-29855"
+          },
+          {
+            "constraint_id": "A4-CON-00029",
+            "constraint_index": 29,
+            "coordinate_ids": [
+              "A4-D3-C000",
+              "A4-D3-C003",
+              "A4-D3-C004",
+              "A4-D3-C007",
+              "A4-D3-C012",
+              "A4-D3-C013",
+              "A4-D3-C017",
+              "A4-D3-C020"
+            ],
+            "left_pattern_id": "A4-P106",
+            "mask_int": 305174784,
+            "right_pattern_id": "A4-P153",
+            "witness_pair_id": "A4-PAIR-33383"
+          }
+        ],
+        "cubic_coordinate_count": 21,
+        "packing_lower_bound": 4,
+        "pairwise_disjoint": true
+      },
+      "forced_degree_one": {
+        "constraint_id": "A4-CON-00000",
+        "constraint_index": 0,
+        "coordinate_ids": [
+          "A4-D1-C000"
+        ],
+        "left_pattern_id": "A4-P000",
+        "mask_int": 1,
+        "right_pattern_id": "A4-P001",
+        "witness_pair_id": "A4-PAIR-00000"
+      },
+      "group": "A4",
+      "lower_bound_arithmetic": {
+        "block_coordinate_sets_disjoint": true,
+        "claimed_minimum": 11,
+        "cubic_packing": 4,
+        "forced_degree_one": 1,
+        "lower_bound": 11,
+        "quadratic_vertex_cover": 6,
+        "sum_expression": "1+6+4=11"
+      }
+    }
+  ],
+  "schema_version": "family_degree_finite_theorem_certificate_v1",
+  "theorem": "For each declared four-vertex action, every separating fingerprint has size at least 1+(q-1)+r, and the canonical support attains equality."
+}

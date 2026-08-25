@@ -1,0 +1,39 @@
+{
+  "artifact_root": "certificates/minimum_fingerprints",
+  "canonical_json": {
+    "encoding": "utf-8",
+    "indent": 2,
+    "integer_only_scientific_fields": true,
+    "sort_keys": true,
+    "trailing_newline": true
+  },
+  "contract_id": "MINIMUM_FINGERPRINTS_CONTRACT_V1",
+  "instance": {
+    "coordinate_counts": {"A4": 29, "S4": 19},
+    "full_pair_counts": {"A4": 67528, "S4": 23653},
+    "groups": ["S4", "A4"],
+    "pattern_counts": {"A4": 368, "S4": 218},
+    "separator_mask": "bit_i_is_one_iff_the_complete_degree_three_signatures_differ_at_coordinate_i"
+  },
+  "lower_bound_certificate": {
+    "accepted_type": "complete_branch_dag_v1",
+    "branch_node": "choose_one_uncovered_constraint_and_include_one_child_for_every_coordinate_in_its_mask",
+    "closed_leaf_types": [
+      "nonempty_uncovered_at_budget_zero",
+      "pairwise_disjoint_uncovered_packing_larger_than_budget"
+    ],
+    "root_budget": "minimum_size_minus_one"
+  },
+  "problem": {
+    "feasible_set": "coordinate_subset_hitting_every_nonempty_pair_separator_mask",
+    "objective": "minimum_coordinate_cardinality",
+    "required_witness": "lexicographically_first_optimal_coordinate_id_tuple"
+  },
+  "required_artifacts": [
+    "primary/instance.json",
+    "primary/lower_bound_certificate.json",
+    "primary/minimum_fingerprints.json",
+    "independent/minimum_fingerprints.json"
+  ],
+  "schema_dialect": "orbit_sum_machine_contract_v1"
+}

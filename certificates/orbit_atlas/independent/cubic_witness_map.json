@@ -1,0 +1,4528 @@
+{
+  "experiment_id": "ORBIT_ATLAS",
+  "groups": [
+    {
+      "colliding_pair_count": 39,
+      "group": "S4",
+      "rows": [
+        {
+          "fibre_id": "S4-QF003",
+          "group": "S4",
+          "left_mask": 77,
+          "left_pattern_id": "S4-P025",
+          "pair_id": "S4-QP000",
+          "right_mask": 83,
+          "right_pattern_id": "S4-P028",
+          "selected_coordinate_id": "S4-D3-C002",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "S4-D3-C002",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "S4-D3-C003",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C007",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "S4-D3-C008",
+              "left_value": 0,
+              "right_value": 1
+            }
+          ]
+        },
+        {
+          "fibre_id": "S4-QF001",
+          "group": "S4",
+          "left_mask": 92,
+          "left_pattern_id": "S4-P035",
+          "pair_id": "S4-QP001",
+          "right_mask": 101,
+          "right_pattern_id": "S4-P042",
+          "selected_coordinate_id": "S4-D3-C002",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "S4-D3-C002",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C004",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "S4-D3-C007",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "S4-D3-C011",
+              "left_value": 0,
+              "right_value": 1
+            }
+          ]
+        },
+        {
+          "fibre_id": "S4-QF007",
+          "group": "S4",
+          "left_mask": 94,
+          "left_pattern_id": "S4-P037",
+          "pair_id": "S4-QP002",
+          "right_mask": 109,
+          "right_pattern_id": "S4-P048",
+          "selected_coordinate_id": "S4-D3-C001",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "S4-D3-C001",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "S4-D3-C004",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "S4-D3-C006",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C011",
+              "left_value": 0,
+              "right_value": 1
+            }
+          ]
+        },
+        {
+          "fibre_id": "S4-QF002",
+          "group": "S4",
+          "left_mask": 102,
+          "left_pattern_id": "S4-P043",
+          "pair_id": "S4-QP003",
+          "right_mask": 106,
+          "right_pattern_id": "S4-P045",
+          "selected_coordinate_id": "S4-D3-C001",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "S4-D3-C001",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "S4-D3-C004",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C006",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C011",
+              "left_value": 1,
+              "right_value": 0
+            }
+          ]
+        },
+        {
+          "fibre_id": "S4-QF025",
+          "group": "S4",
+          "left_mask": 111,
+          "left_pattern_id": "S4-P050",
+          "pair_id": "S4-QP004",
+          "right_mask": 123,
+          "right_pattern_id": "S4-P057",
+          "selected_coordinate_id": "S4-D3-C001",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "S4-D3-C001",
+              "left_value": 5,
+              "right_value": 4
+            },
+            {
+              "coordinate_id": "S4-D3-C002",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C003",
+              "left_value": 2,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "S4-D3-C004",
+              "left_value": 2,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "S4-D3-C006",
+              "left_value": 2,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "S4-D3-C007",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "S4-D3-C008",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C011",
+              "left_value": 1,
+              "right_value": 0
+            }
+          ]
+        },
+        {
+          "fibre_id": "S4-QF006",
+          "group": "S4",
+          "left_mask": 115,
+          "left_pattern_id": "S4-P051",
+          "pair_id": "S4-QP005",
+          "right_mask": 220,
+          "right_pattern_id": "S4-P063",
+          "selected_coordinate_id": "S4-D3-C001",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "S4-D3-C001",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "S4-D3-C002",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "S4-D3-C003",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "S4-D3-C005",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "S4-D3-C006",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "S4-D3-C007",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C008",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "S4-D3-C009",
+              "left_value": 1,
+              "right_value": 2
+            }
+          ]
+        },
+        {
+          "fibre_id": "S4-QF000",
+          "group": "S4",
+          "left_mask": 116,
+          "left_pattern_id": "S4-P052",
+          "pair_id": "S4-QP006",
+          "right_mask": 228,
+          "right_pattern_id": "S4-P066",
+          "selected_coordinate_id": "S4-D3-C004",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "S4-D3-C004",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "S4-D3-C005",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "S4-D3-C009",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "S4-D3-C011",
+              "left_value": 1,
+              "right_value": 2
+            }
+          ]
+        },
+        {
+          "fibre_id": "S4-QF024",
+          "group": "S4",
+          "left_mask": 119,
+          "left_pattern_id": "S4-P055",
+          "pair_id": "S4-QP007",
+          "right_mask": 231,
+          "right_pattern_id": "S4-P069",
+          "selected_coordinate_id": "S4-D3-C001",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "S4-D3-C001",
+              "left_value": 2,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "S4-D3-C002",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C003",
+              "left_value": 2,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "S4-D3-C004",
+              "left_value": 3,
+              "right_value": 4
+            },
+            {
+              "coordinate_id": "S4-D3-C005",
+              "left_value": 4,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "S4-D3-C006",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "S4-D3-C007",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C008",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "S4-D3-C011",
+              "left_value": 1,
+              "right_value": 2
+            }
+          ]
+        },
+        {
+          "fibre_id": "S4-QF023",
+          "group": "S4",
+          "left_mask": 126,
+          "left_pattern_id": "S4-P060",
+          "pair_id": "S4-QP008",
+          "right_mask": 303,
+          "right_pattern_id": "S4-P081",
+          "selected_coordinate_id": "S4-D3-C001",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "S4-D3-C001",
+              "left_value": 1,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "S4-D3-C005",
+              "left_value": 5,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "S4-D3-C006",
+              "left_value": 2,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "S4-D3-C007",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "S4-D3-C011",
+              "left_value": 1,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "S4-D3-C012",
+              "left_value": 0,
+              "right_value": 1
+            }
+          ]
+        },
+        {
+          "fibre_id": "S4-QF022",
+          "group": "S4",
+          "left_mask": 219,
+          "left_pattern_id": "S4-P062",
+          "pair_id": "S4-QP009",
+          "right_mask": 591,
+          "right_pattern_id": "S4-P094",
+          "selected_coordinate_id": "S4-D3-C000",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "S4-D3-C000",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C002",
+              "left_value": 0,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "S4-D3-C003",
+              "left_value": 6,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "S4-D3-C007",
+              "left_value": 0,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "S4-D3-C008",
+              "left_value": 2,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "S4-D3-C012",
+              "left_value": 0,
+              "right_value": 1
+            }
+          ]
+        },
+        {
+          "fibre_id": "S4-QF021",
+          "group": "S4",
+          "left_mask": 221,
+          "left_pattern_id": "S4-P064",
+          "pair_id": "S4-QP010",
+          "right_mask": 599,
+          "right_pattern_id": "S4-P101",
+          "selected_coordinate_id": "S4-D3-C000",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "S4-D3-C000",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C002",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "S4-D3-C003",
+              "left_value": 3,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C004",
+              "left_value": 3,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C011",
+              "left_value": 0,
+              "right_value": 2
+            }
+          ]
+        },
+        {
+          "fibre_id": "S4-QF019",
+          "group": "S4",
+          "left_mask": 237,
+          "left_pattern_id": "S4-P070",
+          "pair_id": "S4-QP011",
+          "right_mask": 633,
+          "right_pattern_id": "S4-P114",
+          "selected_coordinate_id": "S4-D3-C000",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "S4-D3-C000",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C002",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C003",
+              "left_value": 4,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "S4-D3-C007",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C008",
+              "left_value": 0,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "S4-D3-C012",
+              "left_value": 0,
+              "right_value": 1
+            }
+          ]
+        },
+        {
+          "fibre_id": "S4-QF018",
+          "group": "S4",
+          "left_mask": 238,
+          "left_pattern_id": "S4-P071",
+          "pair_id": "S4-QP012",
+          "right_mask": 679,
+          "right_pattern_id": "S4-P131",
+          "selected_coordinate_id": "S4-D3-C000",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "S4-D3-C000",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C002",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C004",
+              "left_value": 4,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "S4-D3-C009",
+              "left_value": 2,
+              "right_value": 4
+            }
+          ]
+        },
+        {
+          "fibre_id": "S4-QF020",
+          "group": "S4",
+          "left_mask": 246,
+          "left_pattern_id": "S4-P073",
+          "pair_id": "S4-QP013",
+          "right_mask": 663,
+          "right_pattern_id": "S4-P122",
+          "selected_coordinate_id": "S4-D3-C000",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "S4-D3-C000",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C001",
+              "left_value": 4,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "S4-D3-C002",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C003",
+              "left_value": 0,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "S4-D3-C004",
+              "left_value": 4,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "S4-D3-C005",
+              "left_value": 4,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "S4-D3-C010",
+              "left_value": 2,
+              "right_value": 4
+            }
+          ]
+        },
+        {
+          "fibre_id": "S4-QF017",
+          "group": "S4",
+          "left_mask": 365,
+          "left_pattern_id": "S4-P085",
+          "pair_id": "S4-QP014",
+          "right_mask": 634,
+          "right_pattern_id": "S4-P115",
+          "selected_coordinate_id": "S4-D3-C000",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "S4-D3-C000",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C001",
+              "left_value": 2,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "S4-D3-C002",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "S4-D3-C004",
+              "left_value": 1,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "S4-D3-C005",
+              "left_value": 5,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "S4-D3-C006",
+              "left_value": 1,
+              "right_value": 3
+            }
+          ]
+        },
+        {
+          "fibre_id": "S4-QF016",
+          "group": "S4",
+          "left_mask": 373,
+          "left_pattern_id": "S4-P087",
+          "pair_id": "S4-QP015",
+          "right_mask": 826,
+          "right_pattern_id": "S4-P171",
+          "selected_coordinate_id": "S4-D3-C000",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "S4-D3-C000",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C002",
+              "left_value": 3,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "S4-D3-C007",
+              "left_value": 0,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "S4-D3-C012",
+              "left_value": 1,
+              "right_value": 0
+            }
+          ]
+        },
+        {
+          "fibre_id": "S4-QF015",
+          "group": "S4",
+          "left_mask": 605,
+          "left_pattern_id": "S4-P106",
+          "pair_id": "S4-QP016",
+          "right_mask": 667,
+          "right_pattern_id": "S4-P124",
+          "selected_coordinate_id": "S4-D3-C003",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "S4-D3-C003",
+              "left_value": 1,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "S4-D3-C004",
+              "left_value": 2,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "S4-D3-C007",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C011",
+              "left_value": 1,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "S4-D3-C012",
+              "left_value": 1,
+              "right_value": 0
+            }
+          ]
+        },
+        {
+          "fibre_id": "S4-QF014",
+          "group": "S4",
+          "left_mask": 606,
+          "left_pattern_id": "S4-P107",
+          "pair_id": "S4-QP017",
+          "right_mask": 729,
+          "right_pattern_id": "S4-P138",
+          "selected_coordinate_id": "S4-D3-C001",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "S4-D3-C001",
+              "left_value": 2,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "S4-D3-C002",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "S4-D3-C003",
+              "left_value": 2,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "S4-D3-C004",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "S4-D3-C006",
+              "left_value": 5,
+              "right_value": 4
+            },
+            {
+              "coordinate_id": "S4-D3-C007",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C008",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C011",
+              "left_value": 2,
+              "right_value": 3
+            }
+          ]
+        },
+        {
+          "fibre_id": "S4-QF004",
+          "group": "S4",
+          "left_mask": 625,
+          "left_pattern_id": "S4-P109",
+          "pair_id": "S4-QP018",
+          "right_mask": 675,
+          "right_pattern_id": "S4-P129",
+          "selected_coordinate_id": "S4-D3-C003",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "S4-D3-C003",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C004",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C008",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C009",
+              "left_value": 2,
+              "right_value": 4
+            },
+            {
+              "coordinate_id": "S4-D3-C011",
+              "left_value": 2,
+              "right_value": 1
+            }
+          ]
+        },
+        {
+          "fibre_id": "S4-QF010",
+          "group": "S4",
+          "left_mask": 627,
+          "left_pattern_id": "S4-P111",
+          "pair_id": "S4-QP019",
+          "right_mask": 686,
+          "right_pattern_id": "S4-P133",
+          "selected_coordinate_id": "S4-D3-C003",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "S4-D3-C003",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "S4-D3-C004",
+              "left_value": 3,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "S4-D3-C008",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C009",
+              "left_value": 3,
+              "right_value": 5
+            },
+            {
+              "coordinate_id": "S4-D3-C011",
+              "left_value": 3,
+              "right_value": 2
+            }
+          ]
+        },
+        {
+          "fibre_id": "S4-QF010",
+          "group": "S4",
+          "left_mask": 627,
+          "left_pattern_id": "S4-P111",
+          "pair_id": "S4-QP020",
+          "right_mask": 739,
+          "right_pattern_id": "S4-P144",
+          "selected_coordinate_id": "S4-D3-C001",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "S4-D3-C001",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "S4-D3-C002",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C003",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "S4-D3-C004",
+              "left_value": 3,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "S4-D3-C006",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C007",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "S4-D3-C008",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C009",
+              "left_value": 3,
+              "right_value": 5
+            },
+            {
+              "coordinate_id": "S4-D3-C011",
+              "left_value": 3,
+              "right_value": 2
+            }
+          ]
+        },
+        {
+          "fibre_id": "S4-QF010",
+          "group": "S4",
+          "left_mask": 627,
+          "left_pattern_id": "S4-P111",
+          "pair_id": "S4-QP021",
+          "right_mask": 753,
+          "right_pattern_id": "S4-P155",
+          "selected_coordinate_id": "S4-D3-C001",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "S4-D3-C001",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "S4-D3-C002",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C006",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C007",
+              "left_value": 1,
+              "right_value": 2
+            }
+          ]
+        },
+        {
+          "fibre_id": "S4-QF012",
+          "group": "S4",
+          "left_mask": 630,
+          "left_pattern_id": "S4-P112",
+          "pair_id": "S4-QP022",
+          "right_mask": 732,
+          "right_pattern_id": "S4-P140",
+          "selected_coordinate_id": "S4-D3-C003",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "S4-D3-C003",
+              "left_value": 0,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "S4-D3-C005",
+              "left_value": 4,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "S4-D3-C006",
+              "left_value": 4,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "S4-D3-C007",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C010",
+              "left_value": 2,
+              "right_value": 4
+            },
+            {
+              "coordinate_id": "S4-D3-C011",
+              "left_value": 4,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "S4-D3-C012",
+              "left_value": 0,
+              "right_value": 1
+            }
+          ]
+        },
+        {
+          "fibre_id": "S4-QF028",
+          "group": "S4",
+          "left_mask": 631,
+          "left_pattern_id": "S4-P113",
+          "pair_id": "S4-QP023",
+          "right_mask": 743,
+          "right_pattern_id": "S4-P147",
+          "selected_coordinate_id": "S4-D3-C001",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "S4-D3-C001",
+              "left_value": 4,
+              "right_value": 5
+            },
+            {
+              "coordinate_id": "S4-D3-C002",
+              "left_value": 3,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "S4-D3-C003",
+              "left_value": 2,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "S4-D3-C005",
+              "left_value": 4,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "S4-D3-C006",
+              "left_value": 4,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "S4-D3-C007",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "S4-D3-C008",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C009",
+              "left_value": 4,
+              "right_value": 5
+            }
+          ]
+        },
+        {
+          "fibre_id": "S4-QF029",
+          "group": "S4",
+          "left_mask": 635,
+          "left_pattern_id": "S4-P116",
+          "pair_id": "S4-QP024",
+          "right_mask": 761,
+          "right_pattern_id": "S4-P161",
+          "selected_coordinate_id": "S4-D3-C001",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "S4-D3-C001",
+              "left_value": 4,
+              "right_value": 5
+            },
+            {
+              "coordinate_id": "S4-D3-C004",
+              "left_value": 4,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "S4-D3-C006",
+              "left_value": 5,
+              "right_value": 4
+            },
+            {
+              "coordinate_id": "S4-D3-C011",
+              "left_value": 3,
+              "right_value": 4
+            }
+          ]
+        },
+        {
+          "fibre_id": "S4-QF005",
+          "group": "S4",
+          "left_mask": 659,
+          "left_pattern_id": "S4-P119",
+          "pair_id": "S4-QP025",
+          "right_mask": 666,
+          "right_pattern_id": "S4-P123",
+          "selected_coordinate_id": "S4-D3-C001",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "S4-D3-C001",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C002",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "S4-D3-C003",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C005",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C006",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C007",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C008",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C009",
+              "left_value": 2,
+              "right_value": 1
+            }
+          ]
+        },
+        {
+          "fibre_id": "S4-QF013",
+          "group": "S4",
+          "left_mask": 670,
+          "left_pattern_id": "S4-P126",
+          "pair_id": "S4-QP026",
+          "right_mask": 742,
+          "right_pattern_id": "S4-P146",
+          "selected_coordinate_id": "S4-D3-C001",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "S4-D3-C001",
+              "left_value": 2,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "S4-D3-C002",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "S4-D3-C003",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "S4-D3-C004",
+              "left_value": 2,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "S4-D3-C006",
+              "left_value": 2,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "S4-D3-C007",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "S4-D3-C008",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "S4-D3-C009",
+              "left_value": 2,
+              "right_value": 4
+            },
+            {
+              "coordinate_id": "S4-D3-C010",
+              "left_value": 4,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "S4-D3-C011",
+              "left_value": 2,
+              "right_value": 3
+            }
+          ]
+        },
+        {
+          "fibre_id": "S4-QF010",
+          "group": "S4",
+          "left_mask": 686,
+          "left_pattern_id": "S4-P133",
+          "pair_id": "S4-QP027",
+          "right_mask": 739,
+          "right_pattern_id": "S4-P144",
+          "selected_coordinate_id": "S4-D3-C001",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "S4-D3-C001",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "S4-D3-C002",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C006",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C007",
+              "left_value": 1,
+              "right_value": 2
+            }
+          ]
+        },
+        {
+          "fibre_id": "S4-QF010",
+          "group": "S4",
+          "left_mask": 686,
+          "left_pattern_id": "S4-P133",
+          "pair_id": "S4-QP028",
+          "right_mask": 753,
+          "right_pattern_id": "S4-P155",
+          "selected_coordinate_id": "S4-D3-C001",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "S4-D3-C001",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "S4-D3-C002",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C003",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C004",
+              "left_value": 2,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "S4-D3-C006",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C007",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "S4-D3-C008",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "S4-D3-C009",
+              "left_value": 5,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "S4-D3-C011",
+              "left_value": 2,
+              "right_value": 3
+            }
+          ]
+        },
+        {
+          "fibre_id": "S4-QF011",
+          "group": "S4",
+          "left_mask": 694,
+          "left_pattern_id": "S4-P135",
+          "pair_id": "S4-QP029",
+          "right_mask": 756,
+          "right_pattern_id": "S4-P157",
+          "selected_coordinate_id": "S4-D3-C004",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "S4-D3-C004",
+              "left_value": 2,
+              "right_value": 4
+            },
+            {
+              "coordinate_id": "S4-D3-C005",
+              "left_value": 4,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "S4-D3-C009",
+              "left_value": 4,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "S4-D3-C011",
+              "left_value": 2,
+              "right_value": 4
+            }
+          ]
+        },
+        {
+          "fibre_id": "S4-QF010",
+          "group": "S4",
+          "left_mask": 739,
+          "left_pattern_id": "S4-P144",
+          "pair_id": "S4-QP030",
+          "right_mask": 753,
+          "right_pattern_id": "S4-P155",
+          "selected_coordinate_id": "S4-D3-C003",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "S4-D3-C003",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C004",
+              "left_value": 2,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "S4-D3-C008",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "S4-D3-C009",
+              "left_value": 5,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "S4-D3-C011",
+              "left_value": 2,
+              "right_value": 3
+            }
+          ]
+        },
+        {
+          "fibre_id": "S4-QF009",
+          "group": "S4",
+          "left_mask": 741,
+          "left_pattern_id": "S4-P145",
+          "pair_id": "S4-QP031",
+          "right_mask": 746,
+          "right_pattern_id": "S4-P149",
+          "selected_coordinate_id": "S4-D3-C007",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "S4-D3-C007",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C009",
+              "left_value": 2,
+              "right_value": 4
+            },
+            {
+              "coordinate_id": "S4-D3-C011",
+              "left_value": 4,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "S4-D3-C012",
+              "left_value": 0,
+              "right_value": 1
+            }
+          ]
+        },
+        {
+          "fibre_id": "S4-QF008",
+          "group": "S4",
+          "left_mask": 748,
+          "left_pattern_id": "S4-P151",
+          "pair_id": "S4-QP032",
+          "right_mask": 822,
+          "right_pattern_id": "S4-P169",
+          "selected_coordinate_id": "S4-D3-C001",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "S4-D3-C001",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C002",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "S4-D3-C003",
+              "left_value": 3,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "S4-D3-C004",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C005",
+              "left_value": 2,
+              "right_value": 4
+            },
+            {
+              "coordinate_id": "S4-D3-C006",
+              "left_value": 3,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "S4-D3-C007",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "S4-D3-C008",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C011",
+              "left_value": 4,
+              "right_value": 3
+            }
+          ]
+        },
+        {
+          "fibre_id": "S4-QF027",
+          "group": "S4",
+          "left_mask": 750,
+          "left_pattern_id": "S4-P153",
+          "pair_id": "S4-QP033",
+          "right_mask": 875,
+          "right_pattern_id": "S4-P175",
+          "selected_coordinate_id": "S4-D3-C001",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "S4-D3-C001",
+              "left_value": 3,
+              "right_value": 4
+            },
+            {
+              "coordinate_id": "S4-D3-C002",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "S4-D3-C003",
+              "left_value": 3,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "S4-D3-C005",
+              "left_value": 3,
+              "right_value": 4
+            },
+            {
+              "coordinate_id": "S4-D3-C006",
+              "left_value": 5,
+              "right_value": 4
+            },
+            {
+              "coordinate_id": "S4-D3-C007",
+              "left_value": 2,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "S4-D3-C008",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "S4-D3-C009",
+              "left_value": 5,
+              "right_value": 4
+            }
+          ]
+        },
+        {
+          "fibre_id": "S4-QF033",
+          "group": "S4",
+          "left_mask": 751,
+          "left_pattern_id": "S4-P154",
+          "pair_id": "S4-QP034",
+          "right_mask": 763,
+          "right_pattern_id": "S4-P163",
+          "selected_coordinate_id": "S4-D3-C002",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "S4-D3-C002",
+              "left_value": 4,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "S4-D3-C003",
+              "left_value": 6,
+              "right_value": 7
+            },
+            {
+              "coordinate_id": "S4-D3-C007",
+              "left_value": 4,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "S4-D3-C008",
+              "left_value": 2,
+              "right_value": 3
+            }
+          ]
+        },
+        {
+          "fibre_id": "S4-QF032",
+          "group": "S4",
+          "left_mask": 766,
+          "left_pattern_id": "S4-P166",
+          "pair_id": "S4-QP035",
+          "right_mask": 957,
+          "right_pattern_id": "S4-P192",
+          "selected_coordinate_id": "S4-D3-C001",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "S4-D3-C001",
+              "left_value": 6,
+              "right_value": 7
+            },
+            {
+              "coordinate_id": "S4-D3-C004",
+              "left_value": 7,
+              "right_value": 6
+            },
+            {
+              "coordinate_id": "S4-D3-C006",
+              "left_value": 7,
+              "right_value": 6
+            },
+            {
+              "coordinate_id": "S4-D3-C011",
+              "left_value": 6,
+              "right_value": 7
+            }
+          ]
+        },
+        {
+          "fibre_id": "S4-QF026",
+          "group": "S4",
+          "left_mask": 883,
+          "left_pattern_id": "S4-P179",
+          "pair_id": "S4-QP036",
+          "right_mask": 947,
+          "right_pattern_id": "S4-P188",
+          "selected_coordinate_id": "S4-D3-C003",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "S4-D3-C003",
+              "left_value": 3,
+              "right_value": 4
+            },
+            {
+              "coordinate_id": "S4-D3-C004",
+              "left_value": 5,
+              "right_value": 4
+            },
+            {
+              "coordinate_id": "S4-D3-C008",
+              "left_value": 3,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "S4-D3-C009",
+              "left_value": 6,
+              "right_value": 8
+            },
+            {
+              "coordinate_id": "S4-D3-C011",
+              "left_value": 5,
+              "right_value": 4
+            }
+          ]
+        },
+        {
+          "fibre_id": "S4-QF031",
+          "group": "S4",
+          "left_mask": 887,
+          "left_pattern_id": "S4-P182",
+          "pair_id": "S4-QP037",
+          "right_mask": 891,
+          "right_pattern_id": "S4-P183",
+          "selected_coordinate_id": "S4-D3-C002",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "S4-D3-C002",
+              "left_value": 4,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "S4-D3-C004",
+              "left_value": 6,
+              "right_value": 7
+            },
+            {
+              "coordinate_id": "S4-D3-C007",
+              "left_value": 3,
+              "right_value": 4
+            },
+            {
+              "coordinate_id": "S4-D3-C011",
+              "left_value": 7,
+              "right_value": 6
+            }
+          ]
+        },
+        {
+          "fibre_id": "S4-QF030",
+          "group": "S4",
+          "left_mask": 951,
+          "left_pattern_id": "S4-P190",
+          "pair_id": "S4-QP038",
+          "right_mask": 958,
+          "right_pattern_id": "S4-P193",
+          "selected_coordinate_id": "S4-D3-C004",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "S4-D3-C004",
+              "left_value": 6,
+              "right_value": 7
+            },
+            {
+              "coordinate_id": "S4-D3-C005",
+              "left_value": 8,
+              "right_value": 7
+            },
+            {
+              "coordinate_id": "S4-D3-C009",
+              "left_value": 8,
+              "right_value": 7
+            },
+            {
+              "coordinate_id": "S4-D3-C011",
+              "left_value": 6,
+              "right_value": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colliding_pair_count": 51,
+      "group": "A4",
+      "rows": [
+        {
+          "fibre_id": "A4-QF007",
+          "group": "A4",
+          "left_mask": 94,
+          "left_pattern_id": "A4-P049",
+          "pair_id": "A4-QP000",
+          "right_mask": 109,
+          "right_pattern_id": "A4-P060",
+          "selected_coordinate_id": "A4-D3-C002",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "A4-D3-C002",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C005",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C011",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C016",
+              "left_value": 0,
+              "right_value": 1
+            }
+          ]
+        },
+        {
+          "fibre_id": "A4-QF003",
+          "group": "A4",
+          "left_mask": 99,
+          "left_pattern_id": "A4-P052",
+          "pair_id": "A4-QP001",
+          "right_mask": 156,
+          "right_pattern_id": "A4-P082",
+          "selected_coordinate_id": "A4-D3-C001",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "A4-D3-C001",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C002",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C005",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C008",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C014",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C018",
+              "left_value": 0,
+              "right_value": 1
+            }
+          ]
+        },
+        {
+          "fibre_id": "A4-QF002",
+          "group": "A4",
+          "left_mask": 102,
+          "left_pattern_id": "A4-P055",
+          "pair_id": "A4-QP002",
+          "right_mask": 106,
+          "right_pattern_id": "A4-P057",
+          "selected_coordinate_id": "A4-D3-C001",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "A4-D3-C001",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C006",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C008",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C009",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C011",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C016",
+              "left_value": 1,
+              "right_value": 0
+            }
+          ]
+        },
+        {
+          "fibre_id": "A4-QF042",
+          "group": "A4",
+          "left_mask": 111,
+          "left_pattern_id": "A4-P062",
+          "pair_id": "A4-QP003",
+          "right_mask": 159,
+          "right_pattern_id": "A4-P085",
+          "selected_coordinate_id": "A4-D3-C001",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "A4-D3-C001",
+              "left_value": 3,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C003",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C005",
+              "left_value": 0,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C007",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C008",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C011",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C012",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C014",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C016",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C017",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C018",
+              "left_value": 0,
+              "right_value": 1
+            }
+          ]
+        },
+        {
+          "fibre_id": "A4-QF001",
+          "group": "A4",
+          "left_mask": 114,
+          "left_pattern_id": "A4-P063",
+          "pair_id": "A4-QP004",
+          "right_mask": 180,
+          "right_pattern_id": "A4-P097",
+          "selected_coordinate_id": "A4-D3-C002",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "A4-D3-C002",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C005",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C006",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C009",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C010",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C019",
+              "left_value": 0,
+              "right_value": 1
+            }
+          ]
+        },
+        {
+          "fibre_id": "A4-QF039",
+          "group": "A4",
+          "left_mask": 119,
+          "left_pattern_id": "A4-P068",
+          "pair_id": "A4-QP005",
+          "right_mask": 252,
+          "right_pattern_id": "A4-P123",
+          "selected_coordinate_id": "A4-D3-C002",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "A4-D3-C002",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C003",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C004",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C005",
+              "left_value": 2,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "A4-D3-C009",
+              "left_value": 2,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C010",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C012",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C013",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C014",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C018",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C019",
+              "left_value": 0,
+              "right_value": 1
+            }
+          ]
+        },
+        {
+          "fibre_id": "A4-QF041",
+          "group": "A4",
+          "left_mask": 123,
+          "left_pattern_id": "A4-P070",
+          "pair_id": "A4-QP006",
+          "right_mask": 189,
+          "right_pattern_id": "A4-P103",
+          "selected_coordinate_id": "A4-D3-C002",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "A4-D3-C002",
+              "left_value": 2,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "A4-D3-C003",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C004",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C005",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C008",
+              "left_value": 2,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C010",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C012",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C013",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C014",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C018",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C019",
+              "left_value": 0,
+              "right_value": 1
+            }
+          ]
+        },
+        {
+          "fibre_id": "A4-QF038",
+          "group": "A4",
+          "left_mask": 126,
+          "left_pattern_id": "A4-P073",
+          "pair_id": "A4-QP007",
+          "right_mask": 317,
+          "right_pattern_id": "A4-P137",
+          "selected_coordinate_id": "A4-D3-C002",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "A4-D3-C002",
+              "left_value": 0,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C004",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C006",
+              "left_value": 3,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C007",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C009",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C010",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C011",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C012",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C016",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C019",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C020",
+              "left_value": 0,
+              "right_value": 1
+            }
+          ]
+        },
+        {
+          "fibre_id": "A4-QF006",
+          "group": "A4",
+          "left_mask": 173,
+          "left_pattern_id": "A4-P093",
+          "pair_id": "A4-QP008",
+          "right_mask": 179,
+          "right_pattern_id": "A4-P096",
+          "selected_coordinate_id": "A4-D3-C001",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "A4-D3-C001",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C008",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C010",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C019",
+              "left_value": 1,
+              "right_value": 0
+            }
+          ]
+        },
+        {
+          "fibre_id": "A4-QF037",
+          "group": "A4",
+          "left_mask": 183,
+          "left_pattern_id": "A4-P100",
+          "pair_id": "A4-QP009",
+          "right_mask": 303,
+          "right_pattern_id": "A4-P133",
+          "selected_coordinate_id": "A4-D3-C001",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "A4-D3-C001",
+              "left_value": 0,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C004",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C006",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C007",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C009",
+              "left_value": 3,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C010",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C011",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C012",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C016",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C019",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C020",
+              "left_value": 0,
+              "right_value": 1
+            }
+          ]
+        },
+        {
+          "fibre_id": "A4-QF040",
+          "group": "A4",
+          "left_mask": 190,
+          "left_pattern_id": "A4-P104",
+          "pair_id": "A4-QP010",
+          "right_mask": 231,
+          "right_pattern_id": "A4-P114",
+          "selected_coordinate_id": "A4-D3-C001",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "A4-D3-C001",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C003",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C006",
+              "left_value": 2,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C007",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C008",
+              "left_value": 2,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "A4-D3-C011",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C012",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C014",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C016",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C017",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C018",
+              "left_value": 2,
+              "right_value": 1
+            }
+          ]
+        },
+        {
+          "fibre_id": "A4-QF036",
+          "group": "A4",
+          "left_mask": 219,
+          "left_pattern_id": "A4-P106",
+          "pair_id": "A4-QP011",
+          "right_mask": 591,
+          "right_pattern_id": "A4-P153",
+          "selected_coordinate_id": "A4-D3-C000",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "A4-D3-C000",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C003",
+              "left_value": 0,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "A4-D3-C004",
+              "left_value": 3,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C007",
+              "left_value": 3,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C012",
+              "left_value": 0,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "A4-D3-C013",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C017",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C020",
+              "left_value": 0,
+              "right_value": 1
+            }
+          ]
+        },
+        {
+          "fibre_id": "A4-QF034",
+          "group": "A4",
+          "left_mask": 221,
+          "left_pattern_id": "A4-P108",
+          "pair_id": "A4-QP012",
+          "right_mask": 599,
+          "right_pattern_id": "A4-P160",
+          "selected_coordinate_id": "A4-D3-C000",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "A4-D3-C000",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C001",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C002",
+              "left_value": 3,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C003",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C004",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C005",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C006",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C007",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C008",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C009",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C019",
+              "left_value": 0,
+              "right_value": 2
+            }
+          ]
+        },
+        {
+          "fibre_id": "A4-QF035",
+          "group": "A4",
+          "left_mask": 222,
+          "left_pattern_id": "A4-P109",
+          "pair_id": "A4-QP013",
+          "right_mask": 615,
+          "right_pattern_id": "A4-P174",
+          "selected_coordinate_id": "A4-D3-C000",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "A4-D3-C000",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C001",
+              "left_value": 3,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C002",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C003",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C004",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C005",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C006",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C007",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C008",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C009",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C016",
+              "left_value": 0,
+              "right_value": 2
+            }
+          ]
+        },
+        {
+          "fibre_id": "A4-QF005",
+          "group": "A4",
+          "left_mask": 229,
+          "left_pattern_id": "A4-P112",
+          "pair_id": "A4-QP014",
+          "right_mask": 236,
+          "right_pattern_id": "A4-P115",
+          "selected_coordinate_id": "A4-D3-C006",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "A4-D3-C006",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C009",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C014",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C018",
+              "left_value": 0,
+              "right_value": 1
+            }
+          ]
+        },
+        {
+          "fibre_id": "A4-QF031",
+          "group": "A4",
+          "left_mask": 237,
+          "left_pattern_id": "A4-P116",
+          "pair_id": "A4-QP015",
+          "right_mask": 633,
+          "right_pattern_id": "A4-P189",
+          "selected_coordinate_id": "A4-D3-C000",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "A4-D3-C000",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C003",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C004",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C007",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C012",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C013",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C017",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C020",
+              "left_value": 0,
+              "right_value": 1
+            }
+          ]
+        },
+        {
+          "fibre_id": "A4-QF032",
+          "group": "A4",
+          "left_mask": 238,
+          "left_pattern_id": "A4-P117",
+          "pair_id": "A4-QP016",
+          "right_mask": 679,
+          "right_pattern_id": "A4-P209",
+          "selected_coordinate_id": "A4-D3-C000",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "A4-D3-C000",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C001",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C002",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C003",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C004",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C005",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C006",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C007",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C008",
+              "left_value": 3,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C009",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C014",
+              "left_value": 0,
+              "right_value": 2
+            }
+          ]
+        },
+        {
+          "fibre_id": "A4-QF030",
+          "group": "A4",
+          "left_mask": 245,
+          "left_pattern_id": "A4-P120",
+          "pair_id": "A4-QP017",
+          "right_mask": 791,
+          "right_pattern_id": "A4-P256",
+          "selected_coordinate_id": "A4-D3-C000",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "A4-D3-C000",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C001",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C002",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C003",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C004",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C005",
+              "left_value": 3,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C006",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C007",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C008",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C009",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C018",
+              "left_value": 0,
+              "right_value": 2
+            }
+          ]
+        },
+        {
+          "fibre_id": "A4-QF033",
+          "group": "A4",
+          "left_mask": 246,
+          "left_pattern_id": "A4-P121",
+          "pair_id": "A4-QP018",
+          "right_mask": 663,
+          "right_pattern_id": "A4-P200",
+          "selected_coordinate_id": "A4-D3-C000",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "A4-D3-C000",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C001",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C002",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C003",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C004",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C005",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C006",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C007",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C008",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C009",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C015",
+              "left_value": 2,
+              "right_value": 4
+            }
+          ]
+        },
+        {
+          "fibre_id": "A4-QF029",
+          "group": "A4",
+          "left_mask": 365,
+          "left_pattern_id": "A4-P140",
+          "pair_id": "A4-QP019",
+          "right_mask": 636,
+          "right_pattern_id": "A4-P192",
+          "selected_coordinate_id": "A4-D3-C000",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "A4-D3-C000",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C001",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C002",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C003",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C004",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C005",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C006",
+              "left_value": 3,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C007",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C008",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C009",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C011",
+              "left_value": 0,
+              "right_value": 2
+            }
+          ]
+        },
+        {
+          "fibre_id": "A4-QF028",
+          "group": "A4",
+          "left_mask": 366,
+          "left_pattern_id": "A4-P141",
+          "pair_id": "A4-QP020",
+          "right_mask": 634,
+          "right_pattern_id": "A4-P190",
+          "selected_coordinate_id": "A4-D3-C000",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "A4-D3-C000",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C001",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C002",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C003",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C004",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C005",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C006",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C007",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C008",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C009",
+              "left_value": 3,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C010",
+              "left_value": 0,
+              "right_value": 2
+            }
+          ]
+        },
+        {
+          "fibre_id": "A4-QF027",
+          "group": "A4",
+          "left_mask": 373,
+          "left_pattern_id": "A4-P143",
+          "pair_id": "A4-QP021",
+          "right_mask": 993,
+          "right_pattern_id": "A4-P323",
+          "selected_coordinate_id": "A4-D3-C000",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "A4-D3-C000",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C003",
+              "left_value": 3,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C004",
+              "left_value": 0,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "A4-D3-C007",
+              "left_value": 3,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C012",
+              "left_value": 0,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "A4-D3-C013",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C017",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C020",
+              "left_value": 1,
+              "right_value": 0
+            }
+          ]
+        },
+        {
+          "fibre_id": "A4-QF026",
+          "group": "A4",
+          "left_mask": 430,
+          "left_pattern_id": "A4-P147",
+          "pair_id": "A4-QP022",
+          "right_mask": 826,
+          "right_pattern_id": "A4-P267",
+          "selected_coordinate_id": "A4-D3-C000",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "A4-D3-C000",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C003",
+              "left_value": 3,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C004",
+              "left_value": 3,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C007",
+              "left_value": 0,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "A4-D3-C012",
+              "left_value": 0,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "A4-D3-C013",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C017",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C020",
+              "left_value": 1,
+              "right_value": 0
+            }
+          ]
+        },
+        {
+          "fibre_id": "A4-QF000",
+          "group": "A4",
+          "left_mask": 596,
+          "left_pattern_id": "A4-P157",
+          "pair_id": "A4-QP023",
+          "right_mask": 610,
+          "right_pattern_id": "A4-P169",
+          "selected_coordinate_id": "A4-D3-C010",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "A4-D3-C010",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C011",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C014",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C016",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C018",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C019",
+              "left_value": 1,
+              "right_value": 0
+            }
+          ]
+        },
+        {
+          "fibre_id": "A4-QF021",
+          "group": "A4",
+          "left_mask": 605,
+          "left_pattern_id": "A4-P165",
+          "pair_id": "A4-QP024",
+          "right_mask": 723,
+          "right_pattern_id": "A4-P217",
+          "selected_coordinate_id": "A4-D3-C004",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "A4-D3-C004",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C005",
+              "left_value": 2,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C006",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C007",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C009",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C010",
+              "left_value": 2,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "A4-D3-C011",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C012",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C016",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C019",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C020",
+              "left_value": 1,
+              "right_value": 0
+            }
+          ]
+        },
+        {
+          "fibre_id": "A4-QF020",
+          "group": "A4",
+          "left_mask": 606,
+          "left_pattern_id": "A4-P166",
+          "pair_id": "A4-QP025",
+          "right_mask": 729,
+          "right_pattern_id": "A4-P221",
+          "selected_coordinate_id": "A4-D3-C002",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "A4-D3-C002",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C003",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C004",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C005",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C010",
+              "left_value": 3,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C012",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C013",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C014",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C016",
+              "left_value": 0,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C018",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C019",
+              "left_value": 2,
+              "right_value": 1
+            }
+          ]
+        },
+        {
+          "fibre_id": "A4-QF024",
+          "group": "A4",
+          "left_mask": 619,
+          "left_pattern_id": "A4-P177",
+          "pair_id": "A4-QP026",
+          "right_mask": 667,
+          "right_pattern_id": "A4-P202",
+          "selected_coordinate_id": "A4-D3-C004",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "A4-D3-C004",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C006",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C007",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C008",
+              "left_value": 2,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C009",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C010",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C011",
+              "left_value": 2,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "A4-D3-C012",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C016",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C019",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C020",
+              "left_value": 1,
+              "right_value": 0
+            }
+          ]
+        },
+        {
+          "fibre_id": "A4-QF023",
+          "group": "A4",
+          "left_mask": 622,
+          "left_pattern_id": "A4-P180",
+          "pair_id": "A4-QP027",
+          "right_mask": 730,
+          "right_pattern_id": "A4-P222",
+          "selected_coordinate_id": "A4-D3-C001",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "A4-D3-C001",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C003",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C007",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C008",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C011",
+              "left_value": 3,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C012",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C014",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C016",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C017",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C018",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C019",
+              "left_value": 0,
+              "right_value": 2
+            }
+          ]
+        },
+        {
+          "fibre_id": "A4-QF011",
+          "group": "A4",
+          "left_mask": 627,
+          "left_pattern_id": "A4-P184",
+          "pair_id": "A4-QP028",
+          "right_mask": 795,
+          "right_pattern_id": "A4-P258",
+          "selected_coordinate_id": "A4-D3-C001",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "A4-D3-C001",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C003",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C007",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C008",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C010",
+              "left_value": 2,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C011",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C012",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C014",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C016",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C017",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C018",
+              "left_value": 2,
+              "right_value": 3
+            }
+          ]
+        },
+        {
+          "fibre_id": "A4-QF015",
+          "group": "A4",
+          "left_mask": 629,
+          "left_pattern_id": "A4-P186",
+          "pair_id": "A4-QP029",
+          "right_mask": 739,
+          "right_pattern_id": "A4-P230",
+          "selected_coordinate_id": "A4-D3-C002",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "A4-D3-C002",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C003",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C004",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C005",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C010",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C011",
+              "left_value": 2,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C012",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C013",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C014",
+              "left_value": 2,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "A4-D3-C018",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C019",
+              "left_value": 1,
+              "right_value": 0
+            }
+          ]
+        },
+        {
+          "fibre_id": "A4-QF018",
+          "group": "A4",
+          "left_mask": 630,
+          "left_pattern_id": "A4-P187",
+          "pair_id": "A4-QP030",
+          "right_mask": 732,
+          "right_pattern_id": "A4-P224",
+          "selected_coordinate_id": "A4-D3-C004",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "A4-D3-C004",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C006",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C007",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C009",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C010",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C011",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C012",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C015",
+              "left_value": 2,
+              "right_value": 4
+            },
+            {
+              "coordinate_id": "A4-D3-C016",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C019",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C020",
+              "left_value": 0,
+              "right_value": 1
+            }
+          ]
+        },
+        {
+          "fibre_id": "A4-QF045",
+          "group": "A4",
+          "left_mask": 635,
+          "left_pattern_id": "A4-P191",
+          "pair_id": "A4-QP031",
+          "right_mask": 815,
+          "right_pattern_id": "A4-P263",
+          "selected_coordinate_id": "A4-D3-C001",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "A4-D3-C001",
+              "left_value": 2,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "A4-D3-C008",
+              "left_value": 3,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C010",
+              "left_value": 3,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C019",
+              "left_value": 2,
+              "right_value": 3
+            }
+          ]
+        },
+        {
+          "fibre_id": "A4-QF046",
+          "group": "A4",
+          "left_mask": 637,
+          "left_pattern_id": "A4-P193",
+          "pair_id": "A4-QP032",
+          "right_mask": 761,
+          "right_pattern_id": "A4-P248",
+          "selected_coordinate_id": "A4-D3-C002",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "A4-D3-C002",
+              "left_value": 2,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "A4-D3-C005",
+              "left_value": 3,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C011",
+              "left_value": 3,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C016",
+              "left_value": 2,
+              "right_value": 3
+            }
+          ]
+        },
+        {
+          "fibre_id": "A4-QF004",
+          "group": "A4",
+          "left_mask": 661,
+          "left_pattern_id": "A4-P198",
+          "pair_id": "A4-QP033",
+          "right_mask": 662,
+          "right_pattern_id": "A4-P199",
+          "selected_coordinate_id": "A4-D3-C001",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "A4-D3-C001",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C002",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C005",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C006",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C008",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C009",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C010",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C011",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C014",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C016",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C018",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C019",
+              "left_value": 0,
+              "right_value": 1
+            }
+          ]
+        },
+        {
+          "fibre_id": "A4-QF025",
+          "group": "A4",
+          "left_mask": 669,
+          "left_pattern_id": "A4-P203",
+          "pair_id": "A4-QP034",
+          "right_mask": 726,
+          "right_pattern_id": "A4-P219",
+          "selected_coordinate_id": "A4-D3-C005",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "A4-D3-C005",
+              "left_value": 2,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C006",
+              "left_value": 0,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C008",
+              "left_value": 0,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C009",
+              "left_value": 2,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C014",
+              "left_value": 0,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C016",
+              "left_value": 2,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C018",
+              "left_value": 2,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C019",
+              "left_value": 0,
+              "right_value": 2
+            }
+          ]
+        },
+        {
+          "fibre_id": "A4-QF022",
+          "group": "A4",
+          "left_mask": 670,
+          "left_pattern_id": "A4-P204",
+          "pair_id": "A4-QP035",
+          "right_mask": 742,
+          "right_pattern_id": "A4-P232",
+          "selected_coordinate_id": "A4-D3-C001",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "A4-D3-C001",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C003",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C007",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C008",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C011",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C012",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C014",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C015",
+              "left_value": 4,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C016",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C017",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C018",
+              "left_value": 1,
+              "right_value": 2
+            }
+          ]
+        },
+        {
+          "fibre_id": "A4-QF014",
+          "group": "A4",
+          "left_mask": 686,
+          "left_pattern_id": "A4-P211",
+          "pair_id": "A4-QP036",
+          "right_mask": 811,
+          "right_pattern_id": "A4-P261",
+          "selected_coordinate_id": "A4-D3-C001",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "A4-D3-C001",
+              "left_value": 0,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C002",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C003",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C004",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C005",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C010",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C012",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C013",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C014",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C018",
+              "left_value": 3,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C019",
+              "left_value": 1,
+              "right_value": 2
+            }
+          ]
+        },
+        {
+          "fibre_id": "A4-QF016",
+          "group": "A4",
+          "left_mask": 694,
+          "left_pattern_id": "A4-P213",
+          "pair_id": "A4-QP037",
+          "right_mask": 924,
+          "right_pattern_id": "A4-P300",
+          "selected_coordinate_id": "A4-D3-C001",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "A4-D3-C001",
+              "left_value": 0,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C002",
+              "left_value": 2,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C005",
+              "left_value": 0,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C006",
+              "left_value": 2,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C010",
+              "left_value": 0,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C011",
+              "left_value": 2,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C014",
+              "left_value": 2,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C016",
+              "left_value": 0,
+              "right_value": 2
+            }
+          ]
+        },
+        {
+          "fibre_id": "A4-QF019",
+          "group": "A4",
+          "left_mask": 725,
+          "left_pattern_id": "A4-P218",
+          "pair_id": "A4-QP038",
+          "right_mask": 754,
+          "right_pattern_id": "A4-P242",
+          "selected_coordinate_id": "A4-D3-C002",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "A4-D3-C002",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C003",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C004",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C005",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C010",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C012",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C013",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C014",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C015",
+              "left_value": 4,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C018",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C019",
+              "left_value": 1,
+              "right_value": 2
+            }
+          ]
+        },
+        {
+          "fibre_id": "A4-QF013",
+          "group": "A4",
+          "left_mask": 741,
+          "left_pattern_id": "A4-P231",
+          "pair_id": "A4-QP039",
+          "right_mask": 746,
+          "right_pattern_id": "A4-P235",
+          "selected_coordinate_id": "A4-D3-C004",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "A4-D3-C004",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C006",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C007",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C009",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C010",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C011",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C012",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C016",
+              "left_value": 3,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C018",
+              "left_value": 0,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C019",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C020",
+              "left_value": 0,
+              "right_value": 1
+            }
+          ]
+        },
+        {
+          "fibre_id": "A4-QF010",
+          "group": "A4",
+          "left_mask": 748,
+          "left_pattern_id": "A4-P237",
+          "pair_id": "A4-QP040",
+          "right_mask": 873,
+          "right_pattern_id": "A4-P280",
+          "selected_coordinate_id": "A4-D3-C001",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "A4-D3-C001",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C003",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C007",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C008",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C009",
+              "left_value": 0,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C011",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C012",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C014",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C016",
+              "left_value": 3,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C017",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C018",
+              "left_value": 1,
+              "right_value": 0
+            }
+          ]
+        },
+        {
+          "fibre_id": "A4-QF012",
+          "group": "A4",
+          "left_mask": 753,
+          "left_pattern_id": "A4-P241",
+          "pair_id": "A4-QP041",
+          "right_mask": 853,
+          "right_pattern_id": "A4-P272",
+          "selected_coordinate_id": "A4-D3-C001",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "A4-D3-C001",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C002",
+              "left_value": 2,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C003",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C007",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C008",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C011",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C012",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C014",
+              "left_value": 2,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "A4-D3-C016",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C017",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C018",
+              "left_value": 1,
+              "right_value": 2
+            }
+          ]
+        },
+        {
+          "fibre_id": "A4-QF017",
+          "group": "A4",
+          "left_mask": 756,
+          "left_pattern_id": "A4-P244",
+          "pair_id": "A4-QP042",
+          "right_mask": 917,
+          "right_pattern_id": "A4-P297",
+          "selected_coordinate_id": "A4-D3-C001",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "A4-D3-C001",
+              "left_value": 0,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C002",
+              "left_value": 2,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C008",
+              "left_value": 2,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C009",
+              "left_value": 0,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C010",
+              "left_value": 0,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C011",
+              "left_value": 2,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C018",
+              "left_value": 0,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C019",
+              "left_value": 2,
+              "right_value": 0
+            }
+          ]
+        },
+        {
+          "fibre_id": "A4-QF043",
+          "group": "A4",
+          "left_mask": 758,
+          "left_pattern_id": "A4-P246",
+          "pair_id": "A4-QP043",
+          "right_mask": 925,
+          "right_pattern_id": "A4-P301",
+          "selected_coordinate_id": "A4-D3-C001",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "A4-D3-C001",
+              "left_value": 2,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "A4-D3-C002",
+              "left_value": 3,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C005",
+              "left_value": 2,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "A4-D3-C006",
+              "left_value": 3,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C008",
+              "left_value": 3,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C009",
+              "left_value": 2,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "A4-D3-C010",
+              "left_value": 2,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "A4-D3-C011",
+              "left_value": 3,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C014",
+              "left_value": 3,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C016",
+              "left_value": 2,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "A4-D3-C018",
+              "left_value": 2,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "A4-D3-C019",
+              "left_value": 3,
+              "right_value": 2
+            }
+          ]
+        },
+        {
+          "fibre_id": "A4-QF050",
+          "group": "A4",
+          "left_mask": 759,
+          "left_pattern_id": "A4-P247",
+          "pair_id": "A4-QP044",
+          "right_mask": 927,
+          "right_pattern_id": "A4-P303",
+          "selected_coordinate_id": "A4-D3-C001",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "A4-D3-C001",
+              "left_value": 3,
+              "right_value": 4
+            },
+            {
+              "coordinate_id": "A4-D3-C002",
+              "left_value": 4,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "A4-D3-C005",
+              "left_value": 3,
+              "right_value": 4
+            },
+            {
+              "coordinate_id": "A4-D3-C008",
+              "left_value": 4,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "A4-D3-C014",
+              "left_value": 4,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "A4-D3-C018",
+              "left_value": 3,
+              "right_value": 4
+            }
+          ]
+        },
+        {
+          "fibre_id": "A4-QF049",
+          "group": "A4",
+          "left_mask": 766,
+          "left_pattern_id": "A4-P253",
+          "pair_id": "A4-QP045",
+          "right_mask": 957,
+          "right_pattern_id": "A4-P314",
+          "selected_coordinate_id": "A4-D3-C001",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "A4-D3-C001",
+              "left_value": 3,
+              "right_value": 4
+            },
+            {
+              "coordinate_id": "A4-D3-C006",
+              "left_value": 4,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "A4-D3-C008",
+              "left_value": 4,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "A4-D3-C009",
+              "left_value": 3,
+              "right_value": 4
+            },
+            {
+              "coordinate_id": "A4-D3-C011",
+              "left_value": 4,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "A4-D3-C016",
+              "left_value": 3,
+              "right_value": 4
+            }
+          ]
+        },
+        {
+          "fibre_id": "A4-QF009",
+          "group": "A4",
+          "left_mask": 798,
+          "left_pattern_id": "A4-P259",
+          "pair_id": "A4-QP046",
+          "right_mask": 857,
+          "right_pattern_id": "A4-P274",
+          "selected_coordinate_id": "A4-D3-C004",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "A4-D3-C004",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C006",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C007",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C009",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C010",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C011",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C012",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C014",
+              "left_value": 0,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C016",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C019",
+              "left_value": 3,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C020",
+              "left_value": 0,
+              "right_value": 1
+            }
+          ]
+        },
+        {
+          "fibre_id": "A4-QF008",
+          "group": "A4",
+          "left_mask": 822,
+          "left_pattern_id": "A4-P265",
+          "pair_id": "A4-QP047",
+          "right_mask": 860,
+          "right_pattern_id": "A4-P276",
+          "selected_coordinate_id": "A4-D3-C002",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "A4-D3-C002",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C003",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C004",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C005",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C006",
+              "left_value": 2,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C010",
+              "left_value": 1,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C012",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C013",
+              "left_value": 1,
+              "right_value": 0
+            },
+            {
+              "coordinate_id": "A4-D3-C014",
+              "left_value": 0,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C018",
+              "left_value": 2,
+              "right_value": 1
+            },
+            {
+              "coordinate_id": "A4-D3-C019",
+              "left_value": 2,
+              "right_value": 3
+            }
+          ]
+        },
+        {
+          "fibre_id": "A4-QF044",
+          "group": "A4",
+          "left_mask": 823,
+          "left_pattern_id": "A4-P266",
+          "pair_id": "A4-QP048",
+          "right_mask": 889,
+          "right_pattern_id": "A4-P291",
+          "selected_coordinate_id": "A4-D3-C006",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "A4-D3-C006",
+              "left_value": 3,
+              "right_value": 2
+            },
+            {
+              "coordinate_id": "A4-D3-C009",
+              "left_value": 2,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "A4-D3-C014",
+              "left_value": 2,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "A4-D3-C018",
+              "left_value": 3,
+              "right_value": 2
+            }
+          ]
+        },
+        {
+          "fibre_id": "A4-QF048",
+          "group": "A4",
+          "left_mask": 989,
+          "left_pattern_id": "A4-P320",
+          "pair_id": "A4-QP049",
+          "right_mask": 1014,
+          "right_pattern_id": "A4-P333",
+          "selected_coordinate_id": "A4-D3-C002",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "A4-D3-C002",
+              "left_value": 3,
+              "right_value": 4
+            },
+            {
+              "coordinate_id": "A4-D3-C005",
+              "left_value": 4,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "A4-D3-C006",
+              "left_value": 3,
+              "right_value": 4
+            },
+            {
+              "coordinate_id": "A4-D3-C009",
+              "left_value": 4,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "A4-D3-C010",
+              "left_value": 4,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "A4-D3-C019",
+              "left_value": 3,
+              "right_value": 4
+            }
+          ]
+        },
+        {
+          "fibre_id": "A4-QF047",
+          "group": "A4",
+          "left_mask": 1758,
+          "left_pattern_id": "A4-P342",
+          "pair_id": "A4-QP050",
+          "right_mask": 1774,
+          "right_pattern_id": "A4-P345",
+          "selected_coordinate_id": "A4-D3-C010",
+          "separating_coordinates": [
+            {
+              "coordinate_id": "A4-D3-C010",
+              "left_value": 3,
+              "right_value": 4
+            },
+            {
+              "coordinate_id": "A4-D3-C011",
+              "left_value": 4,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "A4-D3-C014",
+              "left_value": 4,
+              "right_value": 3
+            },
+            {
+              "coordinate_id": "A4-D3-C016",
+              "left_value": 3,
+              "right_value": 4
+            },
+            {
+              "coordinate_id": "A4-D3-C018",
+              "left_value": 3,
+              "right_value": 4
+            },
+            {
+              "coordinate_id": "A4-D3-C019",
+              "left_value": 4,
+              "right_value": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema_version": "orbit_atlas_cubic_witness_map_v1"
+}

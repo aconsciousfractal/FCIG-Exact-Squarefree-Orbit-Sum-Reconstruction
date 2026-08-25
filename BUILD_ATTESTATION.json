@@ -1,0 +1,64 @@
+{
+  "artifact_kind": "versioned_release_build",
+  "author": {
+    "name": "Oleksiy Babanskyy",
+    "orcid": "0009-0001-6176-6208"
+  },
+  "claim_contract": {
+    "claim_boundary": "docs/PUBLIC_CLAIM_BOUNDARY.md",
+    "license_boundary": "LICENSE_SCOPE.md",
+    "novelty_priority_firstness_claimed": false,
+    "third_party_full_texts_distributed": 0
+  },
+  "event_boundary": {
+    "external_review_state_recorded": false,
+    "post_build_receipts": "external_to_versioned_source_tree",
+    "publication_state_recorded": false
+  },
+  "intended_release_tag": "v2.0.0",
+  "manifest": {
+    "file_count": 103,
+    "path": "MANIFEST_SHA256.txt",
+    "sha256": "abe94f0e36db7d4552728bccb7f8e954b745988f1d10ca6f9653078679420c36"
+  },
+  "mathematical_scope": {
+    "actions": [
+      "S4",
+      "A4",
+      "S5",
+      "A5"
+    ],
+    "dictionary_sizes": [
+      19,
+      29,
+      83,
+      124
+    ],
+    "exact_global_minima": [
+      7,
+      11,
+      14,
+      17
+    ],
+    "exact_reconstruction_degrees": [
+      3,
+      3,
+      4,
+      4
+    ],
+    "minimum_domain": "subfamilies of the four declared cumulative squarefree support-orbit dictionaries",
+    "n_values": [
+      4,
+      5
+    ]
+  },
+  "paper": {
+    "bytes": 462115,
+    "pages": 21,
+    "path": "paper/Exact_Squarefree_Orbit_Sum_Reconstruction_of_Four_and_Five_Vertex_Loopless_Digraphs.pdf",
+    "sha256": "2c7961afe9c21ff65eee41cbd55716e59d38a2c51134b4a5199874f79fee22bb"
+  },
+  "repository": "https://github.com/aconsciousfractal/FCIG-Exact-Squarefree-Orbit-Sum-Reconstruction",
+  "schema_version": "orbit_sum_build_attestation_v1",
+  "version": "2.0.0"
+}

@@ -1,0 +1,74 @@
+\section{Readable four-vertex lower-bound certificates}
+\label{app:n4-lower}
+
+This appendix expands the lower-bound part of
+Theorem~\ref{thm:n4-minimum}.  It deliberately stops at the ingredients needed
+for the minima $7$ and $11$; it does not classify all equality families.
+
+\subsection{The forced linear layer}
+
+There is one degree-one support orbit: a single directed arc.  Let $P_0$ be
+the empty pattern and $P_1$ a one-arc pattern.  Every coordinate of degree at
+least two vanishes on both, while the linear orbit sum takes values zero and
+one.  The separator mask is therefore a singleton, forcing the linear
+coordinate in every separating family.
+
+\subsection{The complete quadratic constraint graph}
+
+Let $T_1,\ldots,T_r$ be canonical representatives of the quadratic support
+orbits, where $r=5$ for $S_4$ and $r=7$ for $A_4$.  For $i\neq j$, compare the
+two patterns $P_i=T_i$ and $P_j=T_j$.  Both have two arcs, so their unique
+linear coordinate values agree.  Every cubic coordinate vanishes.  Among the
+quadratic coordinates, $q_{[T_i]}$ and $q_{[T_j]}$ are the only coordinates
+whose values distinguish the two support-orbit representatives.  Hence
+\[
+ \Sep(P_i,P_j)=\{q_{[T_i]},q_{[T_j]}\}.
+\]
+All $\binom r2$ pairs occur, producing the edge set of $K_r$.  A hitting set
+must contain a vertex cover of that complete graph.  Since
+$\tau(K_r)=r-1$, at least four of the five $S_4$ quadratics and six of the
+seven $A_4$ quadratics are necessary.
+
+\subsection{Coordinate-disjoint cubic constraints}
+
+After the duplicate and superset reductions, the following explicit pattern
+pairs have pure-cubic separator masks.  Within each action their coordinate
+sets are pairwise disjoint.
+
+\begin{center}
+\small
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{0.12\textwidth}>{\raggedright\arraybackslash}p{0.18\textwidth}>{\raggedright\arraybackslash}X}
+\toprule
+Action & pattern pair & cubic separator coordinates\\
+\midrule
+$S_4$ & P111 / P155 & C001, C002, C006, C007\\
+$S_4$ & P052 / P066 & C004, C005, C009, C011\\
+\midrule
+$A_4$ & P049 / P060 & C002, C005, C011, C016\\
+$A_4$ & P112 / P115 & C006, C009, C014, C018\\
+$A_4$ & P093 / P096 & C001, C008, C010, C019\\
+$A_4$ & P106 / P153 & C000, C003, C004, C007, C012, C013, C017, C020\\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+Here C$j$ abbreviates the coordinate ID \coord{S4-D3-C$j$} or
+\coord{A4-D3-C$j$} in the corresponding row, with three decimal digits.  The
+atlas stores the full pattern masks, values, pair IDs, and separator-mask
+integers.  Pairwise disjointness makes the lower contribution two for $S_4$
+and four for $A_4$.
+
+Because the linear, quadratic, and cubic coordinate sets are disjoint, their
+lower bounds add.  This proves $1+4+2=7$ and $1+6+4=11$ without assuming that
+all lower-degree coordinates are retained.
+
+\subsection{Uniform branch-DAG cross-check}
+
+The complete reduced constraint antichains have $26$ and $58$ rows.  Starting
+with budgets six and ten, a generic branch checker repeatedly applies forced
+singleton and disjoint-packing rules and branches on an uncovered constraint.
+The resulting proof DAGs have $11$ and $22$ nodes.  At every branch the listed
+children cover every coordinate choice available in the selected constraint;
+every leaf displays a packing larger than its remaining budget.  Independent
+verification of these DAGs supplies a method-uniform check of the more
+readable degree-layer argument above.

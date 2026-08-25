@@ -1,0 +1,15 @@
+* text=auto eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.tex text eol=lf
+*.bib text eol=lf
+*.json text eol=lf
+*.csv text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.cff text eol=lf
+*.txt text eol=lf
+LICENSE text eol=lf
+*.pdf -text -diff -merge
+*.png -text -diff -merge
+*.gz -text -diff -merge
