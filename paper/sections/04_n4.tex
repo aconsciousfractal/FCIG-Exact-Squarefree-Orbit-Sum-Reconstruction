@@ -79,6 +79,43 @@ records the finite cubic blocks and the uniform branch-DAG cross-check.
 
 \input{tables/T03_n4_minima}
 
+\begin{proposition}[Complete four-vertex minimum landscapes]
+\label{prop:n4-landscapes}
+There are exactly $10$ minimum $S_4$ fingerprints and exactly $896$ minimum
+$A_4$ fingerprints.  Every $S_4$ minimum has degree profile $(1,4,2)$ and
+both selected cubic coordinates are tree-supported.  Every $A_4$ minimum has
+profile $(1,6,4)$; the number of tree-supported cubics is distributed as
+\[
+  (112,336,336,112)
+\]
+for one, two, three, and four tree coordinates, respectively.  Moreover, the
+two landscapes factor exactly as
+\[
+  10=5\cdot2,\qquad 896=7\cdot128,
+\]
+where the first factor selects the unique omitted quadratic coordinate and
+the second selects a feasible minimum cubic block.
+\end{proposition}
+
+\begin{proof}
+The lower-bound decomposition in Theorem~\ref{thm:n4-minimum} forces the
+linear coordinate and a minimum vertex cover of $K_5$ or $K_7$.  Such a cover
+omits exactly one vertex, giving five or seven quadratic choices.  Exhaustive
+reconstruction of the inclusion-minimal cubic constraints gives exactly two
+feasible two-coordinate blocks for $S_4$ and $128$ feasible four-coordinate
+blocks for $A_4$.  Direct Cartesian-product comparison shows that every
+quadratic omission combines with every feasible cubic block and that every
+global minimum occurs exactly once in this form.
+
+The support-shape test finds two tree supports in each $S_4$ cubic block.  On
+the $128$ $A_4$ blocks the tree-count distribution is
+$(16,48,48,16)$; multiplying by the seven independent quadratic omissions
+gives the displayed global distribution.  The structural origin of the
+$A_4$ binomial row is proved in Proposition~\ref{prop:a4-exchange-cubes}.
+\end{proof}
+
+\input{tables/T07_n4_landscapes}
+
 For auditability, the complete pair system reduces initially to $6998$ and
 $40{,}786$ distinct nonempty separator masks, then to inclusion-minimal
 antichains of sizes $26$ and $58$.  A second lower proof, independent of the

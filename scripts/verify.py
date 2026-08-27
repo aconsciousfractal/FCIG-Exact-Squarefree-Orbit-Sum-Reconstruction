@@ -53,10 +53,10 @@ VISUAL_QA_JSON = ROOT / "docs" / "PDF_VISUAL_QA.json"
 VISUAL_QA_MARKDOWN = ROOT / "docs" / "PDF_VISUAL_QA.md"
 THEOREM_SUMMARY = ROOT / "certificates" / "theorem_summary.json"
 CASE_ORDER = ("S4", "A4", "S5", "A5")
-PACKAGE_VERSION = "2.0.0"
-RELEASE_TAG = "v2.0.0"
-TOOLCHAIN_INVENTORY_COUNT = 104
-TOOLCHAIN_INVENTORY_SHA256 = "ea47cb4f281fe7c4d1d474c16c84497eb29941fed394df661d4920fecfed28b0"
+PACKAGE_VERSION = "2.1.0"
+RELEASE_TAG = "v2.1.0"
+TOOLCHAIN_INVENTORY_COUNT = 106
+TOOLCHAIN_INVENTORY_SHA256 = "7ccab6c7f5d21ec3a5fa996d65e20beec3d71919cfe4d581f4794836deeba68a"
 # n, degree, dictionary, minimum, patterns, residual, tree-separated,
 # tree-blind, lower-DAG nodes, conditional minimum, conditional solution count
 EXPECTED_CASE_ROWS = {
@@ -181,6 +181,21 @@ def pretty_canonical_json_bytes(value: Any) -> bytes:
 
 
 def expected_visual_qa(paper: dict[str, Any]) -> dict[str, Any]:
+    page_count = paper["pages"]
+    contact_sheet_groups = [
+        list(range(start, min(start + 7, page_count + 1)))
+        for start in range(1, page_count + 1, 7)
+    ]
+    full_resolution_pages = sorted(
+        {
+            1,
+            min(12, page_count),
+            min(18, page_count),
+            max(1, page_count - 2),
+            max(1, page_count - 1),
+            page_count,
+        }
+    )
     return {
         "assurance_boundary": {
             "human_observation_is_not_machine_proved": True,
@@ -205,10 +220,10 @@ def expected_visual_qa(paper: dict[str, Any]) -> dict[str, Any]:
                 "public_only_labels": True,
                 "tables_and_rules_readable": True,
             },
-            "contact_sheet_page_groups": [list(range(1, 8)), list(range(8, 15)), list(range(15, 22))],
-            "date": "2026-08-25",
-            "full_resolution_page_numbers": [1, 12, 18, 20, 21],
-            "page_numbers": list(range(1, paper["pages"] + 1)),
+            "contact_sheet_page_groups": contact_sheet_groups,
+            "date": "2026-08-27",
+            "full_resolution_page_numbers": full_resolution_pages,
+            "page_numbers": list(range(1, page_count + 1)),
         },
         "render": {
             "dpi": 144,
@@ -227,7 +242,12 @@ def visual_qa_markdown(value: dict[str, Any]) -> str:
     inspection = value["inspection"]
     render = value["render"]
     points = document["page_size"]["points"]
+    page_count = document["page_count"]
     full_resolution = ", ".join(str(page) for page in inspection["full_resolution_page_numbers"])
+    group_ranges = ", ".join(
+        f"{group[0]}-{group[-1]}" if group[0] != group[-1] else str(group[0])
+        for group in inspection["contact_sheet_page_groups"]
+    )
     return f"""# PDF visual-QA record
 
 Canonical machine record: `docs/PDF_VISUAL_QA.json`
@@ -241,12 +261,12 @@ Status: `{value['status']}`
 - Renderer: Poppler `pdftoppm {render['renderer_version']}`
 - Rasterization: {render['format']}, `{render['dpi']}` dpi, one image per page
 - Inspection date: `{inspection['date']}`
-- Pages inspected: `1-21`; full-resolution spot checks: `{full_resolution}`
+- Pages inspected: `1-{page_count}`; full-resolution spot checks: `{full_resolution}`
 
-All 21 rendered pages were inspected in three contact-sheet groups: 1-7, 8-14,
-and 15-21. The title page, statement-to-certificate tables, branch-DAG digest
-table, data-and-code statement, and both bibliography pages were additionally
-inspected at full raster resolution.
+All {page_count} rendered pages were inspected in contact-sheet groups:
+{group_ranges}. The title page, representative theorem and certificate tables,
+data-and-code statement, and bibliography were additionally inspected at full
+raster resolution.
 
 No clipped text, overlap, missing glyph, accidental blank page, unreadable
 table or rule, visible non-public label, or malformed URL was found. The title
@@ -575,6 +595,20 @@ def verify_five_vertex() -> dict[str, Any]:
             timeout=420,
         )
         require("PASS_FIVE_VERTEX_PAYLOAD_RECONSTRUCTION" in reconstruction_output, "independent payload reconstruction failed")
+        structural_output = run(
+            python_command(
+                ROOT / "scripts" / "verify_structural_certificates.py",
+                "--root",
+                str(ROOT),
+                "--reconstructed-matrix",
+                str(tmp / "reconstruction" / "a5_signed_matrix.csv"),
+            ),
+            timeout=120,
+        )
+        require("PASS_STRUCTURAL_CERTIFICATES" in structural_output, "structural certificate verification failed")
+        require("counts=10,896" in structural_output, "minimum-landscape census")
+        require("blind_rank=4" in structural_output, "A5 signed blind rank")
+        require("global_A4=896,5376" in structural_output, "A4 global exchange census")
         lower_output = run(
             python_command(FIVE_VERTEX_SCRIPTS / "checker" / "verify_lower_bounds.py", "--project-root", str(ROOT), "--producer", str(N5_DATA), "--output", str(tmp / "lower"), "--check-only"),
             timeout=900,
@@ -592,6 +626,9 @@ def verify_five_vertex() -> dict[str, Any]:
         "lower_dag_nodes": [63589, 213648],
         "conditional_minima": [2, 4, 4, 4],
         "conditional_solution_counts": [2, 128, 2, 200],
+        "minimum_landscape_counts": [10, 896],
+        "a5_signed_blind_rank": 4,
+        "a4_global_exchange": {"vertices": 896, "edges": 5376},
     }
 
 
@@ -1297,6 +1334,35 @@ def full_replay() -> dict[str, Any]:
         require("PASS_FIVE_VERTEX_PAYLOAD_RECONSTRUCTION" in output, "full payload comparison")
         compare_scientific(checker, N5_DATA / "independent", ("reconstructed_payload.json",))
 
+        landscape_output = tmp / "structural_landscape" / "structural_certificate.json"
+        output = run(
+            python_command(
+                ROOT / "scripts" / "build_structural_landscape_certificate.py",
+                "--root",
+                str(ROOT),
+                "--output",
+                str(landscape_output),
+            ),
+            timeout=120,
+        )
+        require("PASS_STRUCTURAL_LANDSCAPE_BUILD" in output, "structural-landscape build")
+        compare_scientific(
+            landscape_output.parent,
+            ROOT / "certificates" / "structural",
+            ("structural_certificate.json",),
+        )
+        output = run(
+            python_command(
+                ROOT / "scripts" / "verify_structural_certificates.py",
+                "--root",
+                str(ROOT),
+                "--reconstructed-matrix",
+                str(checker / "a5_signed_matrix.csv"),
+            ),
+            timeout=120,
+        )
+        require("PASS_STRUCTURAL_CERTIFICATES" in output, "full structural replay")
+
     build = run(
         python_command(
             ROOT / "scripts" / "build_paper.py",
@@ -1309,7 +1375,7 @@ def full_replay() -> dict[str, Any]:
     tests = run(python_command(Path("-m"), "unittest", "discover", "-s", "tests", "-v"), timeout=900)
     require("OK" in tests or tests == "", "regression test endpoint missing")
     return {
-        "independent_scientific_outputs_matched": 30,
+        "independent_scientific_outputs_matched": 32,
         "isolated_source_pdf_byte_identity": "PASS",
         "tests": "PASS",
     }

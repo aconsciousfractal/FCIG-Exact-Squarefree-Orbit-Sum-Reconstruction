@@ -35,6 +35,20 @@ SURFACE_NAMES = (
 
 
 class AssuranceTests(unittest.TestCase):
+    def test_paper_builder_normalizes_windows_extended_paths_for_miktex(self) -> None:
+        if os.name != "nt":
+            self.skipTest("Windows path adapter")
+        drive = "C" + ":"
+        ordinary = drive + "\\deep\\project"
+        self.assertEqual(
+            str(build_paper.regular_windows_path(Path("\\\\?\\" + ordinary))),
+            ordinary,
+        )
+        self.assertEqual(
+            str(build_paper.regular_windows_path(Path(r"\\?\UNC\server\share\project"))),
+            r"\\server\share\project",
+        )
+
     def test_pdf_discovery_uses_paths_relative_to_project_root(self) -> None:
         with tempfile.TemporaryDirectory(prefix="orbit_sum_pdf_paths_") as raw:
             root = Path(raw) / "tmp" / "project"
@@ -97,6 +111,40 @@ class AssuranceTests(unittest.TestCase):
         self.assertEqual(compiler, "latexmk")
         self.assertEqual(commands[0][0], tools["latexmk"])
 
+    def test_isolated_miktex_profile_replaces_stale_host_configuration(self) -> None:
+        with tempfile.TemporaryDirectory(prefix="orbit_sum_miktex_profile_") as raw:
+            root = Path(raw)
+            runtime = root / "runtime"
+            executable = runtime / "miktex" / "bin" / "x64" / "pdflatex.exe"
+            (runtime / "miktex" / "config").mkdir(parents=True)
+            (runtime / "miktex" / "config" / "packages.ini").write_text("[packages]\n", encoding="utf-8")
+            (runtime / "tex").mkdir()
+            executable.parent.mkdir(parents=True)
+            executable.write_bytes(b"")
+            template = root / "template"
+            (template / "miktex" / "config").mkdir(parents=True)
+            startup = template / "miktex" / "config" / "miktexstartup.ini"
+            startup.write_text("[Auto]\nConfig=1\n", encoding="utf-8")
+            profile = root / "profile"
+            environment = {name: "stale" for name in build_paper.MIKTEX_MANAGED_ENVIRONMENT}
+            environment["KEEP"] = "unchanged"
+
+            with mock.patch.object(build_paper, "MIKTEX_PROFILE_TEMPLATE", template):
+                build_paper.configure_isolated_miktex(str(executable), environment, profile)
+
+            self.assertEqual(environment["KEEP"], "unchanged")
+            self.assertEqual(environment["MIKTEX_USERROOTS"], str(runtime))
+            self.assertEqual(environment["MIKTEX_USERCONFIG"], str(profile / "config"))
+            self.assertEqual(environment["MIKTEX_USERDATA"], str(profile / "data"))
+            self.assertEqual(environment["MIKTEX_USERINSTALL"], str(profile / "install"))
+            self.assertEqual(environment["MIKTEX_LOG_DIR"], str(profile / "data" / "miktex" / "log"))
+            self.assertNotIn("MIKTEX_COMMONCONFIG", environment)
+            self.assertNotIn("MIKTEX_REPOSITORY", environment)
+            self.assertEqual(
+                (profile / "config" / "miktex" / "config" / "miktexstartup.ini").read_text(encoding="utf-8"),
+                "[Auto]\nConfig=1\n",
+            )
+
     def test_build_attestation_is_closed_and_event_free(self) -> None:
         manifest = {"file_count": 100, "sha256": "a" * 64}
         paper = {"bytes": 450000, "pages": 20, "sha256": "b" * 64}
@@ -144,9 +192,9 @@ class AssuranceTests(unittest.TestCase):
             ("size", lambda value: value["document"].__setitem__("bytes", 1)),
             ("page count", lambda value: value["document"].__setitem__("page_count", 0)),
             ("path", lambda value: value["document"].__setitem__("path", "paper/other.pdf")),
-            ("missing page", lambda value: value["inspection"].__setitem__("page_numbers", list(range(1, 21)))),
-            ("duplicate page", lambda value: value["inspection"]["page_numbers"].append(21)),
-            ("out-of-range page", lambda value: value["inspection"]["page_numbers"].append(22)),
+            ("missing page", lambda value: value["inspection"]["page_numbers"].pop()),
+            ("duplicate page", lambda value: value["inspection"]["page_numbers"].append(paper["pages"])),
+            ("out-of-range page", lambda value: value["inspection"]["page_numbers"].append(paper["pages"] + 1)),
             ("renderer", lambda value: value["render"].__setitem__("renderer", "unknown")),
             ("dpi", lambda value: value["render"].__setitem__("dpi", 72)),
             ("failed check", lambda value: value["inspection"]["checks"].__setitem__("overlap_absent", False)),

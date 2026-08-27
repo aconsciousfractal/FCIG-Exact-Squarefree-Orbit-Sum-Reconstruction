@@ -5,18 +5,18 @@ Canonical machine record: `docs/PDF_VISUAL_QA.json`
 Status: `PASS_ALL_PAGES_INSPECTED`
 
 - Document: `paper/Exact_Squarefree_Orbit_Sum_Reconstruction_of_Four_and_Five_Vertex_Loopless_Digraphs.pdf`
-- SHA-256: `2c7961afe9c21ff65eee41cbd55716e59d38a2c51134b4a5199874f79fee22bb`
-- Size: `462115` bytes
-- Page count and geometry: `21`, A4 (`595.276` x `841.89` points)
+- SHA-256: `c72ce574950b500c2b04d8d202b8d356a7a989192cbee7a4687b8be5d2ad7221`
+- Size: `518372` bytes
+- Page count and geometry: `27`, A4 (`595.276` x `841.89` points)
 - Renderer: Poppler `pdftoppm 26.05.0`
 - Rasterization: PNG, `144` dpi, one image per page
-- Inspection date: `2026-08-25`
-- Pages inspected: `1-21`; full-resolution spot checks: `1, 12, 18, 20, 21`
+- Inspection date: `2026-08-27`
+- Pages inspected: `1-27`; full-resolution spot checks: `1, 12, 18, 25, 26, 27`
 
-All 21 rendered pages were inspected in three contact-sheet groups: 1-7, 8-14,
-and 15-21. The title page, statement-to-certificate tables, branch-DAG digest
-table, data-and-code statement, and both bibliography pages were additionally
-inspected at full raster resolution.
+All 27 rendered pages were inspected in contact-sheet groups:
+1-7, 8-14, 15-21, 22-27. The title page, representative theorem and certificate tables,
+data-and-code statement, and bibliography were additionally inspected at full
+raster resolution.
 
 No clipped text, overlap, missing glyph, accidental blank page, unreadable
 table or rule, visible non-public label, or malformed URL was found. The title

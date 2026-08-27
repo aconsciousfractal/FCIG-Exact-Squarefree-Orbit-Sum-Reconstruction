@@ -11,8 +11,8 @@ lower-bound transition to a checker.
 
 \subsection{Traceability from statement to certificate}
 
-The six main statements have the following evidence chain:
-\begin{table}[htbp]
+The twelve main statements have the following evidence chain:
+\begin{table}[H]
 \centering
 \small
 \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{0.28\textwidth}>{\raggedright\arraybackslash}p{0.27\textwidth}>{\raggedright\arraybackslash}X}
@@ -22,10 +22,16 @@ Statement & finite content & principal certificate surface\\
 Unified reconstruction theorem & degrees $3,3,4,4$ and minima $7,11,14,17$ & union of the four exact-degree and global-minimum packages\\
 Four-vertex collision proposition & $39/51$ residual pairs and cubic sufficiency & collision atlas and degree-three signature tables\\
 Four-vertex minimum theorem & global minima $7/19$ and $11/29$ & explicit supports, structural blocks, and 11/22-node lower DAGs\\
+Four-vertex landscape proposition & $10/896$ complete minima and their degree profiles & complete minimum census, tree counts, and Cartesian-product check\\
 Five-vertex degree and minimum theorem & exact degree four and minima $14/83$, $17/124$ & complete signatures, upper witnesses, and 63,589/213,648-node lower DAGs\\
+Split-channel lemma & symmetric and antisymmetric coordinates over an index-two split & orbit crosswalk and direct sum/difference calculation\\
 Tree/index-two proposition & $39,51,190,105$ tree-separable residual pairs & tree flags, separator masks, and $S_n/A_n$ orbit crosswalk\\
+Signed $A_5$ blind-core proposition & $54$-by-$35$ ranks and primitive rank-four blind core & reconstructed integer matrix, unit minor, and Smith data\\
+Forced-parent corollary & one forced child and at least two non-tree split parents & blind-row parent covers and decoded support\\
 Conditional-extension proposition & added-coordinate data
 $\begin{matrix}(2,2),(4,128),\\(4,2),(4,200)\end{matrix}$ & residual-pair payloads and complete optimal-subset census\\
+$A_4$ exchange-cube proposition & $4(K_4\mathbin{\square}Q_3)$ and a free graded $C_2^3$ action & explicit factor labels, graph audit, group law, freeness, and grading origins\\
+Global $A_4$ exchange corollary & $4(K_7\mathbin{\square}K_4\mathbin{\square}Q_3)$ on $896$ minima & product decomposition and complete vertex/edge census\\
 \bottomrule
 \end{tabularx}
 \caption{Statement-to-certificate traceability.}
@@ -57,6 +63,25 @@ status is accepted as proof authority.
 The assurance label is deliberately limited: the implementations are independent in
 implementation and data path.  This is not a claim of blind human replication
 or independent model-family authorship.
+
+\subsection{Structural-landscape certificates}
+
+The complete four-vertex minimum census and the signed $A_5$ matrix are
+distributed under \path{certificates/structural/}.  The five-vertex checker
+reconstructs the $54$ split rows and all $35$ split-parent columns directly
+from the group actions and requires the resulting CSV to be byte-identical to
+the distributed matrix.  The structural verifier then recomputes the six
+rational ranks, the four blind row classes, all minors needed for the Smith
+data, the ten minimum parent covers, and the forced parent.
+
+For $A_4$, the same verifier re-enumerates all $128$ minimum cubic covers,
+constructs every one-coordinate-exchange edge, and checks the supplied factor
+labels against every vertex pair.  It verifies the three commuting
+involutions, the full $C_2^3$ group law, freeness, orbit grading, and the
+extension to all $896$ global minima.  Thus factor labels and a determinant-one
+minor are treated as checkable witnesses, not as proof oracles.  The builder
+and verifier are separate entry points, and the verifier does not import the
+builder.
 
 \subsection{Hashes and semantic checks}
 

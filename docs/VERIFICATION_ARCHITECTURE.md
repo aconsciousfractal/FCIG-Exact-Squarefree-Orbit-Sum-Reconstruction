@@ -10,25 +10,29 @@ The package separates mathematical proof objects from transport checks.
    canonical pattern orbit and shown injective.
 4. **Lower bounds.** Complete proof DAGs exclude every smaller hitting set;
    each branch and leaf is checked from explicit separator masks.
-5. **Statement identity.** `certificates/theorem_summary.json` fixes the exact
+5. **Structural landscapes.** A separate checker reconstructs the signed
+   `A5` matrix from the group actions, verifies its primitive blind core, and
+   audits every vertex, edge, factor label, and group element in the `A4`
+   conditional and global exchange graphs.
+6. **Statement identity.** `certificates/theorem_summary.json` fixes the exact
    four-case tuple and scope ceiling and is checked against data, TeX, PDF,
    README, ledger, and claim boundary.
-6. **Transport identity.** The manifest and SHA-256 values bind bytes only
+7. **Transport identity.** The manifest and SHA-256 values bind bytes only
    after semantic checks; a hash never substitutes for a proof step.
-7. **Repository identity.** A clean verification scans the checked-out
+8. **Repository identity.** A clean verification scans the checked-out
    ancestry, compares `HEAD`, index, and raw worktree bytes, and rejects
    historical governance paths, filters, Git LFS pointers, symlinks,
    replacement objects, alternates, and hidden index flags. Development mode
    permits normal history and refs; candidate mode requires the intended tag
-   to be absent; release mode requires annotated `v2.0.0` on the same `HEAD`.
-8. **PDF identity.** Metadata, text boundary, embedded fonts, page geometry,
+   to be absent; release mode requires annotated `v2.1.0` on the same `HEAD`.
+9. **PDF identity.** Metadata, text boundary, embedded fonts, page geometry,
    attachments, and active actions are checked directly.
-9. **Visual-QA identity.** A closed JSON record must declare PASS, enumerate
-   all 21 pages, and match the exact PDF path, hash, size, geometry, renderer,
+10. **Visual-QA identity.** A closed JSON record must declare PASS, enumerate
+   all 27 pages, and match the exact PDF path, hash, size, geometry, renderer,
    and DPI. Its Markdown projection is exact. The verifier checks this binding,
    while the visual observation itself remains human evidence.
-10. **Build-environment identity.** The canonical PDF lock fixes the MiKTeX
-    engine, BibTeX, commands, deterministic environment, and 104 loaded TeX
+11. **Build-environment identity.** The canonical PDF lock fixes the MiKTeX
+    engine, BibTeX, commands, deterministic environment, and 106 loaded TeX
     files. The full replay requires both this lock and byte-identical output;
     a hosted run is not claimed until it is actually observed.
 

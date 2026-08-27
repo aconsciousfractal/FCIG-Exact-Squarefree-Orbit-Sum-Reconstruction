@@ -36,15 +36,18 @@ The core profile verifies:
 5. the five-vertex residual pairs, degree-four injectivity, upper witnesses,
    and every reachable node of the two complete lower DAGs;
 6. the tree/index-two and conditional-extension statements;
-7. `certificates/theorem_summary.json` against data, TeX, PDF, README, and
+7. the complete `10/896` four-vertex minimum landscapes, the independently
+   reconstructed `54`-by-`35` signed `A5` matrix, its primitive blind core,
+   and the conditional/global `A4` exchange graphs;
+8. `certificates/theorem_summary.json` against data, TeX, PDF, README, and
    the public claim boundary;
-8. PDF metadata, page geometry, embedded fonts, attachments, and active
+9. PDF metadata, page geometry, embedded fonts, attachments, and active
    actions;
-9. the closed visual-QA JSON record, its exact Markdown projection, PASS
+10. the closed visual-QA JSON record, its exact Markdown projection, PASS
    semantics, complete page census, and binding to the current PDF bytes;
-10. the canonical PDF toolchain lock, including compiler identity, commands,
-    deterministic environment, and the 104-file loaded TeX inventory;
-11. the checked-out Git ancestry and current tree, together with ordinary-Git
+11. the canonical PDF toolchain lock, including compiler identity, commands,
+    deterministic environment, and the 106-file loaded TeX inventory;
+12. the checked-out Git ancestry and current tree, together with ordinary-Git
    delivery without filters, Git LFS pointers, symlinks, historical governance
    paths, hidden index flags, or worktree/index byte drift.
 
@@ -61,8 +64,9 @@ python scripts/verify.py --profile full
 ```
 
 The full profile regenerates both four-vertex enumeration implementations,
-both exact minimum searches, both family-degree implementations, the structural certificate, and
-the five-vertex canonical payload in disposable directories. It compares the
+both exact minimum searches, both family-degree implementations, the readable
+lower-bound certificate, the structural-landscape certificate, and the
+five-vertex canonical payload in disposable directories. It compares the
 resulting canonical objects byte-for-byte with `certificates/`. The large
 five-vertex lower DAGs are semantically rechecked rather than rediscovered by
 an optimizer. It also requires the isolated PDF to be byte-identical and the
@@ -113,7 +117,7 @@ python -O scripts/verify.py --profile core --git-state candidate
 ```
 
 Candidate mode requires the final versioned tree to be untagged. After review,
-an annotated `v2.0.0` tag may be added to that same commit and checked with:
+an annotated `v2.1.0` tag may be added to that same commit and checked with:
 
 ```bash
 python scripts/verify.py --profile core --git-state release
@@ -144,4 +148,7 @@ exceed 260 characters.
 - `7,11,14,17` are minima inside the fixed squarefree dictionaries;
 - conditional totals `8,12,26,32` solve a different problem;
 - the eight `A5` tree-blind pairs have no asserted physical interpretation;
+- the signed `A5` parent-cover number `2` is not the global minimum `17`;
+- the explicit `C2^3` action is on the `128` conditional solution sets and is
+  not asserted to be one global permutation of the `21` coordinate labels;
 - the source audit provides attribution and scope subtraction, not priority.

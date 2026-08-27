@@ -1,8 +1,8 @@
 {
   "artifact": {
-    "bytes": 462115,
+    "bytes": 518372,
     "path": "paper/Exact_Squarefree_Orbit_Sum_Reconstruction_of_Four_and_Five_Vertex_Loopless_Digraphs.pdf",
-    "sha256": "2c7961afe9c21ff65eee41cbd55716e59d38a2c51134b4a5199874f79fee22bb"
+    "sha256": "c72ce574950b500c2b04d8d202b8d356a7a989192cbee7a4687b8be5d2ad7221"
   },
   "assurance_boundary": {
     "canonical_environment_is_portable": false,
@@ -176,6 +176,10 @@
       {
         "file": "tabularx.sty",
         "version": "2023/12/11 v2.12a"
+      },
+      {
+        "file": "float.sty",
+        "version": "2001/11/08 v1.3d"
       },
       {
         "file": "geometry.sty",
@@ -415,6 +419,10 @@
       },
       {
         "file": "tables/T03_n4_minima.tex",
+        "version": null
+      },
+      {
+        "file": "tables/T07_n4_landscapes.tex",
         "version": null
       },
       {

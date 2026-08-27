@@ -12,6 +12,30 @@ $A_n$-orbit or the disjoint union of two $A_n$-orbits.  In the second case we
 call the resulting pair an \emph{index-two split pair}.  This is purely a
 finite group-action definition.
 
+\begin{lemma}[Symmetric and signed channels for a split orbit]
+\label{lem:index-two-channels}
+Fix $n\in\{4,5\}$.  If an $S_n$ support orbit splits into two $A_n$ support
+orbits with coordinates $q_+$ and $q_-$, then
+\[
+  u=q_++q_-,\qquad s=q_+-q_-
+\]
+are respectively fixed and negated by every odd relabelling.  On a split
+pattern pair $(P_+,P_-)$ exchanged by an odd relabelling,
+\[
+  u(P_+)=u(P_-),\qquad s(P_+)=-s(P_-).
+\]
+Over $\mathbb Q$ the two child coordinates are recovered by
+$q_\pm=(u\pm s)/2$.  Over $\mathbb Z$ this is a parity-sublattice statement,
+not a unimodular change of basis.
+\end{lemma}
+
+\begin{proof}
+An even relabelling preserves each child orbit, whereas an odd relabelling
+interchanges them.  Hence it swaps $q_+$ and $q_-$ and gives the two displayed
+transformation laws.  The forward change of variables has determinant $-2$
+and its inverse divides by two, which accounts for the integral caveat.
+\end{proof}
+
 \begin{proposition}[Tree and index-two contrast in the finite panel]
 \label{prop:tree-index-two}
 Every one of the $39$ $S_4$ and $51$ $A_4$ residual pairs at degree two, and
@@ -47,6 +71,84 @@ index-two splitting is necessary for the observed tree blindness but does not
 by itself force it.  This distinction prevents the eight exceptions from
 being inflated into a general statement about alternating actions.
 
+\begin{proposition}[Signed $A_5$ blind block and its primitive integral core]
+\label{prop:a5-signed-blind-core}
+Orient the $54$ split degree-three-residual $A_5$ pattern pairs and the two
+children of each of the $35$ split quartic $S_5$ support parents.  The
+resulting signed integer matrix has rational ranks
+\[
+\begin{array}{c|ccc}
+ & \text{all 35 parents} & \text{14 tree parents} &
+   \text{21 non-tree parents}\\ \hline
+\text{all 54 rows} & 24&14&20\\
+\text{eight tree-blind rows} & 4&0&4.
+\end{array}
+\]
+The eight blind rows form four nonzero classes up to sign, each with
+multiplicity two.  After canonical sign normalization, their restriction to
+the $21$ non-tree parent channels is a primitive rank-four sublattice of
+$\mathbb Z^{21}$.  Equivalently, the associated map
+\[
+  B\colon\mathbb Z^{21}\longrightarrow\mathbb Z^4
+\]
+is surjective and has Smith invariant factors $(1,1,1,1)$.
+\end{proposition}
+
+\begin{proof}
+Lemma~\ref{lem:index-two-channels} identifies the relevant antisymmetric
+coordinate on every split parent.  Exact evaluation on the $54$ oriented
+pattern pairs gives the stated matrix ranks; on the eight blind rows the
+tree-parent block is entrywise zero.  Identifying equal rows up to sign leaves
+four rows.  On the parent columns
+\[
+  \coord{00027},\ \coord{00035},\ \coord{00036},\ \coord{00115}
+\]
+they have the minor
+\[
+M=\begin{pmatrix}
+0&0&0&1\\
+0&0&1&1\\
+0&1&-1&2\\
+1&-1&-1&0
+\end{pmatrix},\qquad \det M=1.
+\]
+Thus the gcd of the full-rank minors is one.  The row lattice is primitive,
+the map $B$ is onto, and the Smith factors are all one.  The companion
+checker additionally recomputes every minor and verifies the displayed
+integer inverse in both multiplication orders.
+\end{proof}
+
+\begin{corollary}[Forced split parent in every $A_5$ fingerprint]
+\label{cor:a5-forced-child}
+Every separating subfamily of the fixed $124$-coordinate $A_5$ dictionary
+contains at least one of
+\[
+  \coord{A5:5:4:00115},\qquad \coord{A5:5:4:00116},
+\]
+and uses quartic split coordinates belonging to at least two distinct
+non-tree $S_5$ parent orbits.  On the eight blind rows the parent-cover number
+is two; exactly ten parent pairs attain it, and all ten contain parent
+\coord{00115}.
+\end{corollary}
+
+\begin{proof}
+The lower-degree coordinates agree on every blind pair, nonsplit quartic
+coordinates are symmetric, and the tree-parent signed block vanishes.  Two
+blind rows have \coord{00115} as their sole nonzero split-parent channel, so
+one of its two $A_5$ children is forced.  No single parent hits all eight
+signed rows, while exhaustive evaluation of the $15$ nonzero non-tree parent
+columns gives ten two-parent covers, each containing \coord{00115}.  This
+proves both assertions.
+\end{proof}
+
+The hexadecimal parent \coord{00115} represents the arcs
+$0\mathbin{\to}1$, $0\mathbin{\to}3$, $1\mathbin{\to}0$, and
+$2\mathbin{\to}0$.  Its underlying simple support is a tree on four touched
+vertices with one reciprocal edge and one isolated fifth vertex.  It is
+therefore not a tree support in the sense fixed at the start of this section.
+The parent-cover value two is likewise not the global minimum
+$\tau(5,A_5)=17$.
+
 \subsection{A common tree cover for the symmetric five-vertex action}
 
 The proposition concerns one separator per residual pair.  A stronger finite
@@ -65,5 +167,7 @@ not used in the proof of the global $14$-coordinate minimum.
 \begin{proofboundary}
 The words ``split pair'' and ``tree-blind'' refer only to orbit fibres and
 directed support shapes in the declared finite model.  They carry no
-geometric, stereochemical, or physical assertion.
+geometric, stereochemical, or physical assertion.  The signed matrix uses
+$S_5$ parent channels; its columns are not the atomic $A_5$ child coordinates
+of the reconstruction dictionary.
 \end{proofboundary}

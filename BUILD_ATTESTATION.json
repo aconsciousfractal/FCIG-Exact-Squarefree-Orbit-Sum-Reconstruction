@@ -15,11 +15,11 @@
     "post_build_receipts": "external_to_versioned_source_tree",
     "publication_state_recorded": false
   },
-  "intended_release_tag": "v2.0.0",
+  "intended_release_tag": "v2.1.0",
   "manifest": {
-    "file_count": 105,
+    "file_count": 111,
     "path": "MANIFEST_SHA256.txt",
-    "sha256": "ad5f163b230598383f840522d50e6e21133bb07b1001ba22bc4e2463dd68206a"
+    "sha256": "b50b281d0d2ca4171a05fe3d77b2f946307aadacefee01ea27f527579c2b3537"
   },
   "mathematical_scope": {
     "actions": [
@@ -53,26 +53,26 @@
     ]
   },
   "paper": {
-    "bytes": 462115,
-    "pages": 21,
+    "bytes": 518372,
+    "pages": 27,
     "path": "paper/Exact_Squarefree_Orbit_Sum_Reconstruction_of_Four_and_Five_Vertex_Loopless_Digraphs.pdf",
-    "sha256": "2c7961afe9c21ff65eee41cbd55716e59d38a2c51134b4a5199874f79fee22bb"
+    "sha256": "c72ce574950b500c2b04d8d202b8d356a7a989192cbee7a4687b8be5d2ad7221"
   },
   "pdf_build_toolchain": {
     "compiler_mode": "pdflatex+bibtex",
     "engine_banner": "MiKTeX-pdfTeX 4.23 (MiKTeX 25.12)",
-    "loaded_file_count": 104,
+    "loaded_file_count": 106,
     "path": "PDF_BUILD_TOOLCHAIN.json",
-    "sha256": "ddbda935bbb68daca3481c0ce51f36ee21077e81f0e1bd0b6ed7427490805f57"
+    "sha256": "f1e8295caad8c0524e37a4b1a717d1ed6be4f66676e4a40ef65d5ebc61389d0f"
   },
   "pdf_visual_qa": {
     "dpi": 144,
-    "inspected_pages": 21,
+    "inspected_pages": 27,
     "path": "docs/PDF_VISUAL_QA.json",
-    "sha256": "c2b8db1d25d8795894751a967f9b64990289751c1f164b5299e791ab0fe8998b",
+    "sha256": "e78a36b61692c4dd0b08bae0690a2b8826719b95e6860aa4d2007aaafd244112",
     "status": "PASS_ALL_PAGES_INSPECTED"
   },
   "repository": "https://github.com/aconsciousfractal/FCIG-Exact-Squarefree-Orbit-Sum-Reconstruction",
   "schema_version": "orbit_sum_build_attestation_v1",
-  "version": "2.0.0"
+  "version": "2.1.0"
 }

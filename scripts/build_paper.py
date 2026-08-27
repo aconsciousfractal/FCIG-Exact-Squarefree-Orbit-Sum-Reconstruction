@@ -16,16 +16,42 @@ import tempfile
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
+def regular_windows_path(path: Path) -> Path:
+    rendered = str(path)
+    if os.name == "nt" and rendered.startswith("\\\\?\\UNC\\"):
+        rendered = "\\\\" + rendered[8:]
+    elif os.name == "nt" and rendered.startswith("\\\\?\\"):
+        rendered = rendered[4:]
+    return Path(rendered)
+
+
+ROOT = regular_windows_path(Path(__file__).resolve().parents[1])
 PAPER = ROOT / "paper"
 TMP_ROOT = ROOT / "tmp" / "pdfs"
 OUTPUT = PAPER / "Exact_Squarefree_Orbit_Sum_Reconstruction_of_Four_and_Five_Vertex_Loopless_Digraphs.pdf"
 TOOLCHAIN_LOCK = ROOT / "PDF_BUILD_TOOLCHAIN.json"
+MIKTEX_PROFILE_TEMPLATE = ROOT / "toolchain" / "miktex" / "isolated_profile"
 IGNORED_SUFFIXES = {".aux", ".bbl", ".blg", ".fdb_latexmk", ".fls", ".log", ".out", ".toc", ".pdf"}
 BUILD_ENVIRONMENT = {
     "FORCE_SOURCE_DATE": "1",
     "SOURCE_DATE_EPOCH": "1787529600",
     "TZ": "UTC",
+}
+MIKTEX_MANAGED_ENVIRONMENT = {
+    "MIKTEX_USERCONFIG",
+    "MIKTEX_USERDATA",
+    "MIKTEX_USERINSTALL",
+    "MIKTEX_USERSTARTUPFILE",
+    "MIKTEX_USERROOTS",
+    "MIKTEX_LOG_DIR",
+    "MIKTEX_COMMONCONFIG",
+    "MIKTEX_COMMONDATA",
+    "MIKTEX_COMMONINSTALL",
+    "MIKTEX_COMMONROOTS",
+    "MIKTEX_COMMONSTARTUPFILE",
+    "MIKTEX_OTHERCOMMONROOTS",
+    "MIKTEX_OTHERUSERROOTS",
+    "MIKTEX_REPOSITORY",
 }
 
 
@@ -69,6 +95,45 @@ def version_facts(executable: str, environment: dict[str, str]) -> dict[str, str
         "banner": lines[0],
         "stdout_sha256": hashlib.sha256((stdout + "\n").encode("utf-8")).hexdigest(),
     }
+
+
+def configure_isolated_miktex(
+    executable: str, environment: dict[str, str], profile_root: Path
+) -> None:
+    resolved = Path(executable).resolve()
+    candidates = [
+        parent
+        for parent in resolved.parents
+        if (parent / "miktex" / "config" / "packages.ini").is_file()
+        and (parent / "tex").is_dir()
+    ]
+    if len(candidates) != 1:
+        raise RuntimeError("cannot derive one MiKTeX runtime root")
+    if not MIKTEX_PROFILE_TEMPLATE.is_dir():
+        raise RuntimeError("missing isolated MiKTeX profile template")
+    runtime_root = candidates[0]
+    config = profile_root / "config"
+    data = profile_root / "data"
+    install = profile_root / "install"
+    shutil.copytree(MIKTEX_PROFILE_TEMPLATE, config)
+    data.mkdir(parents=True)
+    install.mkdir(parents=True)
+    log_dir = data / "miktex" / "log"
+    log_dir.mkdir(parents=True)
+    for name in MIKTEX_MANAGED_ENVIRONMENT:
+        environment.pop(name, None)
+    environment.update(
+        {
+            "MIKTEX_USERCONFIG": str(config),
+            "MIKTEX_USERDATA": str(data),
+            "MIKTEX_USERINSTALL": str(install),
+            "MIKTEX_USERSTARTUPFILE": str(
+                config / "miktex" / "config" / "miktexstartup.ini"
+            ),
+            "MIKTEX_USERROOTS": str(runtime_root),
+            "MIKTEX_LOG_DIR": str(log_dir),
+        }
+    )
 
 
 def package_inventory(log: str) -> list[dict[str, str | None]]:
@@ -176,6 +241,8 @@ def compile_isolated() -> tuple[bytes, str, dict[str, object]]:
         stage = Path(raw_stage)
         copy_sources(stage)
         commands, compiler = compiler_commands(stage)
+        if compiler == "pdflatex+bibtex" and "miktex" in str(Path(commands[0][0]).resolve()).lower():
+            configure_isolated_miktex(commands[0][0], environment, stage / "_miktex_profile")
         engine = version_facts(commands[0][0], environment)
         bibliography = None
         if compiler == "pdflatex+bibtex":

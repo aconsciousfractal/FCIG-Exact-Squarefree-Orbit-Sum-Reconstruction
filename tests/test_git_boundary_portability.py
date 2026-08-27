@@ -94,7 +94,7 @@ class GitBoundaryPortabilityTests(unittest.TestCase):
 
     def test_tag_is_rejected_before_release(self) -> None:
         with committed_repository({"payload.txt": "ordinary blob\n"}) as repo:
-            git(repo, "tag", "v2.0.0")
+            git(repo, "tag", "v2.1.0")
             with self.assertRaisesRegex(ValueError, "candidate checkout already contains"):
                 verify.verify_git_boundary(False, "candidate")
 
@@ -113,7 +113,7 @@ class GitBoundaryPortabilityTests(unittest.TestCase):
                 "user.email=boundary@example.invalid",
                 "tag",
                 "-a",
-                "v2.0.0",
+                "v2.1.0",
                 "-m",
                 "release",
             )
@@ -124,7 +124,7 @@ class GitBoundaryPortabilityTests(unittest.TestCase):
 
     def test_release_rejects_lightweight_tag(self) -> None:
         with committed_repository({"payload.txt": "ordinary blob\n"}) as repo:
-            git(repo, "tag", "v2.0.0")
+            git(repo, "tag", "v2.1.0")
             with self.assertRaisesRegex(ValueError, "must be an annotated tag"):
                 verify.verify_git_boundary(False, "release")
 
@@ -139,7 +139,7 @@ class GitBoundaryPortabilityTests(unittest.TestCase):
                 "user.email=boundary@example.invalid",
                 "tag",
                 "-a",
-                "v2.0.0",
+                "v2.1.0",
                 root,
                 "-m",
                 "release",

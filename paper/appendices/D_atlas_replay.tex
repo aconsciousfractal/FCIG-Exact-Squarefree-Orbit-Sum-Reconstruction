@@ -16,16 +16,26 @@ together with those of the four-vertex registries and certificates, appear in
 the repository manifest.  Matching a digest establishes byte identity only;
 all mathematical conclusions are checked semantically.
 
+The structural revision adds
+\path{certificates/structural/a5_signed_matrix.csv} and
+\path{certificates/structural/structural_certificate.json}.  The former is
+reconstructed independently from the group actions; the latter binds the
+four-vertex minimum landscapes, the primitive signed $A_5$ blind core, and
+the explicit $A_4$ exchange-graph witnesses.
+
 \subsection{Minimal read-only replay}
 
 From the companion-repository root, run
 \begin{verbatim}
 python scripts/verify.py --profile core
 python -O scripts/verify.py --profile core
+python scripts/verify_structural_certificates.py
 \end{verbatim}
-Both commands verify the manifest, rebuild the four-vertex certificate
+The two aggregate commands verify the manifest, rebuild the four-vertex certificate
 semantics, reconstruct the five-vertex coordinate data independently, and
-check every node of both lower-bound DAGs.  They must end with
+check every node of both lower-bound DAGs.  The structural command provides a
+short focused replay; it must end with
+\texttt{PASS\_STRUCTURAL\_CERTIFICATES}.  The two aggregate commands must end with
 \begin{center}\small
 \texttt{PASS\_ORBIT\_SUM\_PACKAGE\_CORE}.
 \end{center}

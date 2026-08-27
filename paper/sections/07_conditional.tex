@@ -42,6 +42,95 @@ does not change the graph-orbit equivalence or the optimization result.
 
 \input{tables/T05_conditional}
 
+\begin{proposition}[Exchange cubes for the minimum cubic $A_4$ extensions]
+\label{prop:a4-exchange-cubes}
+Let $\mathcal M$ be the $128$ four-element subsets of the $21$ cubic $A_4$
+coordinates that solve the conditional extension problem.  Join
+$H,H'\in\mathcal M$ when $|H\mathbin{\triangle}H'|=2$, so that one coordinate
+is exchanged.  The resulting six-regular graph is
+\[
+  4\bigl(K_4\mathbin{\square}Q_3\bigr).
+\]
+It admits a free action by $C_2^3$ through graph automorphisms, with sixteen
+orbits of size eight.  If $t(H)$ is the number of tree-supported coordinates
+in $H$, then every orbit contains a unique member $H_*$ with $t(H_*)=1$.
+For the displayed three-generator identification of the action with $C_2^3$,
+\[
+  t(g\mathbin{\cdot}H_*)=1+\operatorname{wt}(g)\qquad(g\in C_2^3).
+\]
+Consequently each orbit has tree-count enumerator $z(1+z)^3$, and the full
+enumerator is
+\[
+  16z(1+z)^3=16z+48z^2+48z^3+16z^4.
+\]
+\end{proposition}
+
+\begin{proof}
+Re-enumeration from the $21$ cubic separator masks rejects every cover of
+size at most three and gives exactly the $128$ members of $\mathcal M$.
+The certificate labels every member by a component, a $K_4$ vertex, and a
+three-bit word, and verifies for every pair that exchange adjacency is
+equivalent to adjacency in $K_4\mathbin{\square}Q_3$ within one component.
+
+Three displayed permutations of the $128$ solutions preserve every edge,
+square to the identity, and commute.  Their eight products are distinct;
+each of the seven nonidentity products has no fixed point.  They therefore
+give a free $C_2^3$ action with sixteen eight-element orbits.  Direct
+tree-support evaluation supplies, and uniquely determines, the member $H_*$
+of tree count one on each orbit; relative to it the three generators change
+the three independent Hamming coordinates.  Summing the resulting binomial
+orbit enumerators gives the final formula.
+\end{proof}
+
+The factor labels and generators give one explicit certified realization;
+no canonical factorization is claimed.  The action is defined on the
+solution exchange graph.  It is not asserted to arise from one global
+permutation of all $21$ cubic coordinate labels and is not identified with
+the separate transpose or odd-relabeling diagnostics.  It explains the
+conditional minimum landscape without changing either the conditional
+minimum four or the global value $\tau(4,A_4)=11$.
+
+\begin{corollary}[Global $A_4$ minimum-exchange graph]
+\label{cor:a4-global-exchange}
+Join two of the $896$ global minimum $A_4$ fingerprints when their symmetric
+difference has size two.  The resulting graph is twelve-regular and is
+explicitly isomorphic, via the certified omitted-quadratic and cubic-factor
+labels, to
+\[
+  K_7\mathbin{\square}
+  4\bigl(K_4\mathbin{\square}Q_3\bigr)
+  \cong
+  4\bigl(K_7\mathbin{\square}K_4\mathbin{\square}Q_3\bigr).
+\]
+It has $896$ vertices, $5{,}376$ edges, and four connected components of size
+$224$.  The preceding free $C_2^3$ action extends trivially across the $K_7$
+factor, giving $112$ orbits of size eight and global tree-count enumerator
+\[
+  112z(1+z)^3=112z+336z^2+336z^3+112z^4.
+\]
+\end{corollary}
+
+\begin{proof}
+By Proposition~\ref{prop:n4-landscapes}, every global minimum has a unique
+form
+\[
+  \{\ell\}\cup\bigl(\mathcal Q\setminus\{q\}\bigr)\cup H,
+  \qquad q\in\mathcal Q,\quad H\in\mathcal M,
+\]
+where $\ell$ is the forced linear coordinate, $\mathcal Q$ is the set of seven
+quadratic coordinates, and $\mathcal M$ is the set of $128$ conditional cubic
+minima.  Two such fingerprints differ by one exchange exactly when either
+their omitted quadratic coordinates differ and their cubic factors agree, or
+their omitted quadratic coordinates agree and their cubic factors are
+adjacent in the exchange graph on $\mathcal M$.  If both factors change, the
+symmetric difference has size at least four.  Hence the global graph is
+$K_7\mathbin{\square}\Gamma(\mathcal M)$, and
+Proposition~\ref{prop:a4-exchange-cubes} gives the displayed factorization.
+The degree, edge count, and component sizes follow immediately.  Acting only
+on $H$ gives seven copies of each of the sixteen free cubic orbits, and
+multiplying the cubic orbit enumerator by seven gives the stated polynomial.
+\end{proof}
+
 The resulting total fingerprint sizes are $8,12,26,32$ because the retained
 lower dictionaries contain $6,8,22,28$ coordinates.  These totals can exceed
 the global minima substantially: in the global problem the optimizer may

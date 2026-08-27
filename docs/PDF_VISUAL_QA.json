@@ -5,8 +5,8 @@
     "verifier_enforces_binding_and_closed_schema": true
   },
   "document": {
-    "bytes": 462115,
-    "page_count": 21,
+    "bytes": 518372,
+    "page_count": 27,
     "page_size": {
       "name": "A4",
       "points": [
@@ -15,7 +15,7 @@
       ]
     },
     "path": "paper/Exact_Squarefree_Orbit_Sum_Reconstruction_of_Four_and_Five_Vertex_Loopless_Digraphs.pdf",
-    "sha256": "2c7961afe9c21ff65eee41cbd55716e59d38a2c51134b4a5199874f79fee22bb"
+    "sha256": "c72ce574950b500c2b04d8d202b8d356a7a989192cbee7a4687b8be5d2ad7221"
   },
   "inspection": {
     "checks": {
@@ -55,15 +55,24 @@
         19,
         20,
         21
+      ],
+      [
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
       ]
     ],
-    "date": "2026-08-25",
+    "date": "2026-08-27",
     "full_resolution_page_numbers": [
       1,
       12,
       18,
-      20,
-      21
+      25,
+      26,
+      27
     ],
     "page_numbers": [
       1,
@@ -86,7 +95,13 @@
       18,
       19,
       20,
-      21
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27
     ]
   },
   "render": {

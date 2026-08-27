@@ -7,7 +7,7 @@ authors:
     given-names: Oleksiy
     orcid: "https://orcid.org/0009-0001-6176-6208"
 repository-code: "https://github.com/aconsciousfractal/FCIG-Exact-Squarefree-Orbit-Sum-Reconstruction"
-version: "2.0.0"
+version: "2.1.0"
 license: MIT
 keywords:
   - finite-group-actions

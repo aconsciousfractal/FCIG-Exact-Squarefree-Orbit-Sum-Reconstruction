@@ -11,6 +11,7 @@ and no producer-generated separator mask is trusted.
 from __future__ import annotations
 
 import argparse
+import csv
 import hashlib
 import itertools
 import json
@@ -19,6 +20,7 @@ import sys
 import time
 from collections import defaultdict, deque
 from dataclasses import dataclass
+from io import StringIO
 from pathlib import Path
 from typing import Sequence
 
@@ -450,6 +452,87 @@ def metadata(model: IndependentModel) -> list[dict[str, object]]:
     ]
 
 
+def reconstruct_a5_signed_matrix(
+    symmetric: IndependentModel, alternating: IndependentModel
+) -> bytes:
+    """Reconstruct the signed split-parent matrix from the group actions."""
+
+    symmetric_patterns = set(symmetric.patterns)
+    alternating_pattern_index = {
+        mask: index for index, mask in enumerate(alternating.patterns)
+    }
+    split_rows: list[tuple[int, int, int]] = []
+    for left, right in collision_pairs(alternating, 3):
+        left_mask = alternating.patterns[left]
+        right_mask = alternating.patterns[right]
+        left_parent = canonical(left_mask, symmetric.maps)
+        right_parent = canonical(right_mask, symmetric.maps)
+        if left_parent == right_parent:
+            if left_parent not in symmetric_patterns:
+                raise AssertionError("split-pattern parent absent from the symmetric registry")
+            first, second = sorted((left_mask, right_mask))
+            split_rows.append((first, second, left_parent))
+    split_rows.sort()
+    if len(split_rows) != 54:
+        raise AssertionError(f"signed matrix has {len(split_rows)} rows, wanted 54")
+
+    symmetric_quartics = {
+        coordinate.representative
+        for coordinate in symmetric.coordinates
+        if coordinate.degree == 4
+    }
+    split_supports: dict[int, list[int]] = defaultdict(list)
+    for index, coordinate in enumerate(alternating.coordinates):
+        if coordinate.degree != 4:
+            continue
+        parent = canonical(coordinate.representative, symmetric.maps)
+        if parent not in symmetric_quartics:
+            raise AssertionError("split-support parent absent from the symmetric registry")
+        split_supports[parent].append(index)
+    split_supports = {
+        parent: sorted(
+            children,
+            key=lambda index: alternating.coordinates[index].representative,
+        )
+        for parent, children in split_supports.items()
+        if len(children) == 2
+    }
+    parents = sorted(split_supports)
+    if len(parents) != 35:
+        raise AssertionError(f"signed matrix has {len(parents)} columns, wanted 35")
+
+    rows: list[list[object]] = []
+    for first_mask, second_mask, parent in split_rows:
+        first_index = alternating_pattern_index[first_mask]
+        second_index = alternating_pattern_index[second_mask]
+        values: list[int] = []
+        for support_parent in parents:
+            plus, minus = split_supports[support_parent]
+            first_value = (
+                alternating.matrix[first_index][plus]
+                - alternating.matrix[first_index][minus]
+            )
+            second_value = (
+                alternating.matrix[second_index][plus]
+                - alternating.matrix[second_index][minus]
+            )
+            if first_value != -second_value:
+                raise AssertionError("signed-channel anti-invariance failed")
+            values.append(first_value)
+        rows.append(
+            [f"{first_mask:05x}", f"{second_mask:05x}", f"{parent:05x}", *values]
+        )
+
+    stream = StringIO(newline="")
+    writer = csv.writer(stream, lineterminator="\n")
+    writer.writerow(
+        ["a5_pattern_1", "a5_pattern_2", "s5_parent"]
+        + [f"{parent:05x}" for parent in parents]
+    )
+    writer.writerows(rows)
+    return stream.getvalue().encode("utf-8")
+
+
 def reconstruct_group_payload(
     model: IndependentModel, symmetric_companion: IndependentModel | None
 ) -> dict[str, object]:
@@ -661,6 +744,14 @@ def run(project_root: Path, producer_dir: Path, output_dir: Path) -> int:
         "S5": reconstruct_model(5, False),
         "A5": reconstruct_model(5, True),
     }
+    signed_matrix = reconstruct_a5_signed_matrix(models["S5"], models["A5"])
+    distributed_matrix = (
+        project_root / "certificates" / "structural" / "a5_signed_matrix.csv"
+    )
+    if not distributed_matrix.is_file():
+        raise FileNotFoundError(f"missing signed structural matrix: {distributed_matrix}")
+    if signed_matrix != distributed_matrix.read_bytes():
+        raise AssertionError("independent signed A5 matrix differs from the certificate")
     groups = {
         "S4": reconstruct_group_payload(models["S4"], None),
         "A4": reconstruct_group_payload(models["A4"], models["S4"]),
@@ -688,6 +779,7 @@ def run(project_root: Path, producer_dir: Path, output_dir: Path) -> int:
     output_dir.mkdir(parents=True, exist_ok=True)
     rebuilt_path = output_dir / "reconstructed_payload.json"
     rebuilt_path.write_bytes(rebuilt_raw)
+    (output_dir / "a5_signed_matrix.csv").write_bytes(signed_matrix)
     verdict_name = (
         "PASS_FIVE_VERTEX_PAYLOAD_RECONSTRUCTION"
         if byte_identical and verdict.startswith("PASS")

@@ -3,7 +3,9 @@ from __future__ import annotations
 import hashlib
 import json
 import sys
+import tempfile
 import unittest
+from copy import deepcopy
 from pathlib import Path
 
 
@@ -14,6 +16,7 @@ if str(SCRIPTS) not in sys.path:
 
 import build_manifest  # noqa: E402
 import verify  # noqa: E402
+import verify_structural_certificates as structural  # noqa: E402
 
 
 def load(path: Path) -> dict:
@@ -73,6 +76,48 @@ class PublicPackageTests(unittest.TestCase):
             digest(ROOT / "certificates" / "five_vertex" / "independent" / "reconstructed_payload.json"),
         )
 
+    def test_structural_landscape_certificate_replays(self) -> None:
+        result = structural.verify(ROOT)
+        self.assertEqual(result["minimum_counts"], [10, 896])
+        self.assertEqual(result["a5_blind_rank"], 4)
+        self.assertEqual((result["a4_global_vertices"], result["a4_global_edges"]), (896, 5376))
+
+    def test_structural_verifier_rejects_reconstructed_matrix_drift(self) -> None:
+        source = ROOT / "certificates" / "structural" / "a5_signed_matrix.csv"
+        with tempfile.TemporaryDirectory(prefix="orbit_sum_signed_matrix_") as raw:
+            mutation = Path(raw) / "a5_signed_matrix.csv"
+            mutation.write_bytes(source.read_bytes() + b"\n")
+            with self.assertRaises(structural.StructuralCertificateError):
+                structural.verify(ROOT, mutation)
+
+    def test_structural_verifier_rejects_factor_label_drift(self) -> None:
+        certificate = load(ROOT / "certificates" / "structural" / "structural_certificate.json")
+        labels = deepcopy(
+            certificate["a4_exchange_action"]["exchange_graph"][
+                "factor_labels_by_solution_index"
+            ]
+        )
+        labels[0] = labels[1]
+        payload = load(ROOT / "certificates" / "five_vertex" / "canonical_payload.json")
+        family = load(
+            ROOT
+            / "certificates"
+            / "family_degree"
+            / "structural"
+            / "finite_theorem_certificate.json"
+        )
+        instance = load(
+            ROOT
+            / "certificates"
+            / "minimum_fingerprints"
+            / "primary"
+            / "instance.json"
+        )
+        matrix = (ROOT / "certificates" / "structural" / "a5_signed_matrix.csv").read_bytes()
+        twists = certificate["a4_exchange_action"]["component_k4_twists"]
+        with self.assertRaises(structural.StructuralCertificateError):
+            structural.build_certificate(payload, family, instance, matrix, labels, twists)
+
     def test_public_tree_has_no_project_governance_labels(self) -> None:
         suffixes = {".md", ".tex", ".sty", ".bib", ".py", ".json", ".yaml", ".yml", ".cff", ".txt"}
         text = "\n".join(
@@ -95,16 +140,16 @@ class PublicPackageTests(unittest.TestCase):
 
     def test_build_attestation_records_only_build_facts(self) -> None:
         cff = (ROOT / "CITATION.cff").read_text(encoding="utf-8")
-        self.assertIn('version: "2.0.0"', cff)
+        self.assertIn('version: "2.1.0"', cff)
         self.assertNotIn("date-released:", cff)
         attestation = load(ROOT / "BUILD_ATTESTATION.json")
-        self.assertEqual(attestation["version"], "2.0.0")
-        self.assertEqual(attestation["intended_release_tag"], "v2.0.0")
+        self.assertEqual(attestation["version"], "2.1.0")
+        self.assertEqual(attestation["intended_release_tag"], "v2.1.0")
         self.assertFalse(attestation["event_boundary"]["external_review_state_recorded"])
         self.assertFalse(attestation["event_boundary"]["publication_state_recorded"])
         self.assertEqual(attestation["pdf_visual_qa"]["status"], "PASS_ALL_PAGES_INSPECTED")
-        self.assertEqual(attestation["pdf_visual_qa"]["inspected_pages"], 21)
-        self.assertEqual(attestation["pdf_build_toolchain"]["loaded_file_count"], 104)
+        self.assertEqual(attestation["pdf_visual_qa"]["inspected_pages"], 27)
+        self.assertEqual(attestation["pdf_build_toolchain"]["loaded_file_count"], 106)
         self.assertNotIn("review", attestation)
         self.assertNotIn("publication_actions", attestation)
         self.assertNotIn("git_candidate", attestation)
@@ -116,17 +161,10 @@ class PublicPackageTests(unittest.TestCase):
         self.assertIn("PDF_BUILD_TOOLCHAIN.json", paths)
         self.assertIn("docs/PDF_VISUAL_QA.json", paths)
 
-    def test_unit_tests_are_direct_release_boundary_checks(self) -> None:
-        workflow = (ROOT / ".github" / "workflows" / "verify.yml").read_text(encoding="utf-8")
-        core = workflow.split("  release-boundary:", 1)[0]
-        release = workflow.split("  release-boundary:", 1)[1].split("  full-replay:", 1)[0]
-        for name, section in (("core", core), ("release", release)):
-            with self.subTest(job=name):
-                self.assertIn("python -B -m unittest discover -s tests -v", section)
-                self.assertIn("python -B -O -m unittest discover -s tests -v", section)
-                self.assertIn("scripts/verify.py --profile core", section)
-        self.assertNotIn("apt-get", workflow)
-        self.assertNotIn("--profile full", workflow)
+    def test_repository_defines_no_github_actions(self) -> None:
+        workflows = ROOT / ".github" / "workflows"
+        files = [] if not workflows.exists() else [path for path in workflows.rglob("*") if path.is_file()]
+        self.assertEqual(files, [])
 
     def test_plain_paper_title_block(self) -> None:
         source = (ROOT / "paper" / "main.tex").read_text(encoding="utf-8")

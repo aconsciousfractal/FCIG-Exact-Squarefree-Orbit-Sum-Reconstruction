@@ -8,7 +8,8 @@ This repository contains one finite theorem paper and its certified atlas.
    4--7.
 2. Read `docs/CLAIM_LEDGER.md` and `docs/PUBLIC_CLAIM_BOUNDARY.md`.
 3. Inspect `certificates/theorem_summary.json` and `docs/ARTIFACT_MAP.md`.
-4. Read `docs/PRIOR_ART_BOUNDARY.md` and the limits in Section 9.
+4. Inspect `certificates/structural/structural_certificate.json`, then read
+   `docs/PRIOR_ART_BOUNDARY.md` and the limits in Section 9.
 
 The headline tuples, in action order `S4,A4,S5,A5`, are:
 
@@ -40,11 +41,19 @@ with `PASS_ORBIT_SUM_PACKAGE_CORE`.
 - Is every lower-DAG node reachable, locally checked, and acyclic?
 - Are the eight `A5` exceptions described only as finite index-two split
   pairs, without physical or chemical interpretation?
+- Are the `10/896` four-vertex landscape counts complete consequences of the
+  lower-bound decomposition and the exhaustive cubic census?
+- Is the `A5` signed matrix independently reconstructed, and are its
+  parent-channel claims kept distinct from the atomic `A5` coordinates and
+  the global minimum `17`?
+- Is the `C2^3` action asserted only on the `128` solution sets, with the
+  displayed factor labels treated as an explicit witness rather than a
+  canonical or carrier-wide action?
 - Is a finite literature search kept distinct from a novelty claim?
 - Does the checked-out ancestry exclude historical governance paths while
   permitting ordinary branches, prior commits, and version tags?
-- Does candidate mode reject a premature `v2.0.0` tag, and does release mode
-  accept only an annotated `v2.0.0` tag on the verified `HEAD`?
+- Does candidate mode reject a premature `v2.1.0` tag, and does release mode
+  accept only an annotated `v2.1.0` tag on the verified `HEAD`?
 - Does a clean ordinary-Git checkout reproduce the manifest and PDF without
   Git LFS?
 - Does changing QA status, PDF binding, page census, renderer, or DPI fail even
@@ -58,6 +67,8 @@ with `PASS_ORBIT_SUM_PACKAGE_CORE`.
 - four-vertex minima: `certificates/minimum_fingerprints/`;
 - readable structural lower bounds: `certificates/family_degree/`;
 - five-vertex payload and lower DAGs: `certificates/five_vertex/`;
+- minimum landscapes, signed `A5` matrix, and `A4` exchange witnesses:
+  `certificates/structural/`;
 - independent five-vertex checkers: `scripts/five_vertex/checker/`;
 - exact statement crosswalk: `certificates/theorem_summary.json`;
 - visual QA: `docs/PDF_VISUAL_QA.json` and its Markdown projection;
