@@ -5,12 +5,12 @@ Canonical machine record: `docs/PDF_VISUAL_QA.json`
 Status: `PASS_ALL_PAGES_INSPECTED`
 
 - Document: `paper/Exact_Squarefree_Orbit_Sum_Reconstruction_of_Four_and_Five_Vertex_Loopless_Digraphs.pdf`
-- SHA-256: `c72ce574950b500c2b04d8d202b8d356a7a989192cbee7a4687b8be5d2ad7221`
-- Size: `518372` bytes
+- SHA-256: `e394f728a28bdd48c2749452b0688e5c713f09f4b6d39c59ed220a209ed8e083`
+- Size: `543113` bytes
 - Page count and geometry: `27`, A4 (`595.276` x `841.89` points)
-- Renderer: Poppler `pdftoppm 26.05.0`
+- Renderer: Poppler `pdftoppm 26.07.0`
 - Rasterization: PNG, `144` dpi, one image per page
-- Inspection date: `2026-08-27`
+- Inspection date: `2026-09-28`
 - Pages inspected: `1-27`; full-resolution spot checks: `1, 12, 18, 25, 26, 27`
 
 All 27 rendered pages were inspected in contact-sheet groups:

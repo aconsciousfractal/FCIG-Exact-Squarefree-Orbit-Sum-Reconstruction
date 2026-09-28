@@ -47,8 +47,10 @@ giving $|I_{R,C}|=|R|A_{R,C}=|C|M_{R,C}$.
 
 \begin{lemma}[Pair-separation equivalence]
 For a finite dictionary $\Dict$ and subfamily $F\subseteq\Dict$, the restricted
-signature $\Fingerprint_F$ is injective on pattern orbits if and only if $F$
-intersects every nonempty mask $\Sep_{\Dict}(R,R')$.
+signature $\Fingerprint_F$ is injective on pattern orbits if and only if
+$F\cap\Sep_{\Dict}(R,R')\neq\varnothing$ for every pair of distinct
+pattern orbits $R,R'$.  Empty separator masks must be included: if one
+occurs, no subfamily of $\Dict$ can separate all pattern orbits.
 \end{lemma}
 
 \begin{proof}

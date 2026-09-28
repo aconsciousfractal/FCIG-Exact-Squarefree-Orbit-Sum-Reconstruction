@@ -98,10 +98,22 @@ publication, archive, and DOI events are deliberately
 recorded outside the versioned source tree so that adding the annotated
 `v2.1.0` tag does not make the build attestation false.
 
+## AI assistance
+
+The research and manuscript were developed with substantial assistance from
+OpenAI Codex, including mathematical exploration, proof development,
+enumeration and certificate-verification code, and writing and revision. The
+author reports using the most capable GPT model available to him in Codex at
+the time; exact historical model-version identifiers are not documented here.
+The manuscript contains the same disclosure. Separate implementations and
+AI-assisted checks do not constitute independent specialist review or
+end-to-end formal verification.
+
 ## License and citation
 
 The MIT license covers original code, generated finite data, and supporting
-documentation. Copyright in the manuscript source and compiled PDF is
+documentation. The manuscript source and compiled PDF are licensed under
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), with copyright
 retained by the author. See [`LICENSE_SCOPE.md`](LICENSE_SCOPE.md),
 [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md), and
 [`CITATION.cff`](CITATION.cff).

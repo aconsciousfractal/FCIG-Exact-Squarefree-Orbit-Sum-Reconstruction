@@ -23,10 +23,16 @@ treated as an antecedent.
   multi-outcome coordinates are stated directly as a hitting set on unordered
   orbit-pair separation masks.
 
-The closest explicitly compared finite separating-invariant result uses the
-`S4` action on six unordered edges over `F2`, whereas this paper uses ordered
-arcs, integer containment counts, `S4/A4`, and complete cumulative squarefree
-dictionaries. The optimization universes differ.
+Kemper--Lopatin--Reimers, Section 3 (Theorems 3.1 and 3.2), studies
+separating invariants for simple undirected graphs on four and five vertices
+over `F2`. In contrast, this paper uses ordered arcs, integer containment
+counts, `S_n/A_n`, and subfamilies of fixed cumulative squarefree dictionaries.
+Both the evaluation domain and the optimization universe differ.
+
+The Grochow--Urisman citation is pinned to arXiv:2606.26244v1, the version
+entitled *Graph Isomorphism and Representation Theory* used for context. The
+revised v2 has a different title. Neither version supplies the finite minima
+in this paper.
 
 ## Audit limit
 
